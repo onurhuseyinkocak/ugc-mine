@@ -83,6 +83,9 @@ em, .italic { font-style: italic; }
 .nav-links a { font-size: 14px; font-weight: 500; color: var(--ink-2); transition: color .3s var(--ease); }
 .nav-links a:hover { color: var(--ink); }
 .nav-cta { font-size: 13.5px; }
+.lang-toggle { display: inline-flex; align-items: center; border: 1px solid var(--line); border-radius: 100px; overflow: hidden; }
+.lang-toggle button { font-size: 12px; font-weight: 600; padding: 7px 12px; color: var(--ink-3); letter-spacing: 0.04em; transition: background .3s var(--ease), color .3s var(--ease); }
+.lang-toggle button.active { background: var(--ink); color: var(--ivory); }
 .nav-burger { display: none; width: 40px; height: 40px; flex-direction: column; gap: 5px; align-items: center; justify-content: center; }
 .nav-burger span { width: 22px; height: 1.5px; background: var(--ink); transition: transform .3s var(--ease), opacity .3s var(--ease); }
 .nav-burger.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }

@@ -15,6 +15,8 @@
   <meta property="og:title" content="Mine Koçak — Bangkok-Based Beauty, Fashion &amp; Lifestyle UGC Creator" />
   <meta property="og:description" content="Authentic, aesthetic UGC for beauty, fashion, lifestyle, travel and hospitality brands — created in Bangkok, for global brands." />
   <meta property="og:image" content="https://ugc-mine.vibecodingturkey.com/assets/og.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Mine Koçak — Bangkok-Based Beauty, Fashion &amp; Lifestyle UGC Creator" />
   <meta name="twitter:description" content="Authentic, aesthetic UGC for beauty, fashion, lifestyle, travel and hospitality brands — created in Bangkok." />
@@ -78,21 +80,25 @@
     <div class="container nav-inner">
       <a href="#top" class="brand">Mine Koçak<span class="dot"></span></a>
       <nav class="nav-links">
-        <a href="#services">Services</a>
-        <a href="#portfolio">Portfolio</a>
-        <a href="#bangkok">Bangkok</a>
-        <a href="#packages">Packages</a>
-        <a href="#faq">FAQ</a>
+        <a href="#services" data-i18n="nav.services">Services</a>
+        <a href="#portfolio" data-i18n="nav.portfolio">Portfolio</a>
+        <a href="#bangkok" data-i18n="nav.bangkok">Bangkok</a>
+        <a href="#packages" data-i18n="nav.packages">Packages</a>
+        <a href="#faq" data-i18n="nav.faq">FAQ</a>
       </nav>
-      <div class="nav-right" style="display:flex;align-items:center;gap:18px">
-        <a href="#contact" class="btn btn-primary nav-cta">Work With Me</a>
+      <div class="nav-right" style="display:flex;align-items:center;gap:16px">
+        <div class="lang-toggle" role="group" aria-label="Language">
+          <button data-lang="en" aria-label="English">EN</button>
+          <button data-lang="tr" aria-label="Türkçe">TR</button>
+        </div>
+        <a href="#contact" class="btn btn-primary nav-cta" data-i18n="nav.cta">Work With Me</a>
         <button class="nav-burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
       </div>
     </div>
     <div class="mobile-menu" id="mobileMenu">
-      <a href="#services">Services</a><a href="#portfolio">Portfolio</a><a href="#bangkok">Bangkok</a>
-      <a href="#packages">Packages</a><a href="#faq">FAQ</a>
-      <a href="#contact" class="btn btn-primary">Work With Me</a>
+      <a href="#services" data-i18n="nav.services">Services</a><a href="#portfolio" data-i18n="nav.portfolio">Portfolio</a><a href="#bangkok" data-i18n="nav.bangkok">Bangkok</a>
+      <a href="#packages" data-i18n="nav.packages">Packages</a><a href="#faq" data-i18n="nav.faq">FAQ</a>
+      <a href="#contact" class="btn btn-primary" data-i18n="nav.cta">Work With Me</a>
     </div>
   </header>
 
@@ -101,17 +107,17 @@
     <section class="hero container">
       <div class="hero-grid">
         <div>
-          <div class="kicker reveal">Bangkok · Beauty · Fashion · Lifestyle</div>
-          <h1 class="reveal d1">Bangkok-based UGC creator for <em>beauty, fashion &amp; lifestyle</em> brands.</h1>
-          <p class="lede reveal d2">I'm Mine — I create authentic, aesthetic short-form content that helps brands tell their product story. Beauty, skincare, fashion, lifestyle, travel and hospitality, made in Bangkok for social ads, organic posts, Reels and TikTok.</p>
+          <div class="kicker reveal" data-i18n="hero.kicker">Bangkok · Beauty · Fashion · Lifestyle</div>
+          <h1 class="reveal d1" data-i18n-html="hero.h">Bangkok-based UGC creator for <em>beauty, fashion &amp; lifestyle</em> brands.</h1>
+          <p class="lede reveal d2" data-i18n="hero.sub">I'm Mine — I create authentic, aesthetic short-form content that helps brands tell their product story. Beauty, skincare, fashion, lifestyle, travel and hospitality, made in Bangkok for social ads, organic posts, Reels and TikTok.</p>
           <div class="hero-actions reveal d3">
-            <a href="#contact" class="btn btn-primary btn-lg">Work With Me <span class="arrow">→</span></a>
-            <a href="#portfolio" class="btn btn-ghost btn-lg">View portfolio</a>
+            <a href="#contact" class="btn btn-primary btn-lg" data-i18n-html="hero.cta1">Work With Me <span class="arrow">→</span></a>
+            <a href="#portfolio" class="btn btn-ghost btn-lg" data-i18n="hero.cta2">View portfolio</a>
           </div>
           <div class="hero-meta reveal d3">
-            <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-5.6-7-11a7 7 0 0 1 14 0c0 5.4-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>Bangkok, Thailand</span>
-            <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 8h14M5 12h14M5 16h9"/></svg>English-first content</span>
-            <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/></svg>Brands worldwide</span>
+            <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-5.6-7-11a7 7 0 0 1 14 0c0 5.4-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg><span data-i18n="hero.chip1">Bangkok, Thailand</span></span>
+            <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 8h14M5 12h14M5 16h9"/></svg><span data-i18n="hero.chip2">English &amp; Turkish content</span></span>
+            <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/></svg><span data-i18n="hero.chip3">Brands worldwide</span></span>
           </div>
         </div>
         <div class="hero-figure reveal d2">
@@ -128,9 +134,9 @@
     <!-- MARQUEE -->
     <div class="marquee" aria-hidden="true">
       <div class="marquee-track" id="marquee">
-        <span class="marquee-item">Beauty</span><span class="marquee-item">Skincare</span><span class="marquee-item">Fashion</span>
-        <span class="marquee-item">Lifestyle</span><span class="marquee-item">Travel</span><span class="marquee-item">Hotels &amp; Cafés</span>
-        <span class="marquee-item">Wellness</span><span class="marquee-item">Apps</span>
+        <span class="marquee-item" data-i18n="mq.beauty">Beauty</span><span class="marquee-item" data-i18n="mq.skincare">Skincare</span><span class="marquee-item" data-i18n="mq.fashion">Fashion</span>
+        <span class="marquee-item" data-i18n="mq.lifestyle">Lifestyle</span><span class="marquee-item" data-i18n="mq.travel">Travel</span><span class="marquee-item" data-i18n="mq.hotels">Hotels &amp; Cafés</span>
+        <span class="marquee-item" data-i18n="mq.wellness">Wellness</span><span class="marquee-item" data-i18n="mq.apps">Apps</span>
       </div>
     </div>
 
@@ -139,14 +145,14 @@
       <div class="container pos-grid">
         <div class="pos-figure reveal"><div class="ph"><div class="mono">Mine</div></div></div>
         <div class="pos-body">
-          <div class="kicker reveal">Who I am</div>
-          <p class="big reveal d1">A female UGC creator based in Bangkok — available for local shoots and global product campaigns, with content that feels natural, polished and brand-safe.</p>
-          <p class="reveal d2">I help beauty, skincare, fashion, lifestyle, travel, wellness, café, hotel and app brands turn products into content people actually want to watch. Everything is shot to feel like a real recommendation — aesthetic, warm and on-brand — not a stiff advertisement.</p>
+          <div class="kicker reveal" data-i18n="pos.kicker">Who I am</div>
+          <p class="big reveal d1" data-i18n="pos.big">A female UGC creator based in Bangkok — available for local shoots and global product campaigns, with content that feels natural, polished and brand-safe.</p>
+          <p class="reveal d2" data-i18n="pos.p">I help beauty, skincare, fashion, lifestyle, travel, wellness, café, hotel and app brands turn products into content people actually want to watch. Everything is shot to feel like a real recommendation — aesthetic, warm and on-brand — not a stiff advertisement.</p>
           <ul class="pos-list reveal d2">
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>Based in Bangkok — available for on-location lifestyle shoots</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>Global-ready: brands ship products to Bangkok for content</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>Beauty, fashion, lifestyle, travel, wellness, hospitality &amp; apps</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>Authentic, polished, brand-safe — built for ads and organic social</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="pos.li1">Based in Bangkok — available for on-location lifestyle shoots</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="pos.li2">Global-ready: brands ship products to Bangkok for content</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="pos.li3">Beauty, fashion, lifestyle, travel, wellness, hospitality &amp; apps</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="pos.li4">Authentic, polished, brand-safe — built for ads and organic social</span></li>
           </ul>
         </div>
       </div>
@@ -154,47 +160,47 @@
 
     <!-- SERVICES -->
     <section class="section container" id="services">
-      <div class="section-head reveal"><div class="kicker">Services</div><h2>Content made to look effortless.</h2><p>From a single UGC video to a full content package — every deliverable is shot, edited and delivered ready to post or run as an ad.</p></div>
+      <div class="section-head reveal"><div class="kicker" data-i18n="svc.kicker">Services</div><h2 data-i18n="svc.h">Content made to look effortless.</h2><p data-i18n="svc.p">From a single UGC video to a full content package — every deliverable is shot, edited and delivered ready to post or run as an ad.</p></div>
       <div class="svc-grid">
-        <div class="svc reveal"><div class="svc-num">01</div><h3>UGC Video Ads</h3><p>Hook-first videos built to convert on paid social — TikTok, Reels and Meta.</p></div>
-        <div class="svc reveal d1"><div class="svc-num">02</div><h3>Organic Reels &amp; TikTok</h3><p>Native short-form that feels at home on the feed and earns watch-time.</p></div>
-        <div class="svc reveal d2"><div class="svc-num">03</div><h3>Product Photography</h3><p>Clean, editorial stills for product pages, ads and social — add-on or standalone.</p></div>
-        <div class="svc reveal"><div class="svc-num">04</div><h3>Beauty &amp; Skincare Content</h3><p>Demos, routines and application shots that show texture, result and feel.</p></div>
-        <div class="svc reveal d1"><div class="svc-num">05</div><h3>Fashion Try-On &amp; Outfit</h3><p>Try-on hauls and outfit storytelling that make pieces feel wearable.</p></div>
-        <div class="svc reveal d2"><div class="svc-num">06</div><h3>Lifestyle Storytelling</h3><p>Warm, day-in-the-life integration that places a product in a real moment.</p></div>
-        <div class="svc reveal"><div class="svc-num">07</div><h3>Travel / Hotel / Café Content</h3><p>On-location hospitality content from Bangkok's most photogenic spaces.</p></div>
-        <div class="svc reveal d1"><div class="svc-num">08</div><h3>Couple Lifestyle Content</h3><p>Relatable couple and travel content for lifestyle and hospitality brands.</p></div>
-        <div class="svc reveal d2"><div class="svc-num">09</div><h3>App / Digital Product UGC</h3><p>Natural, lifestyle-style walkthroughs for beauty, wellness and lifestyle apps.</p></div>
+        <div class="svc reveal"><div class="svc-num">01</div><h3 data-i18n="svc1.t">UGC Video Ads</h3><p data-i18n="svc1.d">Hook-first videos built to convert on paid social — TikTok, Reels and Meta.</p></div>
+        <div class="svc reveal d1"><div class="svc-num">02</div><h3 data-i18n="svc2.t">Organic Reels &amp; TikTok</h3><p data-i18n="svc2.d">Native short-form that feels at home on the feed and earns watch-time.</p></div>
+        <div class="svc reveal d2"><div class="svc-num">03</div><h3 data-i18n="svc3.t">Product Photography</h3><p data-i18n="svc3.d">Clean, editorial stills for product pages, ads and social — add-on or standalone.</p></div>
+        <div class="svc reveal"><div class="svc-num">04</div><h3 data-i18n="svc4.t">Beauty &amp; Skincare Content</h3><p data-i18n="svc4.d">Demos, routines and application shots that show texture, result and feel.</p></div>
+        <div class="svc reveal d1"><div class="svc-num">05</div><h3 data-i18n="svc5.t">Fashion Try-On &amp; Outfit</h3><p data-i18n="svc5.d">Try-on hauls and outfit storytelling that make pieces feel wearable.</p></div>
+        <div class="svc reveal d2"><div class="svc-num">06</div><h3 data-i18n="svc6.t">Lifestyle Storytelling</h3><p data-i18n="svc6.d">Warm, day-in-the-life integration that places a product in a real moment.</p></div>
+        <div class="svc reveal"><div class="svc-num">07</div><h3 data-i18n="svc7.t">Travel / Hotel / Café Content</h3><p data-i18n="svc7.d">On-location hospitality content from Bangkok's most photogenic spaces.</p></div>
+        <div class="svc reveal d1"><div class="svc-num">08</div><h3 data-i18n="svc8.t">Couple Lifestyle Content</h3><p data-i18n="svc8.d">Relatable couple and travel content for lifestyle and hospitality brands.</p></div>
+        <div class="svc reveal d2"><div class="svc-num">09</div><h3 data-i18n="svc9.t">App / Digital Product UGC</h3><p data-i18n="svc9.d">Natural, lifestyle-style walkthroughs for beauty, wellness and lifestyle apps.</p></div>
       </div>
     </section>
 
     <!-- PORTFOLIO -->
     <section class="section container" id="portfolio">
-      <div class="section-head reveal"><div class="kicker">Portfolio</div><h2>Selected concepts.</h2><p>A look at the formats I shoot. Real campaign work is added here as collaborations go live.</p></div>
+      <div class="section-head reveal"><div class="kicker" data-i18n="pf.kicker">Portfolio</div><h2 data-i18n="pf.h">Selected concepts.</h2><p data-i18n="pf.p">A look at the formats I shoot. Real campaign work is added here as collaborations go live.</p></div>
       <div class="pf-grid">
-        <article class="pf-card reveal"><span class="pf-icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span><div class="pf-meta"><div class="pf-cat">Beauty</div><div class="pf-t">Beauty UGC concept</div></div></article>
-        <article class="pf-card reveal d1"><span class="pf-icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span><div class="pf-meta"><div class="pf-cat">Fashion</div><div class="pf-t">Fashion reel concept</div></div></article>
-        <article class="pf-card reveal d2"><span class="pf-icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span><div class="pf-meta"><div class="pf-cat">Lifestyle</div><div class="pf-t">Bangkok café lifestyle</div></div></article>
-        <article class="pf-card reveal d3"><span class="pf-icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span><div class="pf-meta"><div class="pf-cat">Skincare</div><div class="pf-t">Skincare product demo</div></div></article>
-        <article class="pf-card reveal"><span class="pf-icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span><div class="pf-meta"><div class="pf-cat">Hospitality</div><div class="pf-t">Hotel lifestyle content</div></div></article>
-        <article class="pf-card reveal d1"><span class="pf-icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span><div class="pf-meta"><div class="pf-cat">App</div><div class="pf-t">App UGC demo</div></div></article>
-        <article class="pf-card reveal d2"><span class="pf-icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span><div class="pf-meta"><div class="pf-cat">Beauty</div><div class="pf-t">GRWM routine</div></div></article>
-        <article class="pf-card reveal d3"><span class="pf-icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span><div class="pf-meta"><div class="pf-cat">Travel</div><div class="pf-t">Bangkok travel lifestyle</div></div></article>
+        <article class="pf-card reveal"><span class="pf-icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span><div class="pf-meta"><div class="pf-cat" data-i18n="pf.c.beauty">Beauty</div><div class="pf-t" data-i18n="pf1.t">Beauty UGC concept</div></div></article>
+        <article class="pf-card reveal d1"><span class="pf-icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span><div class="pf-meta"><div class="pf-cat" data-i18n="pf.c.fashion">Fashion</div><div class="pf-t" data-i18n="pf2.t">Fashion reel concept</div></div></article>
+        <article class="pf-card reveal d2"><span class="pf-icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span><div class="pf-meta"><div class="pf-cat" data-i18n="pf.c.lifestyle">Lifestyle</div><div class="pf-t" data-i18n="pf3.t">Bangkok café lifestyle</div></div></article>
+        <article class="pf-card reveal d3"><span class="pf-icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span><div class="pf-meta"><div class="pf-cat" data-i18n="pf.c.skincare">Skincare</div><div class="pf-t" data-i18n="pf4.t">Skincare product demo</div></div></article>
+        <article class="pf-card reveal"><span class="pf-icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span><div class="pf-meta"><div class="pf-cat" data-i18n="pf.c.hosp">Hospitality</div><div class="pf-t" data-i18n="pf5.t">Hotel lifestyle content</div></div></article>
+        <article class="pf-card reveal d1"><span class="pf-icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span><div class="pf-meta"><div class="pf-cat" data-i18n="pf.c.app">App</div><div class="pf-t" data-i18n="pf6.t">App UGC demo</div></div></article>
+        <article class="pf-card reveal d2"><span class="pf-icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span><div class="pf-meta"><div class="pf-cat" data-i18n="pf.c.beauty">Beauty</div><div class="pf-t" data-i18n="pf7.t">GRWM routine</div></div></article>
+        <article class="pf-card reveal d3"><span class="pf-icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span><div class="pf-meta"><div class="pf-cat" data-i18n="pf.c.travel">Travel</div><div class="pf-t" data-i18n="pf8.t">Bangkok travel lifestyle</div></div></article>
       </div>
-      <p class="pf-note reveal">Concept placeholders — replace with real Reels/TikToks as campaigns publish.</p>
+      <p class="pf-note reveal" data-i18n="pf.note">Concept placeholders — replace with real Reels/TikToks as campaigns publish.</p>
     </section>
 
     <!-- WHY -->
     <section class="section why">
       <div class="container">
-        <div class="section-head reveal" style="max-width:640px"><div class="kicker">Why brands work with me</div><h2>Easy to brief, lovely to watch.</h2></div>
+        <div class="section-head reveal" style="max-width:640px"><div class="kicker" data-i18n="why.kicker">Why brands work with me</div><h2 data-i18n="why.h">Easy to brief, lovely to watch.</h2></div>
         <div class="why-grid">
-          <div class="why-card reveal"><h3>Natural <span>on camera</span></h3><p>A warm, real presence that makes a product feel recommended, not advertised.</p></div>
-          <div class="why-card reveal d1"><h3>A clean <span>aesthetic</span></h3><p>Beauty- and lifestyle-led visuals that sit beautifully on a brand's feed and ads.</p></div>
-          <div class="why-card reveal"><h3>Bangkok <span>visuals</span></h3><p>Cafés, hotels and lifestyle locations that give global brands fresh, Asia-based content.</p></div>
-          <div class="why-card reveal d1"><h3>Fast &amp; <span>professional</span></h3><p>Clear communication, agreed scope and on-time delivery — easy to work with.</p></div>
-          <div class="why-card reveal"><h3>Made for <span>ads &amp; organic</span></h3><p>Hook-first content that works as a paid creative or an organic post.</p></div>
-          <div class="why-card reveal d1"><h3>Brand-safe &amp; <span>flexible</span></h3><p>Polished, on-brand presentation that adapts across beauty, fashion and lifestyle niches.</p></div>
+          <div class="why-card reveal"><h3 data-i18n-html="why1.q">Natural <span>on camera</span></h3><p data-i18n="why1.p">A warm, real presence that makes a product feel recommended, not advertised.</p></div>
+          <div class="why-card reveal d1"><h3 data-i18n-html="why2.q">A clean <span>aesthetic</span></h3><p data-i18n="why2.p">Beauty- and lifestyle-led visuals that sit beautifully on a brand's feed and ads.</p></div>
+          <div class="why-card reveal"><h3 data-i18n-html="why3.q">Bangkok <span>visuals</span></h3><p data-i18n="why3.p">Cafés, hotels and lifestyle locations that give global brands fresh, Asia-based content.</p></div>
+          <div class="why-card reveal d1"><h3 data-i18n-html="why4.q">Fast &amp; <span>professional</span></h3><p data-i18n="why4.p">Clear communication, agreed scope and on-time delivery — easy to work with.</p></div>
+          <div class="why-card reveal"><h3 data-i18n-html="why5.q">Made for <span>ads &amp; organic</span></h3><p data-i18n="why5.p">Hook-first content that works as a paid creative or an organic post.</p></div>
+          <div class="why-card reveal d1"><h3 data-i18n-html="why6.q">Brand-safe &amp; <span>flexible</span></h3><p data-i18n="why6.p">Polished, on-brand presentation that adapts across beauty, fashion and lifestyle niches.</p></div>
         </div>
       </div>
     </section>
@@ -203,10 +209,10 @@
     <section class="section container" id="bangkok">
       <div class="bkk-grid">
         <div class="bkk-body">
-          <div class="kicker reveal">The Bangkok advantage</div>
-          <p class="big reveal d1">A creative city that gives your brand fresh, warm, internationally-aesthetic content.</p>
-          <p class="reveal d2">Bangkok is full of light-filled cafés, design-led hotels and lifestyle spaces that photograph beautifully. For a global beauty, fashion or lifestyle brand, that means content that feels current and travel-inspired — shot efficiently, on location, without the cost of a Western production.</p>
-          <p class="reveal d2">It's an Asia base with a global eye: relatable enough to feel authentic, polished enough to sit next to your brand's best work.</p>
+          <div class="kicker reveal" data-i18n="bkk.kicker">The Bangkok advantage</div>
+          <p class="big reveal d1" data-i18n="bkk.big">A creative city that gives your brand fresh, warm, internationally-aesthetic content.</p>
+          <p class="reveal d2" data-i18n="bkk.p1">Bangkok is full of light-filled cafés, design-led hotels and lifestyle spaces that photograph beautifully. For a global beauty, fashion or lifestyle brand, that means content that feels current and travel-inspired — shot efficiently, on location, without the cost of a Western production.</p>
+          <p class="reveal d2" data-i18n="bkk.p2">It's an Asia base with a global eye: relatable enough to feel authentic, polished enough to sit next to your brand's best work.</p>
         </div>
         <div class="bkk-figure reveal d1"><div class="ph">Bangkok, Thailand</div></div>
       </div>
@@ -214,51 +220,51 @@
 
     <!-- CONTENT TYPES -->
     <section class="section container">
-      <div class="section-head reveal"><div class="kicker">What I create</div><h2>Formats brands ask for.</h2></div>
+      <div class="section-head reveal"><div class="kicker" data-i18n="types.kicker">What I create</div><h2 data-i18n="types.h">Formats brands ask for.</h2></div>
       <div class="types reveal d1">
-        <span class="type">Unboxing</span><span class="type">Product demo</span><span class="type">Problem / solution ad</span>
-        <span class="type">Morning routine</span><span class="type">GRWM</span><span class="type">Try-on haul</span>
-        <span class="type">Voiceover UGC</span><span class="type">Testimonial-style</span><span class="type">Lifestyle integration</span>
-        <span class="type">Café / hotel / travel</span><span class="type">App walkthrough</span><span class="type">Couple lifestyle</span>
+        <span class="type" data-i18n="t.unbox">Unboxing</span><span class="type" data-i18n="t.demo">Product demo</span><span class="type" data-i18n="t.ps">Problem / solution ad</span>
+        <span class="type" data-i18n="t.morning">Morning routine</span><span class="type" data-i18n="t.grwm">GRWM</span><span class="type" data-i18n="t.tryon">Try-on haul</span>
+        <span class="type" data-i18n="t.vo">Voiceover UGC</span><span class="type" data-i18n="t.testi">Testimonial-style</span><span class="type" data-i18n="t.life">Lifestyle integration</span>
+        <span class="type" data-i18n="t.travel">Café / hotel / travel</span><span class="type" data-i18n="t.app">App walkthrough</span><span class="type" data-i18n="t.couple">Couple lifestyle</span>
       </div>
     </section>
 
     <!-- PROCESS -->
     <section class="section container" id="process">
-      <div class="section-head reveal"><div class="kicker">Process</div><h2>Simple, from brief to delivery.</h2></div>
+      <div class="section-head reveal"><div class="kicker" data-i18n="proc.kicker">Process</div><h2 data-i18n="proc.h">Simple, from brief to delivery.</h2></div>
       <div class="steps">
-        <div class="step reveal"><div class="n">01</div><h3>Brand brief</h3><p>You share the product, goal, references and timeline.</p></div>
-        <div class="step reveal d1"><div class="n">02</div><h3>Concept &amp; script</h3><p>I plan the angle, hook and shot list around your product.</p></div>
-        <div class="step reveal d2"><div class="n">03</div><h3>Shoot in Bangkok</h3><p>Filmed on location, at home or in a lifestyle setting.</p></div>
-        <div class="step reveal d3"><div class="n">04</div><h3>Delivery-ready</h3><p>Edited, captioned content delivered for ads or organic — raw files on request.</p></div>
+        <div class="step reveal"><div class="n">01</div><h3 data-i18n="step1.t">Brand brief</h3><p data-i18n="step1.d">You share the product, goal, references and timeline.</p></div>
+        <div class="step reveal d1"><div class="n">02</div><h3 data-i18n="step2.t">Concept &amp; script</h3><p data-i18n="step2.d">I plan the angle, hook and shot list around your product.</p></div>
+        <div class="step reveal d2"><div class="n">03</div><h3 data-i18n="step3.t">Shoot in Bangkok</h3><p data-i18n="step3.d">Filmed on location, at home or in a lifestyle setting.</p></div>
+        <div class="step reveal d3"><div class="n">04</div><h3 data-i18n="step4.t">Delivery-ready</h3><p data-i18n="step4.d">Edited, captioned content delivered for ads or organic — raw files on request.</p></div>
       </div>
     </section>
 
     <!-- PACKAGES -->
     <section class="section container" id="packages">
-      <div class="section-head reveal"><div class="kicker">Collaboration options</div><h2>Pick a starting point.</h2><p>Flexible scopes shaped to your brief. Custom quote available — contact for rates.</p></div>
+      <div class="section-head reveal"><div class="kicker" data-i18n="pkg.kicker">Collaboration options</div><h2 data-i18n="pkg.h">Pick a starting point.</h2><p data-i18n="pkg.p">Flexible scopes shaped to your brief. Custom quote available — contact for rates.</p></div>
       <div class="pkg-grid">
-        <div class="pkg reveal"><div class="price">Contact for rates</div><h3>Single UGC Video</h3><p>One concept, one video, edited + raw. Best for a first test.</p></div>
-        <div class="pkg reveal d1"><div class="price">Contact for rates</div><h3>UGC Video Bundle</h3><p>A set of videos with multiple hooks for organic + paid testing.</p></div>
-        <div class="pkg reveal d2"><div class="price">Contact for rates</div><h3>Monthly Content Package</h3><p>A steady stream of on-brand content, planned and delivered monthly.</p></div>
-        <div class="pkg reveal"><div class="price">Add-on</div><h3>Product Photography</h3><p>Editorial product stills to pair with your video deliverables.</p></div>
-        <div class="pkg reveal d1"><div class="price">Contact for rates</div><h3>Bangkok Location Shoot</h3><p>On-location café, hotel or lifestyle content shot in Bangkok.</p></div>
-        <div class="pkg reveal d2"><div class="price">Contact for rates</div><h3>Couple / Travel Lifestyle</h3><p>Warm couple and travel content for lifestyle and hospitality brands.</p></div>
+        <div class="pkg reveal"><div class="price" data-i18n="pkg.rates">Contact for rates</div><h3 data-i18n="pkg1.t">Single UGC Video</h3><p data-i18n="pkg1.d">One concept, one video, edited + raw. Best for a first test.</p></div>
+        <div class="pkg reveal d1"><div class="price" data-i18n="pkg.rates">Contact for rates</div><h3 data-i18n="pkg2.t">UGC Video Bundle</h3><p data-i18n="pkg2.d">A set of videos with multiple hooks for organic + paid testing.</p></div>
+        <div class="pkg reveal d2"><div class="price" data-i18n="pkg.rates">Contact for rates</div><h3 data-i18n="pkg3.t">Monthly Content Package</h3><p data-i18n="pkg3.d">A steady stream of on-brand content, planned and delivered monthly.</p></div>
+        <div class="pkg reveal"><div class="price" data-i18n="pkg.addon">Add-on</div><h3 data-i18n="pkg4.t">Product Photography</h3><p data-i18n="pkg4.d">Editorial product stills to pair with your video deliverables.</p></div>
+        <div class="pkg reveal d1"><div class="price" data-i18n="pkg.rates">Contact for rates</div><h3 data-i18n="pkg5.t">Bangkok Location Shoot</h3><p data-i18n="pkg5.d">On-location café, hotel or lifestyle content shot in Bangkok.</p></div>
+        <div class="pkg reveal d2"><div class="price" data-i18n="pkg.rates">Contact for rates</div><h3 data-i18n="pkg6.t">Couple / Travel Lifestyle</h3><p data-i18n="pkg6.d">Warm couple and travel content for lifestyle and hospitality brands.</p></div>
       </div>
     </section>
 
     <!-- FAQ -->
     <section class="section container" id="faq">
-      <div class="section-head reveal"><div class="kicker">FAQ</div><h2>Questions brands ask.</h2></div>
+      <div class="section-head reveal"><div class="kicker" data-i18n="faq.kicker">FAQ</div><h2 data-i18n="faq.h">Questions brands ask.</h2></div>
       <div class="faq reveal d1">
-        <details class="faq-item"><summary><span>Can I hire a Bangkok-based UGC creator for my beauty brand?</span><span class="faq-sign"></span></summary><div class="faq-answer">Yes. I'm a Bangkok-based female UGC creator specialising in beauty, skincare, fashion and lifestyle content — authentic, aesthetic short-form for ads, reels and TikTok. I work with local Bangkok businesses and with international brands that ship products to Thailand.</div></details>
-        <details class="faq-item"><summary><span>Do you create UGC videos for fashion and lifestyle brands?</span><span class="faq-sign"></span></summary><div class="faq-answer">Yes — try-ons, outfit content, lifestyle storytelling and product integration are core formats, shot to feel natural and brand-safe and delivered ready for organic posts and paid social.</div></details>
-        <details class="faq-item"><summary><span>Can you shoot content in cafés, hotels or lifestyle locations in Bangkok?</span><span class="faq-sign"></span></summary><div class="faq-answer">Yes. Bangkok's cafés, hotels and lifestyle spaces are a real advantage. I shoot on location for hospitality, travel, café and lifestyle campaigns, giving brands fresh, Asia-based visuals.</div></details>
-        <details class="faq-item"><summary><span>Can international brands send products to Bangkok for UGC content?</span><span class="faq-sign"></span></summary><div class="faq-answer">Yes — that's a common way to work. Once the product arrives, I handle concept, shoot and delivery remotely, with usage rights agreed up front.</div></details>
-        <details class="faq-item"><summary><span>Do you create content for TikTok, Instagram Reels and paid ads?</span><span class="faq-sign"></span></summary><div class="faq-answer">Yes. Content is built native for TikTok, Reels and Shorts, and can be delivered as organic posts or paid ad creatives, with raw footage and usage rights available.</div></details>
-        <details class="faq-item"><summary><span>Can you create couple lifestyle content?</span><span class="faq-sign"></span></summary><div class="faq-answer">Yes — couple, travel and lifestyle content is available, great for travel, hospitality and lifestyle brands. For dedicated travel and hospitality campaigns there's also a sister studio, <a href="https://moviatravelhub.vibecodingturkey.com" target="_blank" rel="noopener">Movia Travel Hub</a>.</div></details>
-        <details class="faq-item"><summary><span>Can you create UGC for mobile apps?</span><span class="faq-sign"></span></summary><div class="faq-answer">Yes. Lifestyle-style app UGC — walkthroughs, problem-solution and integration content — framed in a natural, everyday way that suits beauty, wellness and lifestyle apps.</div></details>
-        <details class="faq-item"><summary><span>How do brands collaborate with you?</span><span class="faq-sign"></span></summary><div class="faq-answer">Send the brand, product, timeline and content needs through the form below, by email, or via Instagram DM. I'll reply with content angles, scope and a custom quote based on deliverables.</div></details>
+        <details class="faq-item"><summary><span data-i18n="faq.q1">Can I hire a Bangkok-based UGC creator for my beauty brand?</span><span class="faq-sign"></span></summary><div class="faq-answer" data-i18n="faq.a1">Yes. I'm a Bangkok-based female UGC creator specialising in beauty, skincare, fashion and lifestyle content — authentic, aesthetic short-form for ads, reels and TikTok. I work with local Bangkok businesses and with international brands that ship products to Thailand.</div></details>
+        <details class="faq-item"><summary><span data-i18n="faq.q2">Do you create UGC videos for fashion and lifestyle brands?</span><span class="faq-sign"></span></summary><div class="faq-answer" data-i18n="faq.a2">Yes — try-ons, outfit content, lifestyle storytelling and product integration are core formats, shot to feel natural and brand-safe and delivered ready for organic posts and paid social.</div></details>
+        <details class="faq-item"><summary><span data-i18n="faq.q3">Can you shoot content in cafés, hotels or lifestyle locations in Bangkok?</span><span class="faq-sign"></span></summary><div class="faq-answer" data-i18n="faq.a3">Yes. Bangkok's cafés, hotels and lifestyle spaces are a real advantage. I shoot on location for hospitality, travel, café and lifestyle campaigns, giving brands fresh, Asia-based visuals.</div></details>
+        <details class="faq-item"><summary><span data-i18n="faq.q4">Can international brands send products to Bangkok for UGC content?</span><span class="faq-sign"></span></summary><div class="faq-answer" data-i18n="faq.a4">Yes — that's a common way to work. Once the product arrives, I handle concept, shoot and delivery remotely, with usage rights agreed up front.</div></details>
+        <details class="faq-item"><summary><span data-i18n="faq.q5">Do you create content for TikTok, Instagram Reels and paid ads?</span><span class="faq-sign"></span></summary><div class="faq-answer" data-i18n="faq.a5">Yes. Content is built native for TikTok, Reels and Shorts, and can be delivered as organic posts or paid ad creatives, with raw footage and usage rights available.</div></details>
+        <details class="faq-item"><summary><span data-i18n="faq.q6">Can you create couple lifestyle content?</span><span class="faq-sign"></span></summary><div class="faq-answer" data-i18n-html="faq.a6">Yes — couple, travel and lifestyle content is available, great for travel, hospitality and lifestyle brands. For dedicated travel and hospitality campaigns there's also a sister studio, <a href="https://moviatravelhub.vibecodingturkey.com" target="_blank" rel="noopener">Movia Travel Hub</a>.</div></details>
+        <details class="faq-item"><summary><span data-i18n="faq.q7">Can you create UGC for mobile apps?</span><span class="faq-sign"></span></summary><div class="faq-answer" data-i18n="faq.a7">Yes. Lifestyle-style app UGC — walkthroughs, problem-solution and integration content — framed in a natural, everyday way that suits beauty, wellness and lifestyle apps.</div></details>
+        <details class="faq-item"><summary><span data-i18n="faq.q8">How do brands collaborate with you?</span><span class="faq-sign"></span></summary><div class="faq-answer" data-i18n="faq.a8">Send the brand, product, timeline and content needs through the form below, by email, or via Instagram DM. I'll reply with content angles, scope and a custom quote based on deliverables.</div></details>
       </div>
     </section>
 
@@ -266,9 +272,9 @@
     <section class="section container" id="contact">
       <div class="contact-grid">
         <div class="contact-left">
-          <div class="kicker reveal">Let's collaborate</div>
-          <h2 class="reveal d1">Tell me about your brand.</h2>
-          <p class="lede reveal d1">Share your brand, product, timeline and content needs — I'll come back with content angles and a custom quote, usually within 24 hours.</p>
+          <div class="kicker reveal" data-i18n="contact.kicker">Let's collaborate</div>
+          <h2 class="reveal d1" data-i18n="contact.h">Tell me about your brand.</h2>
+          <p class="lede reveal d1" data-i18n="contact.sub">Share your brand, product, timeline and content needs — I'll come back with content angles and a custom quote, usually within 24 hours.</p>
           <div class="contact-channels reveal d2">
             <a class="cc" href="https://www.instagram.com/mineexplora" target="_blank" rel="noopener">
               <span class="cc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></span>
@@ -279,42 +285,42 @@
               <span><span class="l">Email</span><span class="v">onurhuseyinkocak@gmail.com</span></span><span class="arrow">→</span>
             </a>
           </div>
-          <div class="response reveal d3"><span class="pulse"></span><span>Available for collaborations · replies within 24h</span></div>
+          <div class="response reveal d3"><span class="pulse"></span><span data-i18n="contact.response">Available for collaborations · replies within 24h</span></div>
         </div>
         <form class="form reveal d1" id="leadForm" novalidate>
           <div class="form-row">
-            <div class="field"><label for="f-name">Name</label><input id="f-name" name="name" type="text" autocomplete="name" placeholder="Your name" /></div>
-            <div class="field"><label for="f-email">Email <span class="req">*</span></label><input id="f-email" name="email" type="email" autocomplete="email" required placeholder="you@brand.com" /></div>
+            <div class="field"><label for="f-name" data-i18n="form.name">Name</label><input id="f-name" name="name" type="text" autocomplete="name" data-i18n-ph="form.name.ph" placeholder="Your name" /></div>
+            <div class="field"><label for="f-email" data-i18n="form.email">Email <span class="req">*</span></label><input id="f-email" name="email" type="email" autocomplete="email" required placeholder="you@brand.com" /></div>
           </div>
           <div class="form-row">
-            <div class="field"><label for="f-brand">Brand</label><input id="f-brand" name="company" type="text" placeholder="Brand name" /></div>
-            <div class="field"><label for="f-product">Niche <span class="req">*</span></label>
+            <div class="field"><label for="f-brand" data-i18n="form.brand">Brand</label><input id="f-brand" name="company" type="text" data-i18n-ph="form.brand.ph" placeholder="Brand name" /></div>
+            <div class="field"><label for="f-product" data-i18n="form.niche">Niche <span class="req">*</span></label>
               <select id="f-product" name="product" required>
-                <option value="">Select…</option>
-                <option value="Beauty / Skincare">Beauty / Skincare</option>
-                <option value="Fashion / Clothing">Fashion / Clothing</option>
-                <option value="Lifestyle">Lifestyle</option>
-                <option value="Travel / Hospitality">Travel / Hospitality</option>
-                <option value="Hotel / Café / Restaurant">Hotel / Café / Restaurant</option>
-                <option value="Wellness">Wellness</option>
-                <option value="Mobile app">Mobile app</option>
-                <option value="Other">Other</option>
+                <option value="" data-i18n="form.select">Select…</option>
+                <option value="Beauty / Skincare" data-i18n="form.n.beauty">Beauty / Skincare</option>
+                <option value="Fashion / Clothing" data-i18n="form.n.fashion">Fashion / Clothing</option>
+                <option value="Lifestyle" data-i18n="form.n.lifestyle">Lifestyle</option>
+                <option value="Travel / Hospitality" data-i18n="form.n.travel">Travel / Hospitality</option>
+                <option value="Hotel / Café / Restaurant" data-i18n="form.n.hotel">Hotel / Café / Restaurant</option>
+                <option value="Wellness" data-i18n="form.n.wellness">Wellness</option>
+                <option value="Mobile app" data-i18n="form.n.app">Mobile app</option>
+                <option value="Other" data-i18n="form.n.other">Other</option>
               </select>
             </div>
           </div>
-          <div class="field"><label for="f-goal">What do you need?</label>
+          <div class="field"><label for="f-goal" data-i18n="form.need">What do you need?</label>
             <select id="f-goal" name="goal">
-              <option value="">Select…</option>
-              <option value="UGC video ads">UGC video ads</option>
-              <option value="Organic reels / TikTok">Organic reels / TikTok</option>
-              <option value="Product photography">Product photography</option>
-              <option value="Bangkok location shoot">Bangkok location shoot</option>
-              <option value="Monthly content">Monthly content</option>
+              <option value="" data-i18n="form.select">Select…</option>
+              <option value="UGC video ads" data-i18n="form.need.ads">UGC video ads</option>
+              <option value="Organic reels / TikTok" data-i18n="form.need.organic">Organic reels / TikTok</option>
+              <option value="Product photography" data-i18n="form.need.photo">Product photography</option>
+              <option value="Bangkok location shoot" data-i18n="form.need.shoot">Bangkok location shoot</option>
+              <option value="Monthly content" data-i18n="form.need.monthly">Monthly content</option>
             </select>
           </div>
-          <div class="field"><label for="f-msg">Tell me about it</label><textarea id="f-msg" name="message" placeholder="Brand, product, timeline and the kind of content you're after."></textarea></div>
+          <div class="field"><label for="f-msg" data-i18n="form.msg">Tell me about it</label><textarea id="f-msg" name="message" data-i18n-ph="form.msg.ph" placeholder="Brand, product, timeline and the kind of content you're after."></textarea></div>
           <input class="hp" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" />
-          <button type="submit" class="btn btn-primary btn-lg">Send inquiry <span class="arrow">→</span></button>
+          <button type="submit" class="btn btn-primary btn-lg" data-i18n-html="form.send">Send inquiry <span class="arrow">→</span></button>
           <div class="form-status" id="formStatus" role="status" aria-live="polite"></div>
         </form>
       </div>
@@ -324,11 +330,11 @@
   <footer class="footer">
     <div class="container">
       <div class="footer-top">
-        <div class="footer-brand"><div class="b">Mine Koçak</div><p>Bangkok-based beauty, fashion &amp; lifestyle UGC creator. Authentic, aesthetic content for global brands.</p></div>
-        <div class="footer-col"><h4>Explore</h4><a href="#services">Services</a><a href="#portfolio">Portfolio</a><a href="#bangkok">Bangkok</a><a href="#packages">Packages</a><a href="#faq">FAQ</a></div>
-        <div class="footer-col"><h4>Connect</h4><a href="https://www.instagram.com/mineexplora" target="_blank" rel="noopener">Instagram — @mineexplora</a><a href="mailto:onurhuseyinkocak@gmail.com">Email</a><a href="https://moviatravelhub.vibecodingturkey.com" target="_blank" rel="noopener">Movia Travel Hub</a></div>
+        <div class="footer-brand"><div class="b">Mine Koçak</div><p data-i18n="footer.tag">Bangkok-based beauty, fashion &amp; lifestyle UGC creator. Authentic, aesthetic content for global brands.</p></div>
+        <div class="footer-col"><h4 data-i18n="footer.explore">Explore</h4><a href="#services" data-i18n="nav.services">Services</a><a href="#portfolio" data-i18n="nav.portfolio">Portfolio</a><a href="#bangkok" data-i18n="nav.bangkok">Bangkok</a><a href="#packages" data-i18n="nav.packages">Packages</a><a href="#faq" data-i18n="nav.faq">FAQ</a></div>
+        <div class="footer-col"><h4 data-i18n="footer.connect">Connect</h4><a href="https://www.instagram.com/mineexplora" target="_blank" rel="noopener">Instagram — @mineexplora</a><a href="mailto:onurhuseyinkocak@gmail.com" data-i18n="footer.email">Email</a><a href="https://moviatravelhub.vibecodingturkey.com" target="_blank" rel="noopener">Movia Travel Hub</a></div>
       </div>
-      <div class="footer-bottom"><span>© <span id="year">2026</span> Mine Koçak</span><span>Bangkok, Thailand · Working worldwide</span></div>
+      <div class="footer-bottom"><span>© <span id="year">2026</span> Mine Koçak</span><span data-i18n="footer.made">Bangkok, Thailand · Working worldwide</span></div>
     </div>
   </footer>
 
