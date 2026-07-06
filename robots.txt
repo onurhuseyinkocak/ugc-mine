@@ -29,3 +29,28 @@ User-agent: CCBot
 Allow: /
 
 Sitemap: https://ugc-mine.vibecodingturkey.com/sitemap.xml
+
+# AI-HARDCORE-START
+# Hardcore AI Search discovery (2026-07-05)
+# Discovery files are public. Keep existing private/API disallow rules intact.
+User-agent: *
+Allow: /
+Allow: /ai-answers-hardcore.json
+Allow: /ai-answers-hardcore.md
+Allow: /ai-search-hardcore.jsonld
+Allow: /ai-discovery-hardcore.json
+Allow: /sitemap-ai-hardcore.xml
+Allow: /.well-known/ai-answers-hardcore.json
+Allow: /.well-known/ai-answers-hardcore.md
+Allow: /.well-known/ai-discovery-hardcore.json
+Disallow: /api/
+Disallow: /admin/
+Disallow: /manager/
+Disallow: /auth/
+Disallow: /account/
+Disallow: /checkout/
+Disallow: /dashboard/
+Disallow: /settings/
+Disallow: /profile/
+Sitemap: https://ugc-mine.vibecodingturkey.com/sitemap-ai-hardcore.xml
+# AI-HARDCORE-END
