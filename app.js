@@ -34,12 +34,12 @@
       "svc8.t": "Couple Lifestyle Content", "svc8.d": "Relatable couple and travel content for lifestyle and hospitality brands.",
       "svc9.t": "App / Digital Product UGC", "svc9.d": "Natural, lifestyle-style walkthroughs for beauty, wellness and lifestyle apps.",
 
-      "pf.kicker": "Portfolio", "pf.h": "Selected concepts.",
-      "pf.p": "A look at the formats I shoot. Real campaign work is added here as collaborations go live.",
+      "pf.kicker": "Live creator work", "pf.h": "Watch Mine on Instagram.",
+      "pf.p": "Real, published creator work. Open any card to watch the original post or Reel with sound.",
       "pf.c.beauty": "Beauty", "pf.c.fashion": "Fashion", "pf.c.lifestyle": "Lifestyle", "pf.c.skincare": "Skincare", "pf.c.hosp": "Hospitality", "pf.c.app": "App", "pf.c.travel": "Travel",
-      "pf1.t": "Beauty UGC concept", "pf2.t": "Fashion reel concept", "pf3.t": "Bangkok café lifestyle", "pf4.t": "Skincare product demo",
-      "pf5.t": "Hotel lifestyle content", "pf6.t": "App UGC demo", "pf7.t": "GRWM routine", "pf8.t": "Bangkok travel lifestyle",
-      "pf.note": "Concept placeholders — replace with real Reels/TikToks as campaigns publish.",
+      "pf1.t": "Makeup and hair creator Reel", "pf2.t": "Press-on nails product demo", "pf3.t": "Creator introduction", "pf4.t": "Outdoor lifestyle storytelling",
+      "pf5.t": "Beach lifestyle visual", "pf6.t": "Natural lifestyle hook",
+      "pf.note": "Published on @mineexplora · live work checked 15 July 2026.",
 
       "why.kicker": "Why brands work with me", "why.h": "Easy to brief, lovely to watch.",
       "why1.q": "Natural <span>on camera</span>", "why1.p": "A warm, real presence that makes a product feel recommended, not advertised.",
@@ -95,6 +95,11 @@
       "contact.kicker": "Let's collaborate", "contact.h": "Tell me about your brand.",
       "contact.sub": "Share your brand, product, timeline and content needs — I'll come back with content angles and a custom quote, usually within 24 hours.",
       "contact.response": "Available for collaborations · replies within 24h",
+      "net.kicker": "Creator network", "net.h": "One brief. The right creator.", "net.p": "Choose a specialist instead of forcing one creator into every niche.",
+      "net.mine.tag": "Beauty · Lifestyle · Travel", "net.mine.p": "Warm female-led UGC for beauty, everyday products, lifestyle, travel and consumer apps.",
+      "net.onur.tag": "Tech · SaaS · Apps", "net.onur.p": "Product-fluent explainers, demos and founder-style UGC for technical products.",
+      "net.movia.tag": "Couple Travel · Places", "net.movia.p": "Couple travel and venue videos for hotels, cafés, restaurants, destinations and travel apps.",
+      "net.current": "You are here", "net.visit": "Visit portfolio →",
       "form.name": "Name", "form.name.ph": "Your name", "form.email": "Email <span class=\"req\">*</span>",
       "form.brand": "Brand", "form.brand.ph": "Brand name", "form.niche": "Niche <span class=\"req\">*</span>", "form.select": "Select…",
       "form.n.beauty": "Beauty / Skincare", "form.n.fashion": "Fashion / Clothing", "form.n.lifestyle": "Lifestyle", "form.n.travel": "Travel / Hospitality", "form.n.hotel": "Hotel / Café / Restaurant", "form.n.wellness": "Wellness", "form.n.app": "Mobile app", "form.n.other": "Other",
@@ -102,9 +107,10 @@
       "form.msg": "Tell me about it", "form.msg.ph": "Brand, product, timeline and the kind of content you're after.",
       "form.send": "Send inquiry <span class=\"arrow\">→</span>",
       "form.sending": "Sending…", "form.ok": "Thank you — got it. I'll reply within 24 hours.", "form.err": "Add your email and niche, then try again.",
+      "form.fallback": "Automatic delivery is temporarily unavailable. Your completed brief is ready as an email draft:", "form.fallback.cta": "Open email",
 
       "footer.tag": "Bangkok-based beauty, fashion &amp; lifestyle UGC creator. Authentic, aesthetic content for global brands.",
-      "footer.explore": "Explore", "footer.connect": "Connect", "footer.email": "Email", "footer.made": "Bangkok, Thailand · Working worldwide"
+      "footer.explore": "Explore", "footer.connect": "Connect", "footer.network": "Creator network", "footer.email": "Email", "footer.made": "Bangkok, Thailand · Working worldwide"
     },
 
     tr: {
@@ -138,12 +144,12 @@
       "svc8.t": "Çift Yaşam Tarzı İçeriği", "svc8.d": "Yaşam tarzı ve ağırlama markaları için samimi çift ve seyahat içeriği.",
       "svc9.t": "Uygulama / Dijital Ürün UGC", "svc9.d": "Güzellik, wellness ve yaşam tarzı uygulamaları için doğal, yaşam-tarzı tanıtımlar.",
 
-      "pf.kicker": "Portfolyo", "pf.h": "Seçili konseptler.",
-      "pf.p": "Çektiğim formatlara bir bakış. Gerçek kampanya işleri, iş birlikleri yayınlandıkça buraya eklenir.",
+      "pf.kicker": "Canlı üretici işleri", "pf.h": "Mine'ı Instagram'da izle.",
+      "pf.p": "Gerçek, yayınlanmış üretici işleri. Orijinal gönderiyi veya Reels videosunu sesli izlemek için bir karta dokun.",
       "pf.c.beauty": "Güzellik", "pf.c.fashion": "Moda", "pf.c.lifestyle": "Yaşam Tarzı", "pf.c.skincare": "Cilt Bakımı", "pf.c.hosp": "Ağırlama", "pf.c.app": "Uygulama", "pf.c.travel": "Seyahat",
-      "pf1.t": "Güzellik UGC konsepti", "pf2.t": "Moda reel konsepti", "pf3.t": "Bangkok kafe yaşam tarzı", "pf4.t": "Cilt bakımı ürün demosu",
-      "pf5.t": "Otel yaşam tarzı içeriği", "pf6.t": "Uygulama UGC demosu", "pf7.t": "GRWM rutini", "pf8.t": "Bangkok seyahat yaşam tarzı",
-      "pf.note": "Konsept placeholder'ları — kampanyalar yayınlandıkça gerçek Reels/TikTok ile değiştir.",
+      "pf1.t": "Makyaj ve saç üretici Reels'i", "pf2.t": "Takma tırnak ürün demosu", "pf3.t": "Üretici tanıtımı", "pf4.t": "Outdoor lifestyle hikâyesi",
+      "pf5.t": "Sahil lifestyle görseli", "pf6.t": "Doğal lifestyle kancası",
+      "pf.note": "@mineexplora'da yayında · canlı işler 15 Temmuz 2026'da kontrol edildi.",
 
       "why.kicker": "Markalar neden benimle çalışıyor", "why.h": "Brief vermesi kolay, izlemesi keyifli.",
       "why1.q": "Kamera <span>önünde doğal</span>", "why1.p": "Ürünü reklam değil, tavsiye gibi hissettiren sıcak ve gerçek bir duruş.",
@@ -199,6 +205,11 @@
       "contact.kicker": "Hadi çalışalım", "contact.h": "Markandan bahset.",
       "contact.sub": "Markanı, ürününü, zaman planını ve içerik ihtiyaçlarını paylaş — içerik açıları ve özel bir teklifle, genelde 24 saat içinde dönerim.",
       "contact.response": "İş birliklerine açık · 24 saat içinde yanıt",
+      "net.kicker": "Üretici ağı", "net.h": "Tek brief. Doğru üretici.", "net.p": "Her nişi tek kişiye zorlamak yerine işin uzmanını seç.",
+      "net.mine.tag": "Güzellik · Lifestyle · Travel", "net.mine.p": "Güzellik, gündelik ürünler, lifestyle, travel ve tüketici uygulamaları için sıcak kadın üretici bakışı.",
+      "net.onur.tag": "Tech · SaaS · App", "net.onur.p": "Teknik ürünler için ürüne hâkim anlatım, demo ve founder-style UGC.",
+      "net.movia.tag": "Couple Travel · Mekân", "net.movia.p": "Otel, kafe, restoran, destinasyon ve travel app'ler için çift seyahat ve mekân videoları.",
+      "net.current": "Şu an buradasın", "net.visit": "Portfolyoya git →",
       "form.name": "İsim", "form.name.ph": "Adın", "form.email": "E-posta <span class=\"req\">*</span>",
       "form.brand": "Marka", "form.brand.ph": "Marka adı", "form.niche": "Niş <span class=\"req\">*</span>", "form.select": "Seç…",
       "form.n.beauty": "Güzellik / Cilt Bakımı", "form.n.fashion": "Moda / Giyim", "form.n.lifestyle": "Yaşam Tarzı", "form.n.travel": "Seyahat / Ağırlama", "form.n.hotel": "Otel / Kafe / Restoran", "form.n.wellness": "Wellness", "form.n.app": "Mobil uygulama", "form.n.other": "Diğer",
@@ -206,9 +217,10 @@
       "form.msg": "Biraz anlat", "form.msg.ph": "Marka, ürün, zaman planı ve istediğin içerik türü.",
       "form.send": "Mesaj gönder <span class=\"arrow\">→</span>",
       "form.sending": "Gönderiliyor…", "form.ok": "Teşekkürler — aldım. 24 saat içinde döneceğim.", "form.err": "E-posta ve niş ekleyip tekrar dene.",
+      "form.fallback": "Otomatik gönderim geçici olarak kapalı. Doldurduğun brief e-posta taslağı olarak hazır:", "form.fallback.cta": "E-postayı aç",
 
       "footer.tag": "Bangkok merkezli güzellik, moda &amp; yaşam tarzı UGC içerik üreticisi. Global markalar için samimi, estetik içerik.",
-      "footer.explore": "Keşfet", "footer.connect": "Bağlan", "footer.email": "E-posta", "footer.made": "Bangkok, Tayland · Dünya geneli çalışıyorum"
+      "footer.explore": "Keşfet", "footer.connect": "Bağlan", "footer.network": "Üretici ağı", "footer.email": "E-posta", "footer.made": "Bangkok, Tayland · Dünya geneli çalışıyorum"
     },
 
     th: {
@@ -218,7 +230,7 @@
       "hero.h": "ผู้สร้างเนื้อหา UGC ที่ตั้งอยู่ในกรุงเทพสำหรับแบรนด์ <em>ความงาม แฟชั่น และไลฟ์สไตล์</em>",
       "hero.sub": "ฉันคือ Mine — ฉันสร้างเนื้อหาวิดีโอสั้นที่แท้จริงและสวยงามเพื่อช่วยให้แบรนด์ของคุณเล่าเรื่องราวผลิตภัณฑ์ของพวกเขา ความงาม ผลิตภัณฑ์บำรุงผิว แฟชั่น ไลฟ์สไตล์ การเดินทาง และการท่องเที่ยว สร้างที่กรุงเทพสำหรับโฆษณาในโซเชียล โพสต์แบบปกติ Reels และ TikTok",
       "hero.cta1": "ทำงานกับฉัน <span class=\"arrow\">→</span>", "hero.cta2": "ดูพอร์ตโฟลิโอ",
-      "hero.chip1": "กรุงเทพ ประเทศไทย", "hero.chip2": "เนื้อหาภาษาอังกฤษและไทย", "hero.chip3": "แบรนด์ทั่วโลก",
+      "hero.chip1": "กรุงเทพ ประเทศไทย", "hero.chip2": "คอนเทนต์ภาษาอังกฤษและตุรกี · ส่งบรีฟภาษาไทยได้", "hero.chip3": "แบรนด์ทั่วโลก",
 
       "mq.beauty": "ความงาม", "mq.skincare": "ผลิตภัณฑ์บำรุงผิว", "mq.fashion": "แฟชั่น", "mq.lifestyle": "ไลฟ์สไตล์", "mq.travel": "การเดินทาง", "mq.hotels": "โรงแรม &amp; คาเฟ่", "mq.wellness": "ความปลอดภัยและสุขภาพ", "mq.apps": "แอปพลิเคชัน",
 
@@ -242,12 +254,12 @@
       "svc8.t": "เนื้อหาไลฟ์สไตล์คู่", "svc8.d": "เนื้อหาคู่และการเดินทางที่เกี่ยวข้องสำหรับแบรนด์ไลฟ์สไตล์และการท่องเที่ยว",
       "svc9.t": "แอป / เนื้อหา UGC ผลิตภัณฑ์ดิจิทัล", "svc9.d": "วิธีใช้งานวิดีโอแนวไลฟ์สไตล์ที่เป็นธรรมชาติสำหรับแอปความงาม สุขภาพ และไลฟ์สไตล์",
 
-      "pf.kicker": "พอร์ตโฟลิโอ", "pf.h": "แนวคิดที่เลือก",
-      "pf.p": "ภาพรวมของรูปแบบที่ฉันถ่าย งานแคมเปญจริงจะถูกเพิ่มที่นี่เมื่อความร่วมมือเข้าสู่ขั้นตอนการทำงาน",
+      "pf.kicker": "ผลงานจริงของครีเอเตอร์", "pf.h": "ดูผลงาน Mine บน Instagram",
+      "pf.p": "ผลงานจริงที่เผยแพร่แล้ว เปิดแต่ละการ์ดเพื่อดูโพสต์หรือ Reel ต้นฉบับพร้อมเสียง",
       "pf.c.beauty": "ความงาม", "pf.c.fashion": "แฟชั่น", "pf.c.lifestyle": "ไลฟ์สไตล์", "pf.c.skincare": "ผลิตภัณฑ์บำรุงผิว", "pf.c.hosp": "การท่องเที่ยว", "pf.c.app": "แอพพลิเคชั่น", "pf.c.travel": "การเดินทาง",
-      "pf1.t": "แนวคิด UGC ความงาม", "pf2.t": "แนวคิดม้วนแฟชั่น", "pf3.t": "ไลฟ์สไตล์คาเฟ่กรุงเทพ", "pf4.t": "สาธิตผลิตภัณฑ์บำรุงผิว",
-      "pf5.t": "เนื้อหาไลฟ์สไตล์โรงแรม", "pf6.t": "สาธิต UGC แอพพลิเคชั่น", "pf7.t": "กิจวัตร GRWM", "pf8.t": "ไลฟ์สไตล์การเดินทางของกรุงเทพ",
-      "pf.note": "โปรแกรมยึดตำแหน่งแนวคิด — แทนที่ด้วย Reels/TikToks จริงเมื่อแคมเปญเผยแพร่",
+      "pf1.t": "Reel แต่งหน้าและทำผม", "pf2.t": "เดโมเล็บปลอม", "pf3.t": "แนะนำตัวครีเอเตอร์", "pf4.t": "เล่าเรื่องไลฟ์สไตล์กลางแจ้ง",
+      "pf5.t": "ภาพไลฟ์สไตล์ริมทะเล", "pf6.t": "ฮุกไลฟ์สไตล์แบบธรรมชาติ",
+      "pf.note": "เผยแพร่บน @mineexplora · ตรวจสอบผลงานล่าสุด 15 กรกฎาคม 2026",
 
       "why.kicker": "ทำไมแบรนด์ถึงทำงานกับฉัน", "why.h": "ง่ายในการให้คำสั่ง น่าดู",
       "why1.q": "ธรรมชาติ <span>หน้ากล้อง</span>", "why1.p": "การปรากฏตัวที่อบอุ่นและแท้จริงที่ทำให้ผลิตภัณฑ์รู้สึกแนะนำ ไม่ใช่โฆษณา",
@@ -260,7 +272,7 @@
       "bkk.kicker": "ข้อได้เปรียบของกรุงเทพ",
       "bkk.big": "เมืองที่สร้างสรรค์ที่ให้เนื้อหาที่สดใหม่ อบอุ่น และสวยงามโดยนานาชาติแก่แบรนด์ของคุณ",
       "bkk.p1": "กรุงเทพเต็มไปด้วยคาเฟ่ที่เต็มไปด้วยแสง โรงแรมที่นำด้านการออกแบบและสถานที่ไลฟ์สไตล์ที่ถ่ายภาพได้สวยงาม สำหรับแบรนด์ความงาม แฟชั่น หรือไลฟ์สไตล์ทั่วโลก นั่นหมายถึงเนื้อหาที่รู้สึกว่าเป็นปัจจุบันและได้รับแรงบันดาลใจจากการเดินทาง — ถ่ายอย่างมีประสิทธิภาพ ในสถานที่ และไม่มีต้นทุนการผลิตแบบตะวันตก",
-      "bkk.p2": "มันเป็นฐาน Asian ที่มีสายตาโลก: น่าเชื่อพอที่จะรู้สึกว่าเป็นของแท้ ประณีตพอที่จะนั่งข้างเคียงกับงานที่ดีที่สุดของแบรนด์ของคุณ",
+      "bkk.p2": "มันเป็นฐาน Asian ที่มีสายตาโลก: น่าเชื่อพอที่จะรู้สึกว่าเป็นของแท้ ประณีตพอที่จะนั่งข้างเคียงกับงานที่เหมาะสมของแบรนด์ของคุณ",
 
       "types.kicker": "สิ่งที่ฉันสร้าง", "types.h": "รูปแบบที่แบรนด์ขอ",
       "t.unbox": "การแกะกล่อง", "t.demo": "สาธิตผลิตภัณฑ์", "t.ps": "โฆษณาปัญหา / โซลูชัน", "t.morning": "กิจวัตรเช้า", "t.grwm": "GRWM", "t.tryon": "ลองห้องสมุดหนังสือ",
@@ -275,7 +287,7 @@
       "pkg.kicker": "ตัวเลือกความร่วมมือ", "pkg.h": "เลือกจุดเริ่มต้น",
       "pkg.p": "ขอบเขตที่ยืดหยุ่นซึ่งกำหนดรูปร่างตามสั่ง เสนอราคาแบบกำหนดเองพร้อมใช้งาน — ติดต่อสำหรับอัตรา",
       "pkg.rates": "ติดต่อสำหรับอัตรา", "pkg.addon": "เพิ่มเติม",
-      "pkg1.t": "วิดีโอ UGC เดียว", "pkg1.d": "แนวคิดเดียว วิดีโอเดียว ตัดต่อ + ดิบ ดีที่สุดสำหรับการทดสอบครั้งแรก",
+      "pkg1.t": "วิดีโอ UGC เดียว", "pkg1.d": "แนวคิดเดียว วิดีโอเดียว ตัดต่อ + ดิบ เหมาะสมสำหรับการทดสอบครั้งแรก",
       "pkg2.t": "แพ็กเกจวิดีโอ UGC", "pkg2.d": "ชุดวิดีโอที่มีหลายขั้วสำหรับการทดสอบแบบปกติ + จ่าย",
       "pkg3.t": "แพ็กเกจเนื้อหารายเดือน", "pkg3.d": "กระแสเนื้อหาที่อยู่ติดกับแบรนด์นั้นอย่างสม่ำเสมอและนำส่งรายเดือน",
       "pkg4.t": "ถ่ายภาพผลิตภัณฑ์", "pkg4.d": "ภาพนิ่งผลิตภัณฑ์บริหารเพื่อจับคู่กับส่วนการนำส่งวิดีโอของคุณ",
@@ -303,6 +315,11 @@
       "contact.kicker": "ลองทำงานร่วมกัน", "contact.h": "บอกฉันเกี่ยวกับแบรนด์ของคุณ",
       "contact.sub": "แบ่งปันแบรนด์ ผลิตภัณฑ์ ไทม์ไลน์ และความต้องการเนื้อหาของคุณ — ฉันจะกลับมาพร้อมมุมเนื้อหา และราคาแบบกำหนดเอง โดยปกติภายใน 24 ชั่วโมง",
       "contact.response": "พร้อมใช้งานสำหรับความร่วมมือ · ตอบกลับภายใน 24 ชั่วโมง",
+      "net.kicker": "เครือข่ายครีเอเตอร์", "net.h": "บรีฟเดียว เลือกครีเอเตอร์ให้ตรงงาน", "net.p": "เลือกผู้เชี่ยวชาญแต่ละสาย แทนการให้ครีเอเตอร์คนเดียวทำทุกอย่าง",
+      "net.mine.tag": "ความงาม · ไลฟ์สไตล์ · ท่องเที่ยว", "net.mine.p": "UGC โดยครีเอเตอร์หญิงสำหรับความงาม สินค้าในชีวิตประจำวัน ไลฟ์สไตล์ ท่องเที่ยว และแอปผู้บริโภค",
+      "net.onur.tag": "เทค · SaaS · แอป", "net.onur.p": "วิดีโออธิบาย เดโม และ founder-style UGC สำหรับผลิตภัณฑ์เทค",
+      "net.movia.tag": "คู่รักท่องเที่ยว · สถานที่", "net.movia.p": "วิดีโอคู่รักท่องเที่ยวและรีวิวสถานที่สำหรับโรงแรม คาเฟ่ ร้านอาหาร จุดหมาย และแอปท่องเที่ยว",
+      "net.current": "คุณอยู่ที่นี่", "net.visit": "ดูพอร์ตโฟลิโอ →",
       "form.name": "ชื่อ", "form.name.ph": "ชื่อของคุณ", "form.email": "อีเมล <span class=\"req\">*</span>",
       "form.brand": "แบรนด์", "form.brand.ph": "ชื่อแบรนด์", "form.niche": "ข้อมูลเฉพาะ <span class=\"req\">*</span>", "form.select": "เลือก…",
       "form.n.beauty": "ความงาม / ผลิตภัณฑ์บำรุงผิว", "form.n.fashion": "แฟชั่น / เสื้อผ้า", "form.n.lifestyle": "ไลฟ์สไตล์", "form.n.travel": "การเดินทาง / การท่องเที่ยว", "form.n.hotel": "โรงแรม / คาเฟ่ / ร้านอาหาร", "form.n.wellness": "สุขภาพและความปลอดภัย", "form.n.app": "แอปมือถือ", "form.n.other": "อื่น ๆ",
@@ -310,9 +327,10 @@
       "form.msg": "บอกฉันเกี่ยวกับมัน", "form.msg.ph": "แบรนด์ ผลิตภัณฑ์ ไทม์ไลน์ และประเภทของเนื้อหาที่คุณชาต",
       "form.send": "ส่งสอบถาม <span class=\"arrow\">→</span>",
       "form.sending": "กำลังส่ง…", "form.ok": "ขอบคุณ — ได้รับ ฉันจะตอบกลับภายใน 24 ชั่วโมง", "form.err": "เพิ่มอีเมลและข้อมูลเฉพาะของคุณ แล้วลองอีกครั้ง",
+      "form.fallback": "ระบบส่งอัตโนมัติไม่พร้อมใช้งานชั่วคราว บรีฟของคุณถูกเตรียมเป็นอีเมลแล้ว:", "form.fallback.cta": "เปิดอีเมล",
 
       "footer.tag": "ผู้สร้างเนื้อหา UGC ความงาม แฟชั่น และไลฟ์สไตล์ที่ตั้งอยู่ในกรุงเทพ เนื้อหาที่แท้จริงและสวยงามสำหรับแบรนด์ทั่วโลก",
-      "footer.explore": "สำรวจ", "footer.connect": "เชื่อมต่อ", "footer.email": "อีเมล", "footer.made": "กรุงเทพ ประเทศไทย · ทำงานทั่วโลก"
+      "footer.explore": "สำรวจ", "footer.connect": "เชื่อมต่อ", "footer.network": "เครือข่ายครีเอเตอร์", "footer.email": "อีเมล", "footer.made": "กรุงเทพ ประเทศไทย · ทำงานทั่วโลก"
     }
   };
 
@@ -392,6 +410,20 @@
 
   var leadForm = document.getElementById("leadForm");
   if (leadForm) {
+    function mailFallback(status, fd) {
+      var rows = [
+        ["Name", fd.get("name")], ["Email", fd.get("email")], ["Brand", fd.get("company")],
+        ["Niche", fd.get("product")], ["Need", fd.get("goal")], ["Brief", fd.get("message")]
+      ];
+      var body = rows.map(function (row) { return row[0] + ": " + String(row[1] || "").trim(); }).join("\n");
+      var href = "mailto:mineexplora@gmail.com?subject=" + encodeURIComponent("UGC collaboration brief for Mine") + "&body=" + encodeURIComponent(body);
+      status.textContent = trS("form.fallback") + " ";
+      var link = document.createElement("a");
+      link.href = href; link.textContent = trS("form.fallback.cta"); link.style.textDecoration = "underline";
+      status.appendChild(link); status.className = "form-status err";
+      window.location.href = href;
+    }
+
     leadForm.addEventListener("submit", function (ev) {
       ev.preventDefault();
       var status = document.getElementById("formStatus"), btn = leadForm.querySelector("button[type=submit]"), fd = new FormData(leadForm);
@@ -403,8 +435,8 @@
         method: "POST", headers: { "Content-Type": "application/json", apikey: LEAD_ANON, Authorization: "Bearer " + LEAD_ANON },
         body: JSON.stringify({ action: "submit", kind: "mine-booking", lang: window.__lang || "en", site: "ugc-mine", name: fd.get("name") || "", email: email, company: fd.get("company") || "", product: product, goal: fd.get("goal") || "", message: fd.get("message") || "", channel: ENTRY.channel, entry_referrer: ENTRY.entry_referrer, utm: ENTRY.utm })
       }).then(function (r) { return r.json().catch(function () { return {}; }).then(function (j) { return { ok: r.ok, j: j }; }); })
-        .then(function (res) { if (res.ok && res.j && res.j.ok) { status.textContent = trS("form.ok"); status.className = "form-status ok"; leadForm.reset(); } else { status.textContent = trS("form.err"); status.className = "form-status err"; } })
-        .catch(function () { status.textContent = trS("form.err"); status.className = "form-status err"; })
+        .then(function (res) { if (res.ok && res.j && res.j.ok) { status.textContent = trS("form.ok"); status.className = "form-status ok"; leadForm.reset(); } else { mailFallback(status, fd); } })
+        .catch(function () { mailFallback(status, fd); })
         .then(function () { btn.disabled = false; });
     });
   }
