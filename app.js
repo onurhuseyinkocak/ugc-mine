@@ -6,13 +6,13 @@
     en: {
       "nav.services": "Services", "nav.portfolio": "Portfolio", "nav.bangkok": "Bangkok", "nav.packages": "Packages", "nav.faq": "FAQ", "nav.cta": "Work With Me",
 
-      "hero.kicker": "Bangkok · Beauty · Fashion · Lifestyle",
+      "hero.kicker": "Bangkok · Beauty-first · Canvas UGC",
       "hero.h": "Bangkok-based UGC creator for <em>beauty, fashion &amp; lifestyle</em> brands.",
-      "hero.sub": "I'm Mine — I create authentic, aesthetic short-form content that helps brands tell their product story. Beauty, skincare, fashion, lifestyle, travel and hospitality, made in Bangkok for social ads, organic posts, Reels and TikTok.",
+      "hero.sub": "Beauty-first UGC plus recurring Canvas UGC for products, apps, places and services, created by our Bangkok network.",
       "hero.cta1": "Work With Me <span class=\"arrow\">→</span>", "hero.cta2": "View portfolio",
       "hero.chip1": "Bangkok, Thailand", "hero.chip2": "English &amp; Turkish content", "hero.chip3": "Brands worldwide",
 
-      "mq.beauty": "Beauty", "mq.skincare": "Skincare", "mq.fashion": "Fashion", "mq.lifestyle": "Lifestyle", "mq.travel": "Travel", "mq.hotels": "Hotels &amp; Cafés", "mq.wellness": "Wellness", "mq.apps": "Apps",
+      "mq.beauty": "Beauty", "mq.skincare": "Skincare", "mq.fashion": "Fashion", "mq.lifestyle": "Lifestyle", "mq.travel": "Travel", "mq.hotels": "Hotels &amp; Cafés", "mq.wellness": "Wellness", "mq.apps": "Apps", "mq.food": "Food &amp; Beverage", "mq.products": "Consumer Products", "mq.services": "Services", "mq.canvas": "Canvas UGC",
 
       "pos.kicker": "Who I am",
       "pos.big": "A female UGC creator based in Bangkok — available for local shoots and global product campaigns, with content that feels natural, polished and brand-safe.",
@@ -33,6 +33,7 @@
       "svc7.t": "Travel / Hotel / Café Content", "svc7.d": "On-location hospitality content from Bangkok's most photogenic spaces.",
       "svc8.t": "Couple Lifestyle Content", "svc8.d": "Relatable couple and travel content for lifestyle and hospitality brands.",
       "svc9.t": "App / Digital Product UGC", "svc9.d": "Natural, lifestyle-style walkthroughs for beauty, wellness and lifestyle apps.",
+      "svc10.t": "Canvas UGC Programs", "svc10.d": "Recurring concepts, scripts, videos and optional posting for a brand-owned or dedicated ambassador account in any category.",
 
       "pf.kicker": "Live creator work", "pf.h": "Watch Mine on Instagram.",
       "pf.p": "Real, published creator work. Open any card to watch the original post or Reel with sound.",
@@ -56,7 +57,7 @@
 
       "types.kicker": "What I create", "types.h": "Formats brands ask for.",
       "t.unbox": "Unboxing", "t.demo": "Product demo", "t.ps": "Problem / solution ad", "t.morning": "Morning routine", "t.grwm": "GRWM", "t.tryon": "Try-on haul",
-      "t.vo": "Voiceover UGC", "t.testi": "Testimonial-style", "t.life": "Lifestyle integration", "t.travel": "Café / hotel / travel", "t.app": "App walkthrough", "t.couple": "Couple lifestyle",
+      "t.vo": "Voiceover UGC", "t.testi": "Testimonial-style", "t.life": "Lifestyle integration", "t.travel": "Café / hotel / travel", "t.app": "App walkthrough", "t.couple": "Couple lifestyle", "t.canvas": "Canvas UGC series",
 
       "proc.kicker": "Process", "proc.h": "Simple, from brief to delivery.",
       "step1.t": "Brand brief", "step1.d": "You share the product, goal, references and timeline.",
@@ -69,7 +70,7 @@
       "pkg.rates": "Contact for rates", "pkg.addon": "Add-on",
       "pkg1.t": "Single UGC Video", "pkg1.d": "One concept, one video, edited + raw. Best for a first test.",
       "pkg2.t": "UGC Video Bundle", "pkg2.d": "A set of videos with multiple hooks for organic + paid testing.",
-      "pkg3.t": "Monthly Content Package", "pkg3.d": "A steady stream of on-brand content, planned and delivered monthly.",
+      "pkg3.t": "Canvas UGC / Monthly Content", "pkg3.d": "A recurring short-form system for your brand or ambassador account, with concepts, scripts, edits and optional posting.",
       "pkg4.t": "Product Photography", "pkg4.d": "Editorial product stills to pair with your video deliverables.",
       "pkg5.t": "Bangkok Location Shoot", "pkg5.d": "On-location café, hotel or lifestyle content shot in Bangkok.",
       "pkg6.t": "Couple / Travel Lifestyle", "pkg6.d": "Warm couple and travel content for lifestyle and hospitality brands.",
@@ -91,38 +92,40 @@
       "faq.a7": "Yes. Lifestyle-style app UGC — walkthroughs, problem-solution and integration content — framed in a natural, everyday way that suits beauty, wellness and lifestyle apps.",
       "faq.q8": "How do brands collaborate with you?",
       "faq.a8": "Send the brand, product, timeline and content needs through the form below, by email, or via Instagram DM. I'll reply with content angles, scope and a custom quote based on deliverables.",
+      "faq.q9": "Do you offer Canvas UGC for every brand category?",
+      "faq.a9": "Yes. We create recurring Canvas UGC for brand-owned or dedicated ambassador accounts across beauty, apps, food, travel, hospitality, wellness, fashion, education, services and everyday consumer products. The brief is matched to the right creator and setting.",
 
       "contact.kicker": "Let's collaborate", "contact.h": "Tell me about your brand.",
       "contact.sub": "Share your brand, product, timeline and content needs — I'll come back with content angles and a custom quote, usually within 24 hours.",
       "contact.response": "Available for collaborations · replies within 24h",
-      "net.kicker": "Creator network", "net.h": "One brief. The right creator.", "net.p": "Choose a specialist instead of forcing one creator into every niche.",
+      "net.kicker": "Creator network", "net.h": "Every category. The right lead creator.", "net.p": "All three creators handle broad briefs and Canvas UGC. We lead with the strongest fit instead of presenting a generic one-size-fits-all team.",
       "net.mine.tag": "Beauty · Lifestyle · Travel", "net.mine.p": "Warm female-led UGC for beauty, everyday products, lifestyle, travel and consumer apps.",
       "net.onur.tag": "Tech · SaaS · Apps", "net.onur.p": "Product-fluent explainers, demos and founder-style UGC for technical products.",
       "net.movia.tag": "Couple Travel · Places", "net.movia.p": "Couple travel and venue videos for hotels, cafés, restaurants, destinations and travel apps.",
       "net.current": "You are here", "net.visit": "Visit portfolio →",
       "form.name": "Name", "form.name.ph": "Your name", "form.email": "Email <span class=\"req\">*</span>",
       "form.brand": "Brand", "form.brand.ph": "Brand name", "form.niche": "Niche <span class=\"req\">*</span>", "form.select": "Select…",
-      "form.n.beauty": "Beauty / Skincare", "form.n.fashion": "Fashion / Clothing", "form.n.lifestyle": "Lifestyle", "form.n.travel": "Travel / Hospitality", "form.n.hotel": "Hotel / Café / Restaurant", "form.n.wellness": "Wellness", "form.n.app": "Mobile app", "form.n.other": "Other",
-      "form.need": "What do you need?", "form.need.ads": "UGC video ads", "form.need.organic": "Organic reels / TikTok", "form.need.photo": "Product photography", "form.need.shoot": "Bangkok location shoot", "form.need.monthly": "Monthly content",
+      "form.n.beauty": "Beauty / Skincare", "form.n.fashion": "Fashion / Clothing", "form.n.lifestyle": "Lifestyle", "form.n.travel": "Travel / Hospitality", "form.n.hotel": "Hotel / Café / Restaurant", "form.n.wellness": "Wellness", "form.n.app": "Mobile app", "form.n.food": "Food / Beverage", "form.n.consumer": "Consumer product / service", "form.n.other": "Other",
+      "form.need": "What do you need?", "form.need.ads": "UGC video ads", "form.need.organic": "Organic reels / TikTok", "form.need.photo": "Product photography", "form.need.shoot": "Bangkok location shoot", "form.need.monthly": "Monthly content", "form.need.canvas": "Canvas UGC / brand account",
       "form.msg": "Tell me about it", "form.msg.ph": "Brand, product, timeline and the kind of content you're after.",
       "form.send": "Send inquiry <span class=\"arrow\">→</span>",
       "form.sending": "Sending…", "form.ok": "Thank you — got it. I'll reply within 24 hours.", "form.err": "Add your email and niche, then try again.",
       "form.fallback": "Automatic delivery is temporarily unavailable. Your completed brief is ready as an email draft:", "form.fallback.cta": "Open email",
 
-      "footer.tag": "Bangkok-based beauty, fashion &amp; lifestyle UGC creator. Authentic, aesthetic content for global brands.",
+      "footer.tag": "Beauty-first UGC and recurring Canvas UGC for products, apps, places and services across every brand category.",
       "footer.explore": "Explore", "footer.connect": "Connect", "footer.network": "Creator network", "footer.email": "Email", "footer.made": "Bangkok, Thailand · Working worldwide"
     },
 
     tr: {
       "nav.services": "Hizmetler", "nav.portfolio": "Portfolyo", "nav.bangkok": "Bangkok", "nav.packages": "Paketler", "nav.faq": "SSS", "nav.cta": "Birlikte çalışalım",
 
-      "hero.kicker": "Bangkok · Güzellik · Moda · Yaşam Tarzı",
+      "hero.kicker": "Bangkok · Beauty-first · Canvas UGC",
       "hero.h": "<em>Güzellik, moda &amp; yaşam tarzı</em> markaları için Bangkok merkezli UGC içerik üreticisi.",
-      "hero.sub": "Ben Mine — markaların ürün hikâyesini anlatmasına yardımcı olan, samimi ve estetik kısa videolar üretiyorum. Güzellik, cilt bakımı, moda, yaşam tarzı, seyahat ve ağırlama; sosyal reklam, organik içerik, Reels ve TikTok için Bangkok'ta çekiliyor.",
+      "hero.sub": "Ürün, uygulama, mekân ve hizmetler için beauty-first UGC ve düzenli Canvas UGC; Bangkok üretici ağımızla.",
       "hero.cta1": "Birlikte çalışalım <span class=\"arrow\">→</span>", "hero.cta2": "Portfolyoya bak",
       "hero.chip1": "Bangkok, Tayland", "hero.chip2": "İngilizce &amp; Türkçe içerik", "hero.chip3": "Dünya geneli markalar",
 
-      "mq.beauty": "Güzellik", "mq.skincare": "Cilt Bakımı", "mq.fashion": "Moda", "mq.lifestyle": "Yaşam Tarzı", "mq.travel": "Seyahat", "mq.hotels": "Otel &amp; Kafe", "mq.wellness": "Wellness", "mq.apps": "Uygulamalar",
+      "mq.beauty": "Güzellik", "mq.skincare": "Cilt Bakımı", "mq.fashion": "Moda", "mq.lifestyle": "Yaşam Tarzı", "mq.travel": "Seyahat", "mq.hotels": "Otel &amp; Kafe", "mq.wellness": "Wellness", "mq.apps": "Uygulamalar", "mq.food": "Yeme İçme", "mq.products": "Tüketici Ürünleri", "mq.services": "Hizmetler", "mq.canvas": "Canvas UGC",
 
       "pos.kicker": "Ben kimim",
       "pos.big": "Bangkok merkezli bir kadın UGC içerik üreticisi — yerel çekimler ve global ürün kampanyaları için müsait; doğal, özenli ve markaya güvenli içerikler.",
@@ -143,6 +146,7 @@
       "svc7.t": "Seyahat / Otel / Kafe İçeriği", "svc7.d": "Bangkok'un en fotojenik mekânlarından, yerinde ağırlama içeriği.",
       "svc8.t": "Çift Yaşam Tarzı İçeriği", "svc8.d": "Yaşam tarzı ve ağırlama markaları için samimi çift ve seyahat içeriği.",
       "svc9.t": "Uygulama / Dijital Ürün UGC", "svc9.d": "Güzellik, wellness ve yaşam tarzı uygulamaları için doğal, yaşam-tarzı tanıtımlar.",
+      "svc10.t": "Canvas UGC Programları", "svc10.d": "Marka hesabı veya özel ambassador hesabı için düzenli konsept, senaryo, video ve isteğe bağlı yayınlama. Her kategoriye açık.",
 
       "pf.kicker": "Canlı üretici işleri", "pf.h": "Mine'ı Instagram'da izle.",
       "pf.p": "Gerçek, yayınlanmış üretici işleri. Orijinal gönderiyi veya Reels videosunu sesli izlemek için bir karta dokun.",
@@ -166,7 +170,7 @@
 
       "types.kicker": "Ne üretiyorum", "types.h": "Markaların istediği formatlar.",
       "t.unbox": "Unboxing", "t.demo": "Ürün demosu", "t.ps": "Problem / çözüm reklamı", "t.morning": "Sabah rutini", "t.grwm": "GRWM", "t.tryon": "Try-on haul",
-      "t.vo": "Voiceover UGC", "t.testi": "Testimonial tarzı", "t.life": "Yaşam tarzı entegrasyonu", "t.travel": "Kafe / otel / seyahat", "t.app": "Uygulama tanıtımı", "t.couple": "Çift yaşam tarzı",
+      "t.vo": "Voiceover UGC", "t.testi": "Testimonial tarzı", "t.life": "Yaşam tarzı entegrasyonu", "t.travel": "Kafe / otel / seyahat", "t.app": "Uygulama tanıtımı", "t.couple": "Çift yaşam tarzı", "t.canvas": "Canvas UGC serisi",
 
       "proc.kicker": "Süreç", "proc.h": "Brief'ten teslime, basit.",
       "step1.t": "Marka brief'i", "step1.d": "Ürünü, hedefi, referansları ve zaman planını paylaşırsın.",
@@ -179,7 +183,7 @@
       "pkg.rates": "Fiyat için iletişim", "pkg.addon": "Ek",
       "pkg1.t": "Tek UGC Video", "pkg1.d": "Tek konsept, tek video, kurgu + ham. İlk test için ideal.",
       "pkg2.t": "UGC Video Paketi", "pkg2.d": "Organik + paid test için çoklu kancalı bir video seti.",
-      "pkg3.t": "Aylık İçerik Paketi", "pkg3.d": "Markana uygun içeriğin aylık, düzenli akışı.",
+      "pkg3.t": "Canvas UGC / Aylık İçerik", "pkg3.d": "Marka veya ambassador hesabın için konsept, senaryo, kurgu ve isteğe bağlı yayınlamayı kapsayan düzenli kısa video sistemi.",
       "pkg4.t": "Ürün Fotoğrafçılığı", "pkg4.d": "Video teslimatlarınla eşleşecek editoryal ürün kareleri.",
       "pkg5.t": "Bangkok Mekan Çekimi", "pkg5.d": "Bangkok'ta yerinde çekilen kafe, otel ya da yaşam tarzı içeriği.",
       "pkg6.t": "Çift / Seyahat Yaşam Tarzı", "pkg6.d": "Yaşam tarzı ve ağırlama markaları için sıcak çift ve seyahat içeriği.",
@@ -201,38 +205,40 @@
       "faq.a7": "Evet. Yaşam-tarzı tarzında uygulama UGC'si — tanıtım, problem-çözüm ve entegrasyon içeriği — güzellik, wellness ve yaşam tarzı uygulamalarına uyan doğal, gündelik bir tonda.",
       "faq.q8": "Markalar seninle nasıl iş birliği yapar?",
       "faq.a8": "Markayı, ürünü, zaman planını ve içerik ihtiyaçlarını aşağıdaki formdan, e-posta ya da Instagram DM ile gönder. İçerik açıları, kapsam ve teslimatlara göre özel bir teklifle dönerim.",
+      "faq.q9": "Her marka kategorisi için Canvas UGC yapıyor musunuz?",
+      "faq.a9": "Evet. Güzellik, uygulama, yeme içme, seyahat, hospitality, wellness, moda, eğitim, hizmet ve gündelik tüketici ürünleri için marka hesabı veya özel ambassador hesabına düzenli Canvas UGC üretiriz. Brief doğru üretici ve mekânla eşleştirilir.",
 
       "contact.kicker": "Hadi çalışalım", "contact.h": "Markandan bahset.",
       "contact.sub": "Markanı, ürününü, zaman planını ve içerik ihtiyaçlarını paylaş — içerik açıları ve özel bir teklifle, genelde 24 saat içinde dönerim.",
       "contact.response": "İş birliklerine açık · 24 saat içinde yanıt",
-      "net.kicker": "Üretici ağı", "net.h": "Tek brief. Doğru üretici.", "net.p": "Her nişi tek kişiye zorlamak yerine işin uzmanını seç.",
+      "net.kicker": "Üretici ağı", "net.h": "Her kategori. Doğru lider üretici.", "net.p": "Üç üretici de geniş brief ve Canvas UGC işi yapar. Tek tip ekip gibi görünmek yerine her işte en güçlü eşleşmeyle liderlik ederiz.",
       "net.mine.tag": "Güzellik · Lifestyle · Travel", "net.mine.p": "Güzellik, gündelik ürünler, lifestyle, travel ve tüketici uygulamaları için sıcak kadın üretici bakışı.",
       "net.onur.tag": "Tech · SaaS · App", "net.onur.p": "Teknik ürünler için ürüne hâkim anlatım, demo ve founder-style UGC.",
       "net.movia.tag": "Couple Travel · Mekân", "net.movia.p": "Otel, kafe, restoran, destinasyon ve travel app'ler için çift seyahat ve mekân videoları.",
       "net.current": "Şu an buradasın", "net.visit": "Portfolyoya git →",
       "form.name": "İsim", "form.name.ph": "Adın", "form.email": "E-posta <span class=\"req\">*</span>",
       "form.brand": "Marka", "form.brand.ph": "Marka adı", "form.niche": "Niş <span class=\"req\">*</span>", "form.select": "Seç…",
-      "form.n.beauty": "Güzellik / Cilt Bakımı", "form.n.fashion": "Moda / Giyim", "form.n.lifestyle": "Yaşam Tarzı", "form.n.travel": "Seyahat / Ağırlama", "form.n.hotel": "Otel / Kafe / Restoran", "form.n.wellness": "Wellness", "form.n.app": "Mobil uygulama", "form.n.other": "Diğer",
-      "form.need": "Neye ihtiyacın var?", "form.need.ads": "UGC reklam videoları", "form.need.organic": "Organik reels / TikTok", "form.need.photo": "Ürün fotoğrafçılığı", "form.need.shoot": "Bangkok mekan çekimi", "form.need.monthly": "Aylık içerik",
+      "form.n.beauty": "Güzellik / Cilt Bakımı", "form.n.fashion": "Moda / Giyim", "form.n.lifestyle": "Yaşam Tarzı", "form.n.travel": "Seyahat / Ağırlama", "form.n.hotel": "Otel / Kafe / Restoran", "form.n.wellness": "Wellness", "form.n.app": "Mobil uygulama", "form.n.food": "Yeme içme", "form.n.consumer": "Tüketici ürünü / hizmet", "form.n.other": "Diğer",
+      "form.need": "Neye ihtiyacın var?", "form.need.ads": "UGC reklam videoları", "form.need.organic": "Organik reels / TikTok", "form.need.photo": "Ürün fotoğrafçılığı", "form.need.shoot": "Bangkok mekan çekimi", "form.need.monthly": "Aylık içerik", "form.need.canvas": "Canvas UGC / marka hesabı",
       "form.msg": "Biraz anlat", "form.msg.ph": "Marka, ürün, zaman planı ve istediğin içerik türü.",
       "form.send": "Mesaj gönder <span class=\"arrow\">→</span>",
       "form.sending": "Gönderiliyor…", "form.ok": "Teşekkürler — aldım. 24 saat içinde döneceğim.", "form.err": "E-posta ve niş ekleyip tekrar dene.",
       "form.fallback": "Otomatik gönderim geçici olarak kapalı. Doldurduğun brief e-posta taslağı olarak hazır:", "form.fallback.cta": "E-postayı aç",
 
-      "footer.tag": "Bangkok merkezli güzellik, moda &amp; yaşam tarzı UGC içerik üreticisi. Global markalar için samimi, estetik içerik.",
+      "footer.tag": "Her marka kategorisinde ürün, uygulama, mekân ve hizmetler için beauty-first UGC ve düzenli Canvas UGC.",
       "footer.explore": "Keşfet", "footer.connect": "Bağlan", "footer.network": "Üretici ağı", "footer.email": "E-posta", "footer.made": "Bangkok, Tayland · Dünya geneli çalışıyorum"
     },
 
     th: {
       "nav.services": "บริการ", "nav.portfolio": "พอร์ตโฟลิโอ", "nav.bangkok": "กรุงเทพ", "nav.packages": "แพ็กเกจ", "nav.faq": "คำถามที่พบบ่อย", "nav.cta": "ทำงานกับฉัน",
 
-      "hero.kicker": "กรุงเทพฯ · ความงาม · ไลฟ์สไตล์",
+      "hero.kicker": "กรุงเทพฯ · Beauty-first · Canvas UGC",
       "hero.h": "UGC ที่ทำให้แบรนด์<br><em>ดูจริงและน่าเลือก</em>",
-      "hero.sub": "Mine สร้างวิดีโอสั้นสำหรับความงาม ไลฟ์สไตล์ ท่องเที่ยว และแอป พร้อมใช้กับ Reels, TikTok และโฆษณา",
+      "hero.sub": "Beauty-first UGC และ Canvas UGC ต่อเนื่องสำหรับสินค้า แอป สถานที่ และบริการ โดยเครือข่ายครีเอเตอร์ในกรุงเทพฯ",
       "hero.cta1": "ทำงานกับฉัน <span class=\"arrow\">→</span>", "hero.cta2": "ดูพอร์ตโฟลิโอ",
       "hero.chip1": "กรุงเทพ ประเทศไทย", "hero.chip2": "คอนเทนต์ภาษาอังกฤษและตุรกี · ส่งบรีฟภาษาไทยได้", "hero.chip3": "แบรนด์ทั่วโลก",
 
-      "mq.beauty": "ความงาม", "mq.skincare": "ผลิตภัณฑ์บำรุงผิว", "mq.fashion": "แฟชั่น", "mq.lifestyle": "ไลฟ์สไตล์", "mq.travel": "การเดินทาง", "mq.hotels": "โรงแรม &amp; คาเฟ่", "mq.wellness": "ความปลอดภัยและสุขภาพ", "mq.apps": "แอปพลิเคชัน",
+      "mq.beauty": "ความงาม", "mq.skincare": "ผลิตภัณฑ์บำรุงผิว", "mq.fashion": "แฟชั่น", "mq.lifestyle": "ไลฟ์สไตล์", "mq.travel": "การเดินทาง", "mq.hotels": "โรงแรม &amp; คาเฟ่", "mq.wellness": "สุขภาพและ wellness", "mq.apps": "แอปพลิเคชัน", "mq.food": "อาหารและเครื่องดื่ม", "mq.products": "สินค้าอุปโภคบริโภค", "mq.services": "บริการ", "mq.canvas": "Canvas UGC",
 
       "pos.kicker": "ฉันคือใคร",
       "pos.big": "ผู้สร้างเนื้อหา UGC หญิงที่ตั้งอยู่ในกรุงเทพ — พร้อมสำหรับการถ่ายภาพในสถานที่และแคมเปญผลิตภัณฑ์ระดับโลก มีเนื้อหาที่รู้สึกเป็นธรรมชาติ ประณีต และปลอดภัยสำหรับแบรนด์",
@@ -253,6 +259,7 @@
       "svc7.t": "เนื้อหาการเดินทาง / โรงแรม / คาเฟ่", "svc7.d": "เนื้อหาการท่องเที่ยวในสถานที่จากพื้นที่ที่มีฟটูนิกมากที่สุดของกรุงเทพ",
       "svc8.t": "เนื้อหาไลฟ์สไตล์คู่", "svc8.d": "เนื้อหาคู่และการเดินทางที่เกี่ยวข้องสำหรับแบรนด์ไลฟ์สไตล์และการท่องเที่ยว",
       "svc9.t": "แอป / เนื้อหา UGC ผลิตภัณฑ์ดิจิทัล", "svc9.d": "วิธีใช้งานวิดีโอแนวไลฟ์สไตล์ที่เป็นธรรมชาติสำหรับแอปความงาม สุขภาพ และไลฟ์สไตล์",
+      "svc10.t": "โปรแกรม Canvas UGC", "svc10.d": "คอนเซปต์ สคริปต์ วิดีโอ และการลงโพสต์ตามตกลงแบบต่อเนื่อง สำหรับบัญชีแบรนด์หรือบัญชีแอมบาสเดอร์เฉพาะในทุกหมวด",
 
       "pf.kicker": "ผลงานจริงของครีเอเตอร์", "pf.h": "ดูผลงาน Mine บน Instagram",
       "pf.p": "ผลงานจริงที่เผยแพร่แล้ว เปิดแต่ละการ์ดเพื่อดูโพสต์หรือ Reel ต้นฉบับพร้อมเสียง",
@@ -276,7 +283,7 @@
 
       "types.kicker": "สิ่งที่ฉันสร้าง", "types.h": "รูปแบบที่แบรนด์ขอ",
       "t.unbox": "การแกะกล่อง", "t.demo": "สาธิตผลิตภัณฑ์", "t.ps": "โฆษณาปัญหา / โซลูชัน", "t.morning": "กิจวัตรเช้า", "t.grwm": "GRWM", "t.tryon": "ลองห้องสมุดหนังสือ",
-      "t.vo": "UGC บรรยายเสียง", "t.testi": "สไตล์การรับรอง", "t.life": "การรวมไลฟ์สไตล์", "t.travel": "คาเฟ่ / โรงแรม / การเดินทาง", "t.app": "คำแนะนำแอพพลิเคชั่น", "t.couple": "ไลฟ์สไตล์คู่",
+      "t.vo": "UGC บรรยายเสียง", "t.testi": "สไตล์การรับรอง", "t.life": "การรวมไลฟ์สไตล์", "t.travel": "คาเฟ่ / โรงแรม / การเดินทาง", "t.app": "คำแนะนำแอพพลิเคชั่น", "t.couple": "ไลฟ์สไตล์คู่", "t.canvas": "ซีรีส์ Canvas UGC",
 
       "proc.kicker": "กระบวนการ", "proc.h": "ง่าย จากสั่งให้นำส่ง",
       "step1.t": "สั่งแบรนด์", "step1.d": "คุณแบ่งปันผลิตภัณฑ์ เป้าหมาย การอ้างอิง และไทม์ไลน์",
@@ -289,7 +296,7 @@
       "pkg.rates": "ติดต่อสำหรับอัตรา", "pkg.addon": "เพิ่มเติม",
       "pkg1.t": "วิดีโอ UGC เดียว", "pkg1.d": "แนวคิดเดียว วิดีโอเดียว ตัดต่อ + ดิบ เหมาะสมสำหรับการทดสอบครั้งแรก",
       "pkg2.t": "แพ็กเกจวิดีโอ UGC", "pkg2.d": "ชุดวิดีโอที่มีหลายขั้วสำหรับการทดสอบแบบปกติ + จ่าย",
-      "pkg3.t": "แพ็กเกจเนื้อหารายเดือน", "pkg3.d": "กระแสเนื้อหาที่อยู่ติดกับแบรนด์นั้นอย่างสม่ำเสมอและนำส่งรายเดือน",
+      "pkg3.t": "Canvas UGC / คอนเทนต์รายเดือน", "pkg3.d": "ระบบวิดีโอสั้นต่อเนื่องสำหรับบัญชีแบรนด์หรือบัญชีแอมบาสเดอร์ พร้อมคอนเซปต์ สคริปต์ ตัดต่อ และลงโพสต์ตามตกลง",
       "pkg4.t": "ถ่ายภาพผลิตภัณฑ์", "pkg4.d": "ภาพนิ่งผลิตภัณฑ์บริหารเพื่อจับคู่กับส่วนการนำส่งวิดีโอของคุณ",
       "pkg5.t": "การถ่ายภาพสถานที่กรุงเทพ", "pkg5.d": "เนื้อหาคาเฟ่ โรงแรม หรือไลฟ์สไตล์ที่ถ่ายในสถานที่ที่กรุงเทพ",
       "pkg6.t": "คู่ / การเดินทางไลฟ์สไตล์", "pkg6.d": "เนื้อหาคู่และการเดินทางที่อบอุ่นสำหรับแบรนด์ไลฟ์สไตล์และการท่องเที่ยว",
@@ -311,25 +318,27 @@
       "faq.a7": "ใช่ UGC แอปแบบไลฟ์สไตล์ — วิธีใช้ เนื้อหาปัญหา-โซลูชัน และเนื้อหาการรวม — กำหนดไว้ในวิธีที่เป็นธรรมชาติและประจำวันซึ่งเหมาะสำหรับแอปความงาม สุขภาพ และไลฟ์สไตล์",
       "faq.q8": "แบรนด์จะทำงานร่วมกับคุณได้อย่างไร",
       "faq.a8": "ส่งแบรนด์ ผลิตภัณฑ์ ไทม์ไลน์ และความต้องการเนื้อหาผ่านแบบฟอร์มด้านล่าง อีเมล หรือ Instagram DM ฉันจะตอบกลับด้วยมุมเนื้อหา ขอบเขต และราคาแบบกำหนดเองตามผลผลิต",
+      "faq.q9": "รับทำ Canvas UGC สำหรับทุกหมวดแบรนด์ไหม",
+      "faq.a9": "รับ เราสร้าง Canvas UGC ต่อเนื่องสำหรับบัญชีแบรนด์หรือบัญชีแอมบาสเดอร์เฉพาะ ครอบคลุมความงาม แอป อาหาร ท่องเที่ยว hospitality wellness แฟชั่น การศึกษา บริการ และสินค้าในชีวิตประจำวัน พร้อมเลือกครีเอเตอร์กับโลเคชันให้เหมาะกับบรีฟ",
 
       "contact.kicker": "ลองทำงานร่วมกัน", "contact.h": "บอกฉันเกี่ยวกับแบรนด์ของคุณ",
       "contact.sub": "แบ่งปันแบรนด์ ผลิตภัณฑ์ ไทม์ไลน์ และความต้องการเนื้อหาของคุณ — ฉันจะกลับมาพร้อมมุมเนื้อหา และราคาแบบกำหนดเอง โดยปกติภายใน 24 ชั่วโมง",
       "contact.response": "พร้อมใช้งานสำหรับความร่วมมือ · ตอบกลับภายใน 24 ชั่วโมง",
-      "net.kicker": "เครือข่ายครีเอเตอร์", "net.h": "บรีฟเดียว เลือกครีเอเตอร์ให้ตรงงาน", "net.p": "เลือกผู้เชี่ยวชาญแต่ละสาย แทนการให้ครีเอเตอร์คนเดียวทำทุกอย่าง",
+      "net.kicker": "เครือข่ายครีเอเตอร์", "net.h": "ทุกหมวดแบรนด์ เลือกครีเอเตอร์นำให้ตรงงาน", "net.p": "ครีเอเตอร์ทั้งสามรับบรีฟได้หลายหมวดและทำ Canvas UGC ได้ เราเลือกคนที่เหมาะที่สุดเป็นผู้นำในแต่ละงาน",
       "net.mine.tag": "ความงาม · ไลฟ์สไตล์ · ท่องเที่ยว", "net.mine.p": "UGC โดยครีเอเตอร์หญิงสำหรับความงาม สินค้าในชีวิตประจำวัน ไลฟ์สไตล์ ท่องเที่ยว และแอปผู้บริโภค",
       "net.onur.tag": "เทค · SaaS · แอป", "net.onur.p": "วิดีโออธิบาย เดโม และ founder-style UGC สำหรับผลิตภัณฑ์เทค",
       "net.movia.tag": "คู่รักท่องเที่ยว · สถานที่", "net.movia.p": "วิดีโอคู่รักท่องเที่ยวและรีวิวสถานที่สำหรับโรงแรม คาเฟ่ ร้านอาหาร จุดหมาย และแอปท่องเที่ยว",
       "net.current": "คุณอยู่ที่นี่", "net.visit": "ดูพอร์ตโฟลิโอ →",
       "form.name": "ชื่อ", "form.name.ph": "ชื่อของคุณ", "form.email": "อีเมล <span class=\"req\">*</span>",
       "form.brand": "แบรนด์", "form.brand.ph": "ชื่อแบรนด์", "form.niche": "ข้อมูลเฉพาะ <span class=\"req\">*</span>", "form.select": "เลือก…",
-      "form.n.beauty": "ความงาม / ผลิตภัณฑ์บำรุงผิว", "form.n.fashion": "แฟชั่น / เสื้อผ้า", "form.n.lifestyle": "ไลฟ์สไตล์", "form.n.travel": "การเดินทาง / การท่องเที่ยว", "form.n.hotel": "โรงแรม / คาเฟ่ / ร้านอาหาร", "form.n.wellness": "สุขภาพและความปลอดภัย", "form.n.app": "แอปมือถือ", "form.n.other": "อื่น ๆ",
-      "form.need": "คุณต้องการอะไร", "form.need.ads": "วิดีโอโฆษณา UGC", "form.need.organic": "reels / TikTok แบบปกติ", "form.need.photo": "ถ่ายภาพผลิตภัณฑ์", "form.need.shoot": "การถ่ายภาพสถานที่กรุงเทพ", "form.need.monthly": "เนื้อหารายเดือน",
+      "form.n.beauty": "ความงาม / ผลิตภัณฑ์บำรุงผิว", "form.n.fashion": "แฟชั่น / เสื้อผ้า", "form.n.lifestyle": "ไลฟ์สไตล์", "form.n.travel": "การเดินทาง / การท่องเที่ยว", "form.n.hotel": "โรงแรม / คาเฟ่ / ร้านอาหาร", "form.n.wellness": "สุขภาพและ wellness", "form.n.app": "แอปมือถือ", "form.n.food": "อาหาร / เครื่องดื่ม", "form.n.consumer": "สินค้าอุปโภคบริโภค / บริการ", "form.n.other": "อื่น ๆ",
+      "form.need": "คุณต้องการอะไร", "form.need.ads": "วิดีโอโฆษณา UGC", "form.need.organic": "reels / TikTok แบบปกติ", "form.need.photo": "ถ่ายภาพผลิตภัณฑ์", "form.need.shoot": "การถ่ายภาพสถานที่กรุงเทพ", "form.need.monthly": "เนื้อหารายเดือน", "form.need.canvas": "Canvas UGC / บัญชีแบรนด์",
       "form.msg": "บอกฉันเกี่ยวกับมัน", "form.msg.ph": "แบรนด์ ผลิตภัณฑ์ ไทม์ไลน์ และประเภทของเนื้อหาที่คุณชาต",
       "form.send": "ส่งสอบถาม <span class=\"arrow\">→</span>",
       "form.sending": "กำลังส่ง…", "form.ok": "ขอบคุณ — ได้รับ ฉันจะตอบกลับภายใน 24 ชั่วโมง", "form.err": "เพิ่มอีเมลและข้อมูลเฉพาะของคุณ แล้วลองอีกครั้ง",
       "form.fallback": "ระบบส่งอัตโนมัติไม่พร้อมใช้งานชั่วคราว บรีฟของคุณถูกเตรียมเป็นอีเมลแล้ว:", "form.fallback.cta": "เปิดอีเมล",
 
-      "footer.tag": "ผู้สร้างเนื้อหา UGC ความงาม แฟชั่น และไลฟ์สไตล์ที่ตั้งอยู่ในกรุงเทพ เนื้อหาที่แท้จริงและสวยงามสำหรับแบรนด์ทั่วโลก",
+      "footer.tag": "Beauty-first UGC และ Canvas UGC ต่อเนื่องสำหรับสินค้า แอป สถานที่ และบริการในทุกหมวดแบรนด์",
       "footer.explore": "สำรวจ", "footer.connect": "เชื่อมต่อ", "footer.network": "เครือข่ายครีเอเตอร์", "footer.email": "อีเมล", "footer.made": "กรุงเทพ ประเทศไทย · ทำงานทั่วโลก"
     }
   };
