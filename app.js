@@ -38,7 +38,7 @@
       "pf.kicker": "Live creator work", "pf.h": "Watch Mine on Instagram.",
       "pf.p": "Real, published creator work. Open any card to watch the original post or Reel with sound.",
       "pf.c.beauty": "Beauty", "pf.c.fashion": "Fashion", "pf.c.lifestyle": "Lifestyle", "pf.c.skincare": "Skincare", "pf.c.hosp": "Hospitality", "pf.c.app": "App", "pf.c.travel": "Travel",
-      "pf1.t": "Makeup and hair creator Reel", "pf2.t": "Press-on nails product demo", "pf3.t": "Creator introduction", "pf4.t": "Outdoor lifestyle storytelling",
+      "pf1.t": "Makeup Studio beauty collaboration", "pf2.t": "Press-on nails UGC collaboration", "pf3.t": "Creator introduction", "pf4.t": "Outdoor lifestyle storytelling",
       "pf5.t": "Beach lifestyle visual", "pf6.t": "Natural lifestyle hook",
       "pf.note": "Published on @mineexplora · live work checked 15 July 2026.",
 
@@ -151,7 +151,7 @@
       "pf.kicker": "Canlı üretici işleri", "pf.h": "Mine'ı Instagram'da izle.",
       "pf.p": "Gerçek, yayınlanmış üretici işleri. Orijinal gönderiyi veya Reels videosunu sesli izlemek için bir karta dokun.",
       "pf.c.beauty": "Güzellik", "pf.c.fashion": "Moda", "pf.c.lifestyle": "Yaşam Tarzı", "pf.c.skincare": "Cilt Bakımı", "pf.c.hosp": "Ağırlama", "pf.c.app": "Uygulama", "pf.c.travel": "Seyahat",
-      "pf1.t": "Makyaj ve saç üretici Reels'i", "pf2.t": "Takma tırnak ürün demosu", "pf3.t": "Üretici tanıtımı", "pf4.t": "Outdoor lifestyle hikâyesi",
+      "pf1.t": "Makeup Studio güzellik iş birliği", "pf2.t": "Takma tırnak UGC iş birliği", "pf3.t": "Üretici tanıtımı", "pf4.t": "Outdoor lifestyle hikâyesi",
       "pf5.t": "Sahil lifestyle görseli", "pf6.t": "Doğal lifestyle kancası",
       "pf.note": "@mineexplora'da yayında · canlı işler 15 Temmuz 2026'da kontrol edildi.",
 
@@ -264,7 +264,7 @@
       "pf.kicker": "ผลงานจริงของครีเอเตอร์", "pf.h": "ดูผลงาน Mine บน Instagram",
       "pf.p": "ผลงานจริงที่เผยแพร่แล้ว เปิดแต่ละการ์ดเพื่อดูโพสต์หรือ Reel ต้นฉบับพร้อมเสียง",
       "pf.c.beauty": "ความงาม", "pf.c.fashion": "แฟชั่น", "pf.c.lifestyle": "ไลฟ์สไตล์", "pf.c.skincare": "ผลิตภัณฑ์บำรุงผิว", "pf.c.hosp": "การท่องเที่ยว", "pf.c.app": "แอพพลิเคชั่น", "pf.c.travel": "การเดินทาง",
-      "pf1.t": "Reel แต่งหน้าและทำผม", "pf2.t": "เดโมเล็บปลอม", "pf3.t": "แนะนำตัวครีเอเตอร์", "pf4.t": "เล่าเรื่องไลฟ์สไตล์กลางแจ้ง",
+      "pf1.t": "ความร่วมมือด้านความงาม Makeup Studio", "pf2.t": "ความร่วมมือ UGC เดโมเล็บปลอม", "pf3.t": "แนะนำตัวครีเอเตอร์", "pf4.t": "เล่าเรื่องไลฟ์สไตล์กลางแจ้ง",
       "pf5.t": "ภาพไลฟ์สไตล์ริมทะเล", "pf6.t": "ฮุกไลฟ์สไตล์แบบธรรมชาติ",
       "pf.note": "เผยแพร่บน @mineexplora · ตรวจสอบผลงานล่าสุด 15 กรกฎาคม 2026",
 

@@ -159,6 +159,20 @@ em, .italic { font-style: italic; }
 .pf-card .pf-icon svg { width: 14px; height: 14px; color: var(--ink); }
 .pf-note { margin-top: 26px; font-size: 13px; color: var(--ink-3); letter-spacing: 0.02em; }
 
+/* verified collaboration feed */
+.ugc-feed-panel { padding: clamp(18px, 3vw, 30px); border: 1px solid var(--line); border-radius: var(--radius-lg); background: var(--white); }
+.ugc-feed-toolbar { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; padding-bottom: 16px; border-bottom: 1px solid var(--line); }
+.ugc-feed-toolbar strong { font-family: var(--font-display); font-size: clamp(20px, 2.4vw, 27px); }
+.ugc-feed-toolbar span { color: var(--ink-3); font-size: 12px; }
+.ugc-feed-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; padding-top: 18px; }
+.ugc-feed-card { position: relative; min-height: 300px; overflow: hidden; border-radius: 14px; background: var(--cream); display: flex; align-items: end; color: var(--white); }
+.ugc-feed-card img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.ugc-feed-card::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, transparent 38%, rgba(43,34,28,.72)); }
+.ugc-feed-card-copy { position: relative; z-index: 1; padding: 18px; }
+.ugc-feed-card-copy span { display: inline-block; margin-bottom: 6px; font-size: 10px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; }
+.ugc-feed-card-copy strong { display: block; font-family: var(--font-display); font-size: 21px; line-height: 1.1; }
+.ugc-feed-empty { margin: 0; color: var(--ink-3); }
+
 /* why */
 .why { background: var(--ink); color: var(--ivory); }
 .why .kicker { color: var(--gold); }
@@ -287,6 +301,8 @@ em, .italic { font-style: italic; }
 }
 @media (max-width: 680px) {
   body { font-size: 16px; }
+  .ugc-feed-toolbar { align-items: flex-start; flex-direction: column; }
+  .ugc-feed-grid { grid-template-columns: 1fr; }
   .nav-links { display: none; }
   .nav-burger { display: flex; }
   .nav-cta { display: none; }

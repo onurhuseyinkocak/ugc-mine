@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "site": "ugc-mine",
+  "profile": "mineexplora",
+  "lastSuccessfulSyncAt": null,
+  "source": "curated-public-posts",
+  "items": [
+    {
+      "id": "DY177k8Mpva",
+      "publishedAt": "2026-07-15T00:00:00.000Z",
+      "permalink": "https://www.instagram.com/mineexplora/reel/DY177k8Mpva/",
+      "thumbnail": "assets/portfolio/mine-06.jpg",
+      "title": "Makeup Studio beauty collaboration",
+      "categories": ["beauty", "makeup"],
+      "mediaType": "video",
+      "isUGC": true,
+      "ugcScore": 0.99,
+      "classification": "verified-curation",
+      "classificationReasons": ["published collaboration", "vertical beauty video", "original post linked"]
+    },
+    {
+      "id": "DZIY-nBsuie",
+      "publishedAt": "2026-07-15T00:00:00.000Z",
+      "permalink": "https://www.instagram.com/mineexplora/reel/DZIY-nBsuie/",
+      "thumbnail": "assets/portfolio/mine-03.jpg",
+      "title": "Press-on nails UGC collaboration",
+      "categories": ["beauty", "nails"],
+      "mediaType": "video",
+      "isUGC": true,
+      "ugcScore": 0.99,
+      "classification": "verified-curation",
+      "classificationReasons": ["published collaboration", "product demonstration", "original post linked"]
+    }
+  ]
+}

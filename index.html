@@ -202,12 +202,21 @@
       </div>
     </section>
 
+    <!-- VERIFIED COLLABORATION FEED -->
+    <section class="section container" id="latest-work">
+      <div class="section-head reveal"><div class="kicker">Verified collaboration feed</div><h2>Recent UGC, shown from the original posts.</h2><p>Only public posts with an original Instagram link are listed here. The latest successful sync always replaces this feed, so deleted work does not linger as a claim.</p></div>
+      <div class="ugc-feed-panel reveal d1">
+        <div class="ugc-feed-toolbar"><strong>Latest public work</strong><span id="ugcFeedCount" aria-live="polite">Loading verified work…</span></div>
+        <div class="ugc-feed-grid" id="ugcFeedGrid" aria-live="polite"></div>
+      </div>
+    </section>
+
     <!-- PORTFOLIO -->
     <section class="section container" id="portfolio">
       <div class="section-head reveal"><div class="kicker" data-i18n="pf.kicker">Live creator work</div><h2 data-i18n="pf.h">Watch Mine on Instagram.</h2><p data-i18n="pf.p">Real, published creator work. Open any card to watch the original post or Reel with sound.</p></div>
       <div class="pf-grid">
-        <a class="pf-card reveal" href="https://www.instagram.com/mineexplora/reel/DY177k8Mpva/" target="_blank" rel="noopener"><img class="pf-image" src="assets/portfolio/mine-06.jpg" alt="Mine beauty and makeup UGC Reel" loading="lazy" /><span class="pf-icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span><div class="pf-meta"><div class="pf-cat" data-i18n="pf.c.beauty">Beauty</div><div class="pf-t" data-i18n="pf1.t">Makeup and hair creator Reel</div></div></a>
-        <a class="pf-card reveal d1" href="https://www.instagram.com/mineexplora/reel/DZIY-nBsuie/" target="_blank" rel="noopener"><img class="pf-image" src="assets/portfolio/mine-03.jpg" alt="Mine press-on nails UGC Reel" loading="lazy" /><span class="pf-icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span><div class="pf-meta"><div class="pf-cat" data-i18n="pf.c.beauty">Beauty</div><div class="pf-t" data-i18n="pf2.t">Press-on nails product demo</div></div></a>
+        <a class="pf-card reveal" href="https://www.instagram.com/mineexplora/reel/DY177k8Mpva/" target="_blank" rel="noopener"><img class="pf-image" src="assets/portfolio/mine-06.jpg" alt="Mine Makeup Studio beauty UGC collaboration" loading="lazy" /><span class="pf-icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span><div class="pf-meta"><div class="pf-cat" data-i18n="pf.c.beauty">Beauty</div><div class="pf-t" data-i18n="pf1.t">Makeup Studio beauty collaboration</div></div></a>
+        <a class="pf-card reveal d1" href="https://www.instagram.com/mineexplora/reel/DZIY-nBsuie/" target="_blank" rel="noopener"><img class="pf-image" src="assets/portfolio/mine-03.jpg" alt="Mine press-on nails UGC collaboration" loading="lazy" /><span class="pf-icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span><div class="pf-meta"><div class="pf-cat" data-i18n="pf.c.beauty">Beauty</div><div class="pf-t" data-i18n="pf2.t">Press-on nails UGC collaboration</div></div></a>
         <a class="pf-card reveal d2" href="https://www.instagram.com/mineexplora/reel/DZFrK-4s2XX/" target="_blank" rel="noopener"><img class="pf-image" src="assets/portfolio/mine-05.jpg" alt="Mine creator introduction Reel" loading="lazy" /><span class="pf-icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span><div class="pf-meta"><div class="pf-cat" data-i18n="pf.c.lifestyle">Lifestyle</div><div class="pf-t" data-i18n="pf3.t">Creator introduction</div></div></a>
         <a class="pf-card reveal d3" href="https://www.instagram.com/mineexplora/reel/DZKs4jSMqzD/" target="_blank" rel="noopener"><img class="pf-image" src="assets/portfolio/mine-02.jpg" alt="Mine outdoor lifestyle Reel" loading="lazy" /><span class="pf-icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span><div class="pf-meta"><div class="pf-cat" data-i18n="pf.c.travel">Travel</div><div class="pf-t" data-i18n="pf4.t">Outdoor lifestyle storytelling</div></div></a>
         <a class="pf-card reveal" href="https://www.instagram.com/mineexplora/p/DZkTdhqiKEP/" target="_blank" rel="noopener"><img class="pf-image" src="assets/portfolio/mine-01.jpg" alt="Mine beach travel lifestyle post" loading="lazy" /><span class="pf-icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span><div class="pf-meta"><div class="pf-cat" data-i18n="pf.c.travel">Travel</div><div class="pf-t" data-i18n="pf5.t">Beach lifestyle visual</div></div></a>
@@ -392,6 +401,7 @@
 
   <script src="/vct-control.js" data-site="ugc-mine" defer></script>
   <script src="app.js"></script>
+  <script src="ugc-feed.js"></script>
   <script>window.UGC_ADMIN_SITE = "mine";</script>
   <script src="editable.js" defer></script>
 </body>
