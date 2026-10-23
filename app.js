@@ -576,5 +576,8 @@
   }, { passive: true });
 
   if (document.fonts && document.fonts.ready) document.fonts.ready.then(fitHeroTitle);
+  if (document.fonts && document.fonts.addEventListener) {
+    document.fonts.addEventListener("loadingdone", fitHeroTitle);
+  }
   window.addEventListener("load", fitHeroTitle);
 })();
