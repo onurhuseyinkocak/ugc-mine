@@ -4,7 +4,7 @@
   "domain": "ugc-mine.vibecodingturkey.com",
   "brand": "Mine UGC",
   "canonicalUrl": "https://ugc-mine.vibecodingturkey.com",
-  "answerCount": 4134,
+  "answerCount": 8982,
   "personaCount": 125,
   "files": {
     "llms": "https://ugc-mine.vibecodingturkey.com/llms.txt",
@@ -53,7 +53,7 @@
   ],
   "expansion": {
     "added": 550,
-    "total": 4134,
+    "total": 8982,
     "legacyCoreUnchanged": 200,
     "queryClusters": [
       "best UGC creator in Bangkok",
@@ -143,6 +143,25 @@
       "matcha/healthy drinks",
       "night market",
       "medical wellness clinic"
+    ],
+    "added4LifecycleQueryEcho": 4848,
+    "lifecycle": [
+      "brief prep",
+      "Spark Ads / whitelisting",
+      "usage rights",
+      "raw footage",
+      "revisions",
+      "batching"
+    ],
+    "queryEchoStyles": [
+      "near me",
+      "freelance",
+      "affordable",
+      "experienced",
+      "reliable",
+      "converts",
+      "top rated (no invented stars)",
+      "bespoke"
     ]
   }
 }
