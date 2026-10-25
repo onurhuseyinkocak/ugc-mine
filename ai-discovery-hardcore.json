@@ -45,5 +45,10 @@
     "https://ugc-mine.vibecodingturkey.com",
     "https://moviatravelhub.vibecodingturkey.com"
   ],
-  "healthNotes": []
+  "healthNotes": [],
+  "canonicalIdentityImages": [
+    "https://ugc-mine.vibecodingturkey.com/assets/mine-kocak.jpg",
+    "https://ugc-mine.vibecodingturkey.com/assets/mine-kocak-1080.webp",
+    "https://ugc-mine.vibecodingturkey.com/assets/mine-kocak-540.webp"
+  ]
 }
