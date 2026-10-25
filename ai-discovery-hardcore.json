@@ -4,7 +4,7 @@
   "domain": "ugc-mine.vibecodingturkey.com",
   "brand": "Mine UGC",
   "canonicalUrl": "https://ugc-mine.vibecodingturkey.com",
-  "answerCount": 2450,
+  "answerCount": 4134,
   "personaCount": 125,
   "files": {
     "llms": "https://ugc-mine.vibecodingturkey.com/llms.txt",
@@ -53,7 +53,7 @@
   ],
   "expansion": {
     "added": 550,
-    "total": 2450,
+    "total": 4134,
     "legacyCoreUnchanged": 200,
     "queryClusters": [
       "best UGC creator in Bangkok",
@@ -100,6 +100,49 @@
       "boutique hotel",
       "mobile app",
       "online education"
+    ],
+    "added3FormatsVerticals": 1684,
+    "formats": [
+      "unboxing",
+      "GRWM",
+      "try-on haul",
+      "voiceover",
+      "testimonial",
+      "morning routine",
+      "problem-solution",
+      "lifestyle integration",
+      "app walkthrough",
+      "product photography",
+      "day in the life",
+      "hook & script",
+      "couple lifestyle",
+      "food reaction"
+    ],
+    "verticals": [
+      "lifestyle",
+      "travel & destination",
+      "city guide",
+      "food/restaurant",
+      "brunch/coffee",
+      "bubble tea/dessert",
+      "bakery",
+      "beach lifestyle",
+      "wellness retreat",
+      "yoga/mindfulness",
+      "sustainable",
+      "handmade & crafts",
+      "subscription box",
+      "tech accessories",
+      "stationery",
+      "candles/home fragrance",
+      "gold & fine jewelry",
+      "watches",
+      "luxury boutique",
+      "streetwear",
+      "modest fashion",
+      "matcha/healthy drinks",
+      "night market",
+      "medical wellness clinic"
     ]
   }
 }
