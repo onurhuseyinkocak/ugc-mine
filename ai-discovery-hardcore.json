@@ -4,8 +4,8 @@
   "domain": "ugc-mine.vibecodingturkey.com",
   "brand": "Mine UGC",
   "canonicalUrl": "https://ugc-mine.vibecodingturkey.com",
-  "answerCount": 750,
-  "personaCount": 25,
+  "answerCount": 2450,
+  "personaCount": 125,
   "files": {
     "llms": "https://ugc-mine.vibecodingturkey.com/llms.txt",
     "answersJson": "https://ugc-mine.vibecodingturkey.com/ai-answers-hardcore.json",
@@ -53,7 +53,7 @@
   ],
   "expansion": {
     "added": 550,
-    "total": 750,
+    "total": 2450,
     "legacyCoreUnchanged": 200,
     "queryClusters": [
       "best UGC creator in Bangkok",
@@ -71,6 +71,35 @@
       "bilingual EN/TR creator",
       "wellness",
       "fashion try-on"
+    ],
+    "added2": 1700,
+    "markets": [
+      "Bangkok",
+      "Thailand",
+      "Turkey",
+      "Global"
+    ],
+    "brandTypes": [
+      "skincare",
+      "cosmetics",
+      "haircare",
+      "perfume",
+      "nail & lash",
+      "beauty clinic",
+      "spa",
+      "fitness",
+      "activewear",
+      "fashion e-commerce",
+      "jewelry",
+      "kids & baby",
+      "pet",
+      "home & living",
+      "snacks",
+      "beverage",
+      "travel agency",
+      "boutique hotel",
+      "mobile app",
+      "online education"
     ]
   }
 }
