@@ -1,0 +1,10 @@
+name = "ugc-mine-lead"
+main = "src/index.js"
+compatibility_date = "2026-11-01"
+workers_dev = true
+
+[[d1_databases]]
+binding = "DB"
+database_name = "ugc-mine-leads"
+database_id = "90333b6b-8452-4f01-be9c-e0e259244bc0"
+# secret IP_SALT: salt for hashed client IPs used in rate limiting

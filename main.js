@@ -94,7 +94,8 @@
   });
 
   // Brief form -> ugc-lead (Supabase). Mail draft is the fallback.
-  var ENDPOINT = "https://bajrnvusqzllvsvipitr.supabase.co/functions/v1/ugc-lead";
+  var ENDPOINT = "https://ugc-mine-lead.onur-vct-20260722.workers.dev"; // Cloudflare Worker + D1
+  var MAILER = "https://formsubmit.co/ajax/49170d744b48fd4a858d60beaa94e7a1"; // notifies info@ + Mine, auto-replies to the brand
   var status = form.querySelector(".form-status");
   var button = form.querySelector("button[type=submit]");
   var params = new URLSearchParams(location.search);
@@ -119,17 +120,31 @@
 
     button.disabled = true;
     say("Sending…");
-    fetch(ENDPOINT, {
+    var lead = {
+      action: "submit", kind: "contact", lang: "en",
+      name: fd.get("name") || "", company: fd.get("company") || "", email: email, product: product,
+      goal: fd.get("goal") || "", budget: fd.get("budget") || "", timeframe: fd.get("timeframe") || "",
+      message: fd.get("message") || "", channel: "ugc-mine-portfolio",
+      entry_referrer: document.referrer || "", utm: utm
+    };
+    var first = lead.name ? String(lead.name).split(" ")[0] : "";
+    var store = fetch(ENDPOINT, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(lead) })
+      .then(function (r) { return r.json().then(function (j) { if (!r.ok || !j.ok) throw new Error(j.error || "failed"); return j; }); });
+    var mail = fetch(MAILER, {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
+      headers: { "Content-Type": "application/json", Accept: "application/json" },
       body: JSON.stringify({
-        action: "submit", kind: "contact", lang: "en",
-        name: fd.get("name") || "", company: fd.get("company") || "", email: email, product: product,
-        goal: fd.get("goal") || "", budget: fd.get("budget") || "", timeframe: fd.get("timeframe") || "",
-        message: fd.get("message") || "", channel: "ugc-mine-portfolio",
-        entry_referrer: document.referrer || "", utm: utm
+        _subject: "[Mine UGC] New brief: " + (lead.company || lead.name || lead.email),
+        _cc: "mineexplora@gmail.com", _template: "table", _captcha: "false", _replyto: email,
+        _autoresponse: "Hi" + (first ? " " + first : "") + ", thanks for your brief" + (product ? " about " + product : "") + ". I'll reply within 24 hours with two or three content angles and a fixed quote. Mine Koçak, UGC creator in Bangkok. ugc-mine.vibecodingturkey.com / @mineexplora",
+        Name: lead.name, Email: email, Brand: lead.company, Product: product, Package: lead.goal,
+        "Runs as": lead.budget, Timeline: lead.timeframe, Message: lead.message, Source: utm || lead.entry_referrer || "direct"
       })
-    }).then(function (r) { return r.json().then(function (j) { if (!r.ok || !j.ok) throw new Error(j.error || "failed"); return j; }); })
+    }).then(function (r) { return r.json().then(function (j) { if (!r.ok || String(j.success) !== "true") throw new Error(j.message || "failed"); return j; }); });
+    // Success if either path lands: D1 keeps the record, FormSubmit delivers the email.
+    Promise.allSettled([store, mail]).then(function (res) {
+      if (res[0].status !== "fulfilled" && res[1].status !== "fulfilled") throw new Error("both failed");
+    })
       .then(function () {
         form.reset();
         say("Thank you. Your brief is in, I'll reply within 24 hours.", "ok");
