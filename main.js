@@ -137,7 +137,7 @@
         _subject: "[Mine UGC] New brief: " + (lead.company || lead.name || lead.email),
         _cc: "mineexplora@gmail.com", _template: "table", _captcha: "false", _replyto: email,
         _autoresponse: "Hi" + (first ? " " + first : "") + ", thanks for your brief" + (product ? " about " + product : "") + ". I'll reply within 24 hours with two or three content angles and a fixed quote. Mine Koçak, UGC creator in Bangkok. ugc-mine.vibecodingturkey.com / @mineexplora",
-        Name: lead.name, Email: email, Brand: lead.company, Product: product, Package: lead.goal,
+        Name: lead.name, email: email, Brand: lead.company, Product: product, Package: lead.goal,
         "Runs as": lead.budget, Timeline: lead.timeframe, Message: lead.message, Source: utm || lead.entry_referrer || "direct"
       })
     }).then(function (r) { return r.json().then(function (j) { if (!r.ok || String(j.success) !== "true") throw new Error(j.message || "failed"); return j; }); });
