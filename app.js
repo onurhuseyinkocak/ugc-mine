@@ -6,11 +6,11 @@
       "nav.portfolio": "Work", "nav.services": "Services", "nav.about": "About", "nav.packages": "Packages", "nav.faq": "FAQ", "nav.cta": "Work With Me",
 
       "hero.kicker": "Bangkok · UGC creator",
-      "hero.h": "UGC creator in Bangkok<br>for <em>beauty, fashion &amp; lifestyle.</em>",
+      "hero.h": "Everyday stories.<br><em>Closer to your brand.</em>",
       "hero.sub": "I make short-form content that feels like a real recommendation — filmed in Bangkok for beauty, food, travel and lifestyle brands.",
       "hero.cta1": "Start a project <span class=\"arrow\">→</span>", "hero.cta2": "See the work",
       "hero.chip1": "Bangkok, Thailand", "hero.chip2": "EN / TR content · TH briefs", "hero.chip3": "@mineexplora",
-      "hero.stamp": "Open for new projects", "hero.caption": "On location · Kaş, Türkiye",
+      "hero.stamp": "Open for new projects", "hero.caption": "Mine Koçak · Beauty & lifestyle",
 
       "mq.beauty": "Beauty", "mq.skincare": "Skincare", "mq.fashion": "Fashion", "mq.lifestyle": "Lifestyle", "mq.food": "Food", "mq.travel": "Travel", "mq.hotels": "Hotels & Cafés", "mq.apps": "Apps",
 
@@ -106,11 +106,11 @@
       "nav.portfolio": "İşler", "nav.services": "Hizmetler", "nav.about": "Hakkımda", "nav.packages": "Paketler", "nav.faq": "SSS", "nav.cta": "Birlikte Çalışalım",
 
       "hero.kicker": "Bangkok · UGC içerik üreticisi",
-      "hero.h": "Bangkok'ta UGC içerik üreticisi<br><em>güzellik, moda &amp; yaşam tarzı için.</em>",
+      "hero.h": "Hayatın içinden.<br><em>Markana yakın.</em>",
       "hero.sub": "Gerçek bir tavsiye gibi hissettiren kısa videolar üretiyorum — Bangkok'ta güzellik, yemek, seyahat ve yaşam tarzı markaları için.",
       "hero.cta1": "Bir proje başlat <span class=\"arrow\">→</span>", "hero.cta2": "İşlere göz at",
       "hero.chip1": "Bangkok, Tayland", "hero.chip2": "EN / TR içerik · TH brief", "hero.chip3": "@mineexplora",
-      "hero.stamp": "Yeni projelere açık", "hero.caption": "Çekimde · Kaş, Türkiye",
+      "hero.stamp": "Yeni projelere açık", "hero.caption": "Mine Koçak · Güzellik ve yaşam",
 
       "mq.beauty": "Güzellik", "mq.skincare": "Cilt Bakımı", "mq.fashion": "Moda", "mq.lifestyle": "Yaşam Tarzı", "mq.food": "Yemek", "mq.travel": "Seyahat", "mq.hotels": "Otel & Kafe", "mq.apps": "Uygulamalar",
 
@@ -210,7 +210,7 @@
       "hero.sub": "ฉันสร้างวิดีโอสั้นที่ให้ความรู้สึกเหมือนคำแนะนำจากคนจริง ๆ ถ่ายทำในกรุงเทพฯ สำหรับแบรนด์ความงาม อาหาร ท่องเที่ยว และไลฟ์สไตล์",
       "hero.cta1": "เริ่มโปรเจกต์ <span class=\"arrow\">→</span>", "hero.cta2": "ดูผลงาน",
       "hero.chip1": "กรุงเทพฯ ประเทศไทย", "hero.chip2": "คอนเทนต์ EN / TR · รับบรีฟภาษาไทย", "hero.chip3": "@mineexplora",
-      "hero.stamp": "เปิดรับโปรเจกต์ใหม่", "hero.caption": "ถ่ายทำที่ · คัช ตุรกี",
+      "hero.stamp": "เปิดรับโปรเจกต์ใหม่", "hero.caption": "Mine Koçak · Beauty & lifestyle",
 
       "mq.beauty": "ความงาม", "mq.skincare": "สกินแคร์", "mq.fashion": "แฟชั่น", "mq.lifestyle": "ไลฟ์สไตล์", "mq.food": "อาหาร", "mq.travel": "ท่องเที่ยว", "mq.hotels": "โรงแรม & คาเฟ่", "mq.apps": "แอป",
 
