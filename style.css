@@ -81,7 +81,7 @@ h3 { font: 600 16px/1.35 var(--sans); letter-spacing: -.005em; }
 .marquee { overflow: hidden; margin-top: 12px; max-width: 100%; min-width: 0; }
 .brands { min-width: 0; }
 .marquee-track { display: flex; width: max-content; animation: marquee 32s linear infinite; }
-.marquee:hover .marquee-track { animation-play-state: paused; }
+.marquee:hover .marquee-track, .marquee:active .marquee-track { animation-play-state: paused; }
 .brand-row { display: flex; gap: 10px; padding-right: 10px; }
 .tile { display: flex; align-items: center; justify-content: center; height: 52px; padding: 0 22px; border-radius: var(--r); }
 .tile img { height: 24px; width: auto; }
@@ -324,6 +324,6 @@ h3 { font: 600 16px/1.35 var(--sans); letter-spacing: -.005em; }
   *, *::before, *::after { transition-duration: .01ms !important; transition-delay: 0s !important; animation-duration: .01ms !important; }
   .js .rise, .js .rv { transform: none; opacity: 1; }
   .js .frame-clip { clip-path: none; }
-  .marquee-track { animation: none; }
-  .marquee { overflow-x: auto; }
+  /* the strip still drifts, slowly, and pauses on hover/touch: owner wants it moving */
+  .marquee-track { animation: marquee 60s linear infinite !important; }
 }

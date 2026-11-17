@@ -1,5 +1,6 @@
 // Generates every page of the site from content.mjs + strings.mjs. Run: node scripts/build.mjs
-import { writeFileSync, mkdirSync, rmSync, existsSync } from "node:fs";
+import { writeFileSync, mkdirSync, rmSync, existsSync, readFileSync } from "node:fs";
+import { createHash } from "node:crypto";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { SITE, WORK, FORMATS, BRANDS, PRICES, TRY } from "./content.mjs";
@@ -18,6 +19,9 @@ const who = (w, L) => (own(w) ? w[L].fmt : w.brand); // own posts are titled by 
 const short = (w, L) => (own(w) ? esc(strip(w[L].title)) : en(w.brand)); // HTML; only brand names get lang="en" // keeps English names out of Turkish uppercasing (i→İ)
 const out = (rel, html) => { const f = join(ROOT, rel); mkdirSync(dirname(f), { recursive: true }); writeFileSync(f, html); };
 
+// Content hash on CSS/JS URLs: GitHub Pages caches them for 10 minutes, so new HTML could pair with stale CSS.
+const ver = (f) => createHash("sha1").update(readFileSync(join(ROOT, f))).digest("hex").slice(0, 8);
+const CSS_V = ver("style.css"), JS_V = ver("main.js");
 const CSP = "default-src 'self'; script-src 'self' https://www.googletagmanager.com; style-src 'self'; font-src 'self'; img-src 'self' data: https:; media-src 'self'; connect-src 'self' https://ugc-mine-lead.onur-vct-20260722.workers.dev https://formsubmit.co https://academy.vibecodingturkey.com https://*.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com https://*.google.com https://*.doubleclick.net; base-uri 'self'; form-action 'self' mailto:";
 
 function head({ lang, title, desc, path, og, ogW = 1200, ogH = 630, alternates = [], ld, preload = [] }) {
@@ -48,10 +52,10 @@ ${alternates.map(([l, p]) => `<link rel="alternate" hreflang="${l}" href="${SITE
 <link rel="preload" href="/assets/fonts/bodoni-moda-latin-wght-italic.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/assets/fonts/manrope-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
 ${preload.join("\n")}
-<link rel="stylesheet" href="/style.css">
+<link rel="stylesheet" href="/style.css?v=${CSS_V}">
 <script type="application/ld+json">${JSON.stringify(ld)}</script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-K9XZ9B08V9"></script>
-<script src="/main.js" defer></script>
+<script src="/main.js?v=${JS_V}" defer></script>
 <script src="/vct-control.js" data-site="ugc-mine" defer></script>
 </head>`;
 }
