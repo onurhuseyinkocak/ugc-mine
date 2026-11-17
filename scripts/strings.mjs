@@ -23,7 +23,7 @@ export const STR = {
     fmtNote: "Hover or scroll to play. Every frame is from a published video.",
     fmtLast: ["Any format, in English or Turkish.", "Not sure which one fits? Send the product and the goal. I'll suggest two or three angles."],
     ratesKicker: "03 · Rate card · USD", ratesH: "Clear prices. <em>No surprises.</em>",
-    ratesNote: "Every video includes captions, one round of changes and 12 months of use on your own brand channels.",
+    ratesNote: "Every video includes captions, one round of changes and 12 months of use on your own brand channels. What drives each line is explained in the <a href=\"/ugc-rates/\">UGC rates guide</a>.",
     pk: [
       { k: "single", name: "Single", price: usd(PRICES.single), what: "1 video, up to 30 seconds", p: "The easiest way to see how I present your product.", pick: "Single video ($180)" },
       { k: "trio", name: "Trio", price: usd(PRICES.trio), what: "3 videos + 3 alternative openings", p: "Three angles on one product. The alternative openings (the first 3 seconds) let you test which one holds attention.", pick: "Trio ($480)", flag: "Recommended" },
