@@ -15,7 +15,7 @@ const mmss = (s) => `${Math.floor(s / 60)}:${String(s % 60).padStart(2, "0")}`;
 const en = (s) => (s === "Mine Koçak" ? esc(s) : `<span lang="en">${esc(s)}</span>`);
 const own = (w) => w.kind === "own";
 const who = (w, L) => (own(w) ? w[L].fmt : w.brand); // own posts are titled by format, not by a fake "brand"
-const short = (w, L) => (own(w) ? strip(w[L].title) : w.brand); // keeps English names out of Turkish uppercasing (i→İ)
+const short = (w, L) => (own(w) ? esc(strip(w[L].title)) : en(w.brand)); // HTML; only brand names get lang="en" // keeps English names out of Turkish uppercasing (i→İ)
 const out = (rel, html) => { const f = join(ROOT, rel); mkdirSync(dirname(f), { recursive: true }); writeFileSync(f, html); };
 
 const CSP = "default-src 'self'; script-src 'self' https://www.googletagmanager.com; style-src 'self'; font-src 'self'; img-src 'self' data: https:; media-src 'self'; connect-src 'self' https://ugc-mine-lead.onur-vct-20260722.workers.dev https://formsubmit.co https://academy.vibecodingturkey.com https://*.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com https://*.google.com https://*.doubleclick.net; base-uri 'self'; form-action 'self' mailto:";
@@ -258,7 +258,7 @@ function watch(w, i, lang) {
   const html = head({ lang: L, title, desc, path, og: `/assets/og/${L === "tr" ? "tr/" : ""}${w.slug}.jpg`, alternates: alts, ld,
     preload: [`<link rel="preload" href="/assets/work/${w.file}.webp" as="image" fetchpriority="high">`] })
     + `\n<body class="page-watch">\n${header({ ...t, other: wpath(w, L === "tr" ? "en" : "tr") }, false)}\n<main id="main" class="watch wrap">
-  <nav class="crumbs kunye" aria-label="Breadcrumb"><a href="${home}">Mine Koçak</a> / <a href="${home}#work">${W.back}</a> / ${en(short(w, L))}</nav>
+  <nav class="crumbs kunye" aria-label="Breadcrumb"><a href="${home}">Mine Koçak</a> / <a href="${home}#work">${W.back}</a> / ${short(w, L)}</nav>
   <div class="watch-in">
     <div class="watch-video"><video controls playsinline preload="metadata" poster="/assets/work/${w.file}.webp"><source src="/assets/work/${w.file}.mp4" type="video/mp4"></video></div>
     <div class="watch-copy">
@@ -268,7 +268,7 @@ function watch(w, i, lang) {
       <dl class="watch-meta">${rows.map(([a, b]) => `<div><dt>${a}</dt><dd>${b}</dd></div>`).join("")}</dl>
       <p class="watch-links"><a class="reel-src" href="https://www.instagram.com/p/${w.ig}/" target="_blank" rel="noopener">${esc(w[L].label)}</a><a class="reel-src" href="https://www.instagram.com/p/${w.ig}/" target="_blank" rel="noopener">${W.view}</a></p>
       <div class="hero-cta"><a class="btn" href="${home}#brief">${W.brief}</a><a class="link-arrow" href="${home}#rates">${t.rateLink}</a></div>
-      <nav class="watch-nav kunye" aria-label="${W.more}"><a href="${wpath(prev, L)}">← ${en(short(prev, L))}</a><a href="${wpath(next, L)}">${en(short(next, L))} →</a></nav>
+      <nav class="watch-nav kunye" aria-label="${W.more}"><a href="${wpath(prev, L)}">← ${short(prev, L)}</a><a href="${wpath(next, L)}">${short(next, L)} →</a></nav>
     </div>
   </div>
 </main>\n${footer(t)}`;
