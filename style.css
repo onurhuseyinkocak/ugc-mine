@@ -250,6 +250,7 @@ h3 { font: 600 16px/1.35 var(--sans); letter-spacing: -.005em; }
 .watch-meta div { padding: 14px 16px 14px 0; border-bottom: 1px solid var(--line); }
 .watch-meta dt { font: 500 11px/1.5 var(--sans); letter-spacing: .14em; text-transform: uppercase; color: var(--muted); }
 .watch-meta dd { margin-top: 4px; font-weight: 600; }
+.watch-links { display: flex; flex-wrap: wrap; gap: 4px 20px; }
 .watch-nav { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line); }
 .watch-nav a { text-decoration: none; }
 .watch-nav a:hover { color: var(--wine); }
@@ -291,6 +292,8 @@ h3 { font: 600 16px/1.35 var(--sans); letter-spacing: -.005em; }
   .tbl-more[open] summary::after { content: " –"; }
   .about-fig { max-width: 440px; }
   .watch-video { max-width: 420px; }
+  .venue-in .watch-copy { order: -1; }
+  .venue-in .watch-video { max-width: 320px; }
 }
 @media (max-width: 640px) {
   .reels { --card: 60vw; }

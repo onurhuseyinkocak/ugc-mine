@@ -11,8 +11,11 @@ const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 const TODAY = new Date().toISOString().slice(0, 10);
 const esc = (s) => String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
 const strip = (s) => String(s).replace(/<[^>]+>/g, "");
-const mmss = (s) => `0:${String(s).padStart(2, "0")}`;
-const en = (s) => `<span lang="en">${esc(s)}</span>`; // keeps English names out of Turkish uppercasing (i→İ)
+const mmss = (s) => `${Math.floor(s / 60)}:${String(s % 60).padStart(2, "0")}`;
+const en = (s) => (s === "Mine Koçak" ? esc(s) : `<span lang="en">${esc(s)}</span>`);
+const own = (w) => w.kind === "own";
+const who = (w, L) => (own(w) ? w[L].fmt : w.brand); // own posts are titled by format, not by a fake "brand"
+const short = (w, L) => (own(w) ? strip(w[L].title) : w.brand); // keeps English names out of Turkish uppercasing (i→İ)
 const out = (rel, html) => { const f = join(ROOT, rel); mkdirSync(dirname(f), { recursive: true }); writeFileSync(f, html); };
 
 const CSP = "default-src 'self'; script-src 'self' https://www.googletagmanager.com; style-src 'self'; font-src 'self'; img-src 'self' data: https:; media-src 'self'; connect-src 'self' https://ugc-mine-lead.onur-vct-20260722.workers.dev https://formsubmit.co https://academy.vibecodingturkey.com https://*.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com https://*.google.com https://*.doubleclick.net; base-uri 'self'; form-action 'self' mailto:";
@@ -98,9 +101,9 @@ function theatre(t, items = WORK, id = "work", head = true) {
   ${head ? `<div class="wrap sec-head"><p class="kunye">${t.workKicker}</p><h2 id="${id}-title">${t.workH}</h2><p class="sec-note">${t.workNote}</p></div>` : `<h2 id="${id}-title" class="sr-only">${t.workKicker}</h2>`}
   <div class="theatre" data-theatre>
     <ol class="reels" tabindex="0" aria-label="${esc(strip(t.workKicker))}">
-${items.map((w, i) => `      <li class="reel-card" data-i="${i}" data-full="/assets/work/${w.file}.mp4" data-preview="/assets/work/${w.file}-preview.mp4" data-kunye="${String(i + 1).padStart(2, "0")} ${t.of} ${String(items.length).padStart(2, "0")} · ${esc(w.brand)} · ${esc(w[L].title)} · ${mmss(w.secs)}" data-label="${esc(w[L].label)}" data-href="${wpath(w, L)}">
-        <div class="reel"><video muted playsinline loop preload="none" poster="/assets/work/${w.file}.webp" aria-label="${esc(w.brand + " " + strip(w[L].title))}"></video></div>
-        <div class="reel-info"><p class="kunye">${esc(w[L].niche)} · ${esc(w[L].fmt)}</p><h3>${esc(w.brand)} <span>${esc(w[L].title)}</span></h3><p class="reel-line">${esc(w[L].line)}</p><a class="reel-src" href="https://www.instagram.com/p/${w.ig}/" target="_blank" rel="noopener">${esc(w[L].label)}</a></div>
+${items.map((w, i) => `      <li class="reel-card" data-i="${i}" data-full="/assets/work/${w.file}.mp4" data-preview="/assets/work/${w.file}-preview.mp4" data-kunye="${String(i + 1).padStart(2, "0")} ${t.of} ${String(items.length).padStart(2, "0")} · ${esc(who(w, L))} · ${esc(w[L].title)} · ${mmss(w.secs)}" data-label="${esc(w[L].label)}" data-href="${wpath(w, L)}">
+        <div class="reel"><video muted playsinline loop preload="none" poster="/assets/work/${w.file}.webp" aria-label="${esc(who(w, L) + " " + strip(w[L].title))}"></video></div>
+        <div class="reel-info"><p class="kunye">${esc(w[L].niche)} · ${esc(w[L].fmt)}</p><h3>${esc(who(w, L))} <span>${esc(w[L].title)}</span></h3><p class="reel-line">${esc(w[L].line)}</p><a class="reel-src" href="https://www.instagram.com/p/${w.ig}/" target="_blank" rel="noopener">${esc(w[L].label)}</a></div>
       </li>`).join("\n")}
     </ol>
     <div class="wrap theatre-bar">
@@ -156,7 +159,7 @@ const processSec = (t) => `<section class="process wrap" id="process" aria-label
 
 const about = (t) => `<section class="about" aria-labelledby="about-title">
   <div class="wrap about-in">
-    <figure class="about-fig"><img src="/assets/about.webp" width="900" height="1125" alt="${esc(t.aboutImgAlt)}" loading="lazy" decoding="async"><figcaption class="kunye">Mine Koçak · @mineexplora</figcaption></figure>
+    <figure class="about-fig"><img src="/assets/about.webp" width="900" height="1125" alt="${esc(t.aboutImgAlt)}" loading="lazy" decoding="async"><figcaption class="kunye">Mine Koçak · ${en("@mineexplora")}</figcaption></figure>
     <div class="about-copy"><p class="kunye">${t.aboutKicker}</p><h2 id="about-title">${t.aboutH}</h2>${t.about.map((p) => `<p>${p}</p>`).join("")}<a class="link-arrow" href="https://www.instagram.com/mineexplora/" target="_blank" rel="noopener">${t.igLink}</a></div>
   </div>
 </section>`;
@@ -192,7 +195,7 @@ function brief(t) {
 
 const footer = (t) => `<footer class="foot"><div class="wrap foot-in">
   <p>${t.foot}</p>
-  <p><a href="${VENUE}" lang="tr">${t.venueLink}</a> · <a href="https://www.instagram.com/mineexplora/" target="_blank" rel="noopener">Instagram</a> · <a href="mailto:mineexplora@gmail.com">Email</a> · <a href="${t.other}" lang="${t.other === "/" ? "en" : "tr"}">${t.otherName}</a> · <a href="https://ugc-onur.vibecodingturkey.com/">${t.sister}</a></p>
+  <p><a href="${VENUE}" lang="tr">${t.venueLink}</a> · <a href="https://www.instagram.com/mineexplora/" target="_blank" rel="noopener">Instagram</a> · <a href="mailto:mineexplora@gmail.com">${t.lang === "tr" ? "E-posta" : "Email"}</a> · <a href="${t.other}" lang="${t.other === "/" ? "en" : "tr"}">${t.otherName}</a> · <a href="https://ugc-onur.vibecodingturkey.com/">${t.sister}</a></p>
 </div></footer>
 </body>
 </html>
@@ -209,19 +212,20 @@ const service = (t) => ({
   "@type": "Service", "@id": `${SITE}/#ugc`, name: t.lang === "tr" ? "UGC video prodüksiyonu" : "UGC video production",
   serviceType: "User-generated content (UGC) videos", provider: { "@id": `${SITE}/#mine` },
   areaServed: [{ "@type": "City", name: "Antalya" }, { "@type": "Country", name: "Türkiye" }, "Worldwide"],
-  offers: [["Single video", PRICES.single], ["Trio", PRICES.trio], ["Monthly", PRICES.monthly], ["Antalya venue visit video", PRICES.venue]]
-    .map(([name, price]) => ({ "@type": "Offer", name, price: String(price), priceCurrency: "USD" })),
+  offers: t.lang === "tr"
+    ? [["Tekli video", 9000], ["Üçlü", 24000], ["Aylık", 45000], ["Antalya mekân tanıtım videosu", 11000]].map(([name, price]) => ({ "@type": "Offer", name, price: String(price), priceCurrency: "TRY" }))
+    : [["Single video", PRICES.single], ["Trio", PRICES.trio], ["Monthly", PRICES.monthly], ["Antalya venue visit video", PRICES.venue]].map(([name, price]) => ({ "@type": "Offer", name, price: String(price), priceCurrency: "USD" })),
 });
 const proService = (t) => ({
   "@type": "ProfessionalService", "@id": `${SITE}/#studio`, name: "Mine Koçak UGC", url: SITE + t.path, image: `${SITE}/assets/og.jpg`,
-  description: t.desc, priceRange: "$180–$900", email: "mineexplora@gmail.com", founder: { "@id": `${SITE}/#mine` },
+  description: t.desc, priceRange: t.lang === "tr" ? "₺9.000–₺45.000" : "$180–$900", email: "mineexplora@gmail.com", founder: { "@id": `${SITE}/#mine` },
   address: { "@type": "PostalAddress", addressLocality: "Antalya", addressCountry: "TR" },
   areaServed: [{ "@type": "City", name: "Antalya" }, { "@type": "Country", name: "Türkiye" }], knowsLanguage: ["tr", "en"],
   sameAs: ["https://www.instagram.com/mineexplora/"],
 });
 const faqLd = (list) => ({ "@type": "FAQPage", mainEntity: list.map(([q, a]) => ({ "@type": "Question", name: q, acceptedAnswer: { "@type": "Answer", text: a } })) });
 const video = (w, L = "en") => ({
-  "@type": "VideoObject", name: `${w.brand}: ${strip(w[L].title)} · ${L === "tr" ? "Mine Koçak UGC videosu" : "UGC video by Mine Koçak"}`, description: w[L].line,
+  "@type": "VideoObject", name: `${own(w) ? strip(w[L].title) + " (" + w[L].fmt + ")" : w.brand + ": " + strip(w[L].title)} · ${L === "tr" ? "Mine Koçak UGC videosu" : "UGC video by Mine Koçak"}`, description: w[L].line,
   thumbnailUrl: `${SITE}/assets/work/${w.file}.webp`, contentUrl: `${SITE}/assets/work/${w.file}.mp4`,
   uploadDate: `${w.date}T12:00:00+03:00`, duration: `PT${w.secs}S`, inLanguage: L, creator: { "@id": `${SITE}/#mine` },
 });
@@ -241,29 +245,30 @@ function watch(w, i, lang) {
   const t = STR[lang], W = t.watch, L = lang;
   const prev = WORK[(i + WORK.length - 1) % WORK.length], next = WORK[(i + 1) % WORK.length];
   const path = wpath(w, L);
-  const title = L === "tr" ? `${w.brand}: ${strip(w.tr.title)} · ${w.tr.fmt} UGC videosu · Mine Koçak` : `${w.brand}: ${strip(w.en.title)} · ${w.en.fmt} UGC video · Mine Koçak`;
+  const head1 = own(w) ? strip(w[L].title) : `${w.brand}: ${strip(w[L].title)}`;
+  const title = L === "tr" ? `${head1} · ${w.tr.fmt} UGC videosu · Mine Koçak` : `${head1} · ${w.en.fmt} UGC video · Mine Koçak`;
   const desc = L === "tr" ? `${w.tr.line} Mine Koçak, Antalya'da UGC içerik üreticisi.` : `${w.en.line} ${w.en.niche} UGC video by Mine Koçak, UGC creator in Antalya, Türkiye.`;
   const home = L === "tr" ? "/tr/" : "/";
   const ld = { "@context": "https://schema.org", "@graph": [video(w, L), { "@type": "BreadcrumbList", itemListElement: [
     { "@type": "ListItem", position: 1, name: "Mine Koçak UGC", item: SITE + home },
     { "@type": "ListItem", position: 2, name: W.back, item: SITE + home + "#work" },
-    { "@type": "ListItem", position: 3, name: `${w.brand}: ${strip(w[L].title)}`, item: SITE + path }] }] };
-  const rows = [[W.meta[0], en(w.brand)], [W.meta[1], esc(w[L].fmt)], [W.meta[2], mmss(w.secs)], [W.meta[3], w.date]].concat(w.where ? [[W.meta[4], esc(w.where)]] : []);
+    { "@type": "ListItem", position: 3, name: head1, item: SITE + path }] }] };
+  const rows = [[W.meta[0], own(w) ? "@mineexplora" : en(w.brand)], [W.meta[1], esc(w[L].fmt)], [W.meta[2], mmss(w.secs)], [W.meta[3], w.date]].concat(w.where ? [[W.meta[4], esc(w.where)]] : []);
   const alts = [["en", wpath(w, "en")], ["tr", wpath(w, "tr")], ["x-default", wpath(w, "en")]];
-  const html = head({ lang: L, title, desc, path, og: `/assets/og/${w.slug}.jpg`, alternates: alts, ld,
+  const html = head({ lang: L, title, desc, path, og: `/assets/og/${L === "tr" ? "tr/" : ""}${w.slug}.jpg`, alternates: alts, ld,
     preload: [`<link rel="preload" href="/assets/work/${w.file}.webp" as="image" fetchpriority="high">`] })
     + `\n<body class="page-watch">\n${header({ ...t, other: wpath(w, L === "tr" ? "en" : "tr") }, false)}\n<main id="main" class="watch wrap">
-  <nav class="crumbs kunye" aria-label="Breadcrumb"><a href="${home}">Mine Koçak</a> / <a href="${home}#work">${W.back}</a> / ${en(w.brand)}</nav>
+  <nav class="crumbs kunye" aria-label="Breadcrumb"><a href="${home}">Mine Koçak</a> / <a href="${home}#work">${W.back}</a> / ${en(short(w, L))}</nav>
   <div class="watch-in">
     <div class="watch-video"><video controls playsinline preload="metadata" poster="/assets/work/${w.file}.webp"><source src="/assets/work/${w.file}.mp4" type="video/mp4"></video></div>
     <div class="watch-copy">
       <p class="kunye">${esc(w[L].niche)} · ${esc(w[L].fmt)}</p>
-      <h1 class="watch-h">${esc(w.brand)} <em>${esc(w[L].title)}</em></h1>
+      <h1 class="watch-h">${esc(who(w, L))} <em>${esc(w[L].title)}</em></h1>
       <p class="watch-line">${esc(w[L].line)}</p>
       <dl class="watch-meta">${rows.map(([a, b]) => `<div><dt>${a}</dt><dd>${b}</dd></div>`).join("")}</dl>
-      <p><a class="reel-src" href="https://www.instagram.com/p/${w.ig}/" target="_blank" rel="noopener">${esc(w[L].label)}</a> · <a class="reel-src" href="https://www.instagram.com/p/${w.ig}/" target="_blank" rel="noopener">${W.view}</a></p>
+      <p class="watch-links"><a class="reel-src" href="https://www.instagram.com/p/${w.ig}/" target="_blank" rel="noopener">${esc(w[L].label)}</a><a class="reel-src" href="https://www.instagram.com/p/${w.ig}/" target="_blank" rel="noopener">${W.view}</a></p>
       <div class="hero-cta"><a class="btn" href="${home}#brief">${W.brief}</a><a class="link-arrow" href="${home}#rates">${t.rateLink}</a></div>
-      <nav class="watch-nav kunye" aria-label="${W.more}"><a href="${wpath(prev, L)}">← ${en(prev.brand)}</a><a href="${wpath(next, L)}">${en(next.brand)} →</a></nav>
+      <nav class="watch-nav kunye" aria-label="${W.more}"><a href="${wpath(prev, L)}">← ${en(short(prev, L))}</a><a href="${wpath(next, L)}">${en(short(next, L))} →</a></nav>
     </div>
   </div>
 </main>\n${footer(t)}`;
@@ -281,13 +286,13 @@ function venuePage() {
     ["Hangi mekânlarla çalışıyorsunuz?", "Antalya'da kafe, restoran, otel, beach club ve güzellik salonları. Antalya dışı için yol ve konaklama teklife eklenir."],
   ];
   const ld = { "@context": "https://schema.org", "@graph": [person(t), { "@type": "Service", name: "Antalya mekân tanıtım videosu", serviceType: "Mekân tanıtım videosu (UGC)", provider: { "@id": `${SITE}/#mine` }, areaServed: { "@type": "City", name: "Antalya" },
-    offers: { "@type": "Offer", price: String(PRICES.venue), priceCurrency: "USD", name: "Antalya mekân tanıtım videosu" } }, faqLd(vf), video(k, "tr")] };
+    offers: { "@type": "Offer", price: "11000", priceCurrency: "TRY", name: "Antalya mekân tanıtım videosu" } }, faqLd(vf), video(k, "tr")] };
   const html = head({ lang: "tr", title: "Antalya Mekân Tanıtım Videosu · Kafe, Restoran, Otel · Mine Koçak UGC", desc: `Antalya'daki kafe, restoran, otel ve beach club'lar için dikey mekân tanıtım videosu. Konum, atmosfer ve imza lezzet; Instagram ve TikTok'a hazır. ${TRY.venue}.`, path, og: "/assets/og-tr.jpg", ld,
     preload: [`<link rel="preload" href="/assets/work/kiwamiya.webp" as="image" fetchpriority="high">`] })
     + `\n<body class="page-venue">\n${header(t, false, "#brief")}\n<main id="main">
 <section class="watch wrap" aria-labelledby="venue-title">
   <nav class="crumbs kunye" aria-label="Breadcrumb"><a href="/tr/">Mine Koçak</a> / <span>Antalya mekân tanıtım videosu</span></nav>
-  <div class="watch-in">
+  <div class="watch-in venue-in">
     <div class="watch-video"><video controls playsinline preload="metadata" poster="/assets/work/kiwamiya.webp"><source src="/assets/work/kiwamiya.mp4" type="video/mp4"></video><p class="kunye">Örnek: ${en("Kiwamiya, Siam Paragon")} (Bangkok) · ${mmss(k.secs)}</p></div>
     <div class="watch-copy">
       <p class="kunye">Kafe · Restoran · Otel · Beach club</p>
@@ -363,4 +368,4 @@ Mine Koçak, Antalya'da yaşayan bir UGC içerik üreticisidir. Güzellik, tırn
 
 for (const legacy of ["work", "tr"]) if (existsSync(join(ROOT, legacy))) rmSync(join(ROOT, legacy), { recursive: true });
 home("en"); home("tr"); WORK.forEach((w, i) => { watch(w, i, "en"); watch(w, i, "tr"); }); venuePage(); notFound(); sitemap(); llms();
-console.log("built", 3 + WORK.length, "pages");
+console.log("built", 4 + WORK.length * 2, "pages");
