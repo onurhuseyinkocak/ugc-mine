@@ -193,7 +193,7 @@ h3 { font: 600 16px/1.35 var(--sans); letter-spacing: -.005em; }
 .about { padding-top: var(--sec); }
 .about-in { display: grid; grid-template-columns: 4fr 7fr; gap: clamp(32px, 6vw, 96px); align-items: end; }
 .about-fig { max-width: 400px; }
-.about-fig img { width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; border-radius: var(--r); }
+.about-fig img { width: 100%; height: auto; aspect-ratio: 1 / 1; object-fit: cover; border-radius: 50%; }
 .about-fig figcaption { margin-top: 10px; }
 .about-copy h2 { max-width: 640px; margin-top: 14px; }
 .about-copy p:not(.kunye) { margin-top: 16px; max-width: 520px; font-size: 15.5px; }

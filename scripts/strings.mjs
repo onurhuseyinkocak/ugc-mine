@@ -37,7 +37,7 @@ export const STR = {
     steps: [["Brief", "Tell me the product, the audience and where the video will run."], ["Concept & script", "Opening lines and a shot list in 48 hours. You approve before I film."], ["Shoot & edit", "Filmed and edited within 5 working days of the product arriving."], ["Delivery", "Vertical (9:16) files, with and without captions, plus one round of changes."]],
     aboutKicker: "05 · About", aboutH: "Based in Antalya. <em>Filming wherever the brief goes.</em>",
     about: ["I'm Mine. I live in Antalya, Türkiye with my husband. Before that we lived in Bangkok, which is where several of the videos on this page were filmed.", "I film in English and Turkish, so one shoot can serve two markets. My videos are made to work as an organic post, a paid ad or part of a launch."],
-    aboutImgAlt: "Mine Koçak in a white dress with a flower in her hair, outdoors on a sunny day",
+    aboutImgAlt: "Mine Koçak, UGC creator based in Antalya, Türkiye",
     igLink: "@mineexplora on Instagram",
     faqKicker: "06 · FAQ", faqH: "Questions <em>brands ask.</em>",
     faq: [
@@ -94,7 +94,7 @@ export const STR = {
     steps: [["Brief", "Ürünü, hedef kitleyi ve videonun nerede yayınlanacağını yazın."], ["Fikir ve senaryo", "48 saat içinde açılış cümleleri ve çekim listesi. Siz onaylamadan çekmem."], ["Çekim ve kurgu", "Ürün elime ulaştıktan sonra 5 iş günü içinde çekilir ve kurgulanır."], ["Teslim", "Dikey (9:16) dosyalar, altyazılı ve altyazısız, artı bir tur düzeltme."]],
     aboutKicker: "05 · Hakkımda", aboutH: "Antalya'da yaşıyorum. <em>Brief nereye giderse oradayım.</em>",
     about: ["Ben Mine. Eşimle Antalya'da yaşıyorum. Öncesinde Bangkok'taydık; bu sayfadaki videoların bir kısmı orada çekildi.", "Türkçe ve İngilizce çekiyorum; tek çekim iki pazara hizmet edebiliyor. Videolarım organik paylaşım, reklam ya da lansman için hazırlanır."],
-    aboutImgAlt: "Mine Koçak, saçında çiçekle beyaz elbiseyle güneşli bir günde dışarıda",
+    aboutImgAlt: "Mine Koçak, Antalya'da yaşayan UGC içerik üreticisi",
     igLink: "Instagram'da @mineexplora",
     faqKicker: "06 · SSS", faqH: "Markaların <em>sorduğu sorular.</em>",
     faq: [

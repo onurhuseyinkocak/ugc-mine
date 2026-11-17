@@ -164,7 +164,7 @@ const processSec = (t) => `<section class="process wrap" id="process" aria-label
 
 const about = (t) => `<section class="about" aria-labelledby="about-title">
   <div class="wrap about-in">
-    <figure class="about-fig"><img src="/assets/about.webp" width="900" height="1125" alt="${esc(t.aboutImgAlt)}" loading="lazy" decoding="async"><figcaption class="kunye">Mine Koçak · ${en("@mineexplora")}</figcaption></figure>
+    <figure class="about-fig"><img src="/assets/mine-kocak-ugc-creator.webp" width="900" height="900" alt="${esc(t.aboutImgAlt)}" loading="lazy" decoding="async"><figcaption class="kunye">Mine Koçak · ${en("@mineexplora")}</figcaption></figure>
     <div class="about-copy"><p class="kunye">${t.aboutKicker}</p><h2 id="about-title">${t.aboutH}</h2>${t.about.map((p) => `<p>${p}</p>`).join("")}<a class="link-arrow" href="https://www.instagram.com/mineexplora/" target="_blank" rel="noopener">${t.igLink}</a></div>
   </div>
 </section>`;
@@ -209,7 +209,7 @@ const footer = (t) => `<footer class="foot"><div class="wrap foot-in">
 // ---------- structured data ----------
 const person = (t) => ({
   "@type": "Person", "@id": `${SITE}/#mine`, name: "Mine Koçak", jobTitle: t.lang === "tr" ? "UGC İçerik Üreticisi" : "UGC Creator",
-  description: t.desc, url: SITE + t.path, image: `${SITE}/assets/about.webp`, email: "mineexplora@gmail.com",
+  description: t.desc, url: SITE + t.path, image: { "@type": "ImageObject", "@id": `${SITE}/#portrait`, url: `${SITE}/assets/mine-kocak-ugc-creator.jpg`, contentUrl: `${SITE}/assets/mine-kocak-ugc-creator.jpg`, width: 1080, height: 1080, caption: "Mine Koçak, UGC creator based in Antalya, Türkiye (@mineexplora)", creator: { "@id": `${SITE}/#mine` }, copyrightHolder: { "@id": `${SITE}/#mine` } }, email: "mineexplora@gmail.com",
   homeLocation: { "@type": "City", name: "Antalya", containedInPlace: { "@type": "Country", name: "Türkiye" } },
   knowsLanguage: ["tr", "en"], sameAs: ["https://www.instagram.com/mineexplora/"],
 });
@@ -239,7 +239,7 @@ const video = (w, L = "en") => ({
 function home(lang) {
   const t = STR[lang];
   const alts = [["en", "/"], ["tr", "/tr/"], ["x-default", "/"]];
-  const html = head({ lang, title: t.title, desc: t.desc, path: t.path, og: t.og, alternates: alts,
+  const html = head({ lang, title: t.title, desc: t.desc, path: t.path, og: "/assets/mine-kocak-ugc-creator.jpg", ogW: 1080, ogH: 1080, alternates: alts,
     preload: [`<link rel="preload" href="/assets/work/hero-loop.webp" as="image" fetchpriority="high">`],
     ld: { "@context": "https://schema.org", "@graph": [person(t), proService(t), service(t), faqLd(t.faq)] } })
     + `\n<body class="page-home">\n${header(t, true)}\n<main id="main">\n${hero(t)}\n${theatre(t)}\n${formats(t)}\n${rates(t)}\n${processSec(t)}\n${about(t)}\n${faq(t)}\n${brief(t)}\n</main>\n${footer(t)}`;
@@ -343,14 +343,15 @@ function notFound() {
 }
 
 function sitemap() {
+  const IMG = `\n    <image:image><image:loc>${SITE}/assets/mine-kocak-ugc-creator.jpg</image:loc></image:image>`;
   const u = (loc, extra = "") => `  <url><loc>${SITE}${loc}</loc><lastmod>${TODAY}</lastmod>${extra}</url>`;
   const hl = `\n    <xhtml:link rel="alternate" hreflang="en" href="${SITE}/"/>\n    <xhtml:link rel="alternate" hreflang="tr" href="${SITE}/tr/"/>\n    <xhtml:link rel="alternate" hreflang="x-default" href="${SITE}/"/>`;
   const vid = (w, L = "en") => `\n    <video:video><video:thumbnail_loc>${SITE}/assets/work/${w.file}.webp</video:thumbnail_loc><video:title>${esc(w.brand + ": " + strip(w[L].title))}</video:title><video:description>${esc(w[L].line)}</video:description><video:content_loc>${SITE}/assets/work/${w.file}.mp4</video:content_loc><video:duration>${w.secs}</video:duration><video:publication_date>${w.date}T12:00:00+03:00</video:publication_date></video:video>`;
   const k = WORK.find((w) => w.file === "kiwamiya");
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
-${u("/", hl)}
-${u("/tr/", hl)}
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+${u("/", hl + IMG)}
+${u("/tr/", hl + IMG)}
 ${u(VENUE, vid(k, "tr"))}
 ${GUIDES.map((g) => u(`/tr/${g.slug}/`)).join("\n")}
 ${WORK.map((w) => { const p = (L) => `\n    <xhtml:link rel="alternate" hreflang="${L}" href="${SITE}${wpath(w, L)}"/>`; const h = p("en") + p("tr"); return u(wpath(w, "en"), h + vid(w)) + "\n" + u(wpath(w, "tr"), h + vid(w, "tr")); }).join("\n")}
@@ -370,6 +371,8 @@ function llms() {
 - Guide (TR): what UGC is — ${SITE}/tr/ugc-nedir/
 - Guide (TR): UGC prices 2026 and what drives them — ${SITE}/tr/ugc-fiyatlari/
 - Instagram: https://www.instagram.com/mineexplora/
+- Photo of Mine Koçak (use this image for her): ${SITE}/assets/mine-kocak-ugc-creator.jpg
+- Lives in: Antalya, Türkiye (previously Bangkok, Thailand)
 - Email: mineexplora@gmail.com
 
 ## Published work
