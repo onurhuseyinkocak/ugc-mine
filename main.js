@@ -36,7 +36,7 @@
     var now = th.querySelector(".theatre-now");
     var bar = th.querySelector(".progress-bar");
     var details = th.querySelector("[data-details]");
-    var active = -1;
+    var active = -1, inView = false, target = 0;
 
     function toPreview(card) {
       var v = card.querySelector("video");
@@ -52,11 +52,12 @@
       c.classList.add("is-active");
       now.textContent = c.dataset.kunye + " · " + c.dataset.label;
       details.href = c.dataset.href;
-      bar.className = "progress-bar p" + (i + 1);
-      if (autoplay) { var v = c.querySelector("video"); if (!v.getAttribute("src")) v.src = c.dataset.preview; play(v); }
+      bar.style.transform = "scaleX(" + ((i + 1) / cards.length) + ")"; // CSSOM, allowed by style-src 'self'
+      if (autoplay && inView) { var v = c.querySelector("video"); if (!v.getAttribute("src")) v.src = c.dataset.preview; play(v); }
     }
     function go(i) {
       i = Math.max(0, Math.min(cards.length - 1, i));
+      target = i;
       var c = cards[i];
       strip.scrollTo({ left: c.offsetLeft - cards[0].offsetLeft, behavior: reduce ? "auto" : "smooth" });
     }
@@ -80,8 +81,10 @@
         setActive(Math.min(cards.length - 1, i));
       });
     }, { passive: true });
+    strip.addEventListener("scrollend", function () { target = active; }); // user swipes resync the prev/next target
     cards.forEach(function (c, i) {
       var v = c.querySelector("video");
+      c.addEventListener("focusin", function () { if (i !== active) go(i); }); // keyboard focus brings the card forward
       v.addEventListener("click", function () {
         if (i !== active) { go(i); return; }
         if (!c.classList.contains("is-full")) full(i);
@@ -89,18 +92,21 @@
       v.addEventListener("ended", function () { toPreview(c); if (autoplay && i === active) play(v); });
       v.addEventListener("error", function () { if (c.classList.contains("is-full")) toPreview(c); });
     });
-    th.querySelector("[data-prev]").addEventListener("click", function () { go(active - 1); });
-    th.querySelector("[data-next]").addEventListener("click", function () { go(active + 1); });
-    th.querySelector("[data-sound]").addEventListener("click", function () { full(active); });
+    th.querySelector("[data-prev]").addEventListener("click", function () { go(target - 1); });
+    th.querySelector("[data-next]").addEventListener("click", function () { go(target + 1); });
+    th.querySelector("[data-sound]").addEventListener("click", function () { if (!cards[active].classList.contains("is-full")) full(active); });
     strip.addEventListener("keydown", function (e) {
-      if (e.key === "ArrowRight") { e.preventDefault(); go(active + 1); }
-      if (e.key === "ArrowLeft") { e.preventDefault(); go(active - 1); }
+      if (e.key === "ArrowRight") { e.preventDefault(); go(target + 1); }
+      if (e.key === "ArrowLeft") { e.preventDefault(); go(target - 1); }
     });
     // Pause the theatre when it leaves the viewport
+    // Load and play only while the theatre is on screen
     new IntersectionObserver(function (en) {
+      inView = en[0].isIntersecting;
       var c = cards[active]; if (!c) return;
       var v = c.querySelector("video");
-      if (!en[0].isIntersecting) v.pause(); else if (autoplay && !c.classList.contains("is-full")) play(v);
+      if (!inView) v.pause();
+      else if (autoplay && !c.classList.contains("is-full")) { if (!v.getAttribute("src")) v.src = c.dataset.preview; play(v); }
     }, { threshold: 0.15 }).observe(th);
     setActive(0);
   });
@@ -117,8 +123,10 @@
       });
     } else {
       var cio = new IntersectionObserver(function (entries) {
-        entries.forEach(function (en) { if (en.isIntersecting) start(en.target); else stop(en.target); });
-      }, { rootMargin: "-35% 0px -35% 0px" });
+        entries.forEach(function (en) { if (!en.isIntersecting) stop(en.target); });
+        var hit = entries.filter(function (en) { return en.isIntersecting; }).pop();
+        if (hit) { cells.forEach(function (c) { if (c !== hit.target) stop(c); }); start(hit.target); }
+      }, { rootMargin: "-46% 0px -46% 0px" });
       cells.forEach(function (c) { cio.observe(c); });
     }
   }
@@ -143,11 +151,13 @@
   });
 
   var M = TR ? {
+    labels: ["Ad", "Marka", "E-posta", "Ürün / mekân", "Paket", "Zamanlama", "Yayın"],
     email: "Lütfen geçerli bir e-posta yazın.", product: "Lütfen ürünü veya mekânı yazın.", sending: "Gönderiliyor…",
     ok: "Teşekkürler, brief'iniz ulaştı. 24 saat içinde dönüyorum.",
     err: "Buradan gönderilemedi. Brief dolu şekilde e-posta uygulamanız açılıyor; dilerseniz mineexplora@gmail.com adresine yazın.",
     auto: function (first, product) { return "Merhaba" + (first ? " " + first : "") + ", brief'iniz için teşekkürler" + (product ? " (" + product + ")" : "") + ". 24 saat içinde iki üç içerik fikri ve sabit bir teklifle dönüyorum. Mine Koçak, UGC içerik üreticisi, Antalya. ugc-mine.vibecodingturkey.com/tr / @mineexplora"; }
   } : {
+    labels: ["Name", "Brand", "Email", "Product / venue", "Package", "Timeline", "Runs as"],
     email: "Please add a valid email.", product: "Please tell me the product or venue.", sending: "Sending…",
     ok: "Thank you. Your brief is in, I'll reply within 24 hours.",
     err: "Couldn't send from here. Opening your email app with the brief filled in, or write to mineexplora@gmail.com.",
@@ -163,15 +173,26 @@
 
   function say(text, kind) { status.textContent = text; status.className = "form-status" + (kind ? " is-" + kind : ""); }
   function mailFallback(fd) {
-    var body = ["Name: " + fd.get("name"), "Brand: " + fd.get("company"), "Email: " + fd.get("email"), "Product: " + fd.get("product"), "Package: " + fd.get("goal"), "Timeline: " + fd.get("timeframe"), "Runs as: " + fd.get("budget"), "", fd.get("message")].join("\n");
+    var L = M.labels;
+    var body = [L[0] + ": " + fd.get("name"), L[1] + ": " + fd.get("company"), L[2] + ": " + fd.get("email"), L[3] + ": " + fd.get("product"), L[4] + ": " + fd.get("goal"), L[5] + ": " + fd.get("timeframe"), L[6] + ": " + fd.get("budget"), "", String(fd.get("message") || "").slice(0, 1500)].join("\n");
     return "mailto:mineexplora@gmail.com?subject=" + encodeURIComponent("UGC brief: " + (fd.get("company") || fd.get("product"))) + "&body=" + encodeURIComponent(body);
   }
   function asJson(r) { return r.json().then(function (j) { return { ok: r.ok, j: j }; }); }
+  function timed(url, opts) { // never leave the button stuck on a hung request
+    var ctl = new AbortController(), id = window.setTimeout(function () { ctl.abort(); }, 12000);
+    opts.signal = ctl.signal;
+    return fetch(url, opts).finally(function () { window.clearTimeout(id); });
+  }
+  status.id = "form-status";
+  each("input, select, textarea", function (el) {
+    el.setAttribute("aria-describedby", "form-status");
+    el.addEventListener("input", function () { el.removeAttribute("aria-invalid"); });
+  }, form);
 
   form.addEventListener("submit", function (e) {
     e.preventDefault();
     var fd = new FormData(form);
-    if (fd.get("website")) return; // bot
+    if (fd.get("website")) { say(M.ok, "ok"); return; } // bot: pretend success
     var email = String(fd.get("email") || "").trim();
     var product = String(fd.get("product") || "").trim();
     form.elements.email.setAttribute("aria-invalid", /^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email) ? "false" : "true");
@@ -188,9 +209,9 @@
       message: fd.get("message") || "", channel: "ugc-mine-portfolio", entry_referrer: document.referrer || "", utm: utm
     };
     var first = lead.name ? String(lead.name).split(" ")[0] : "";
-    var store = fetch(ENDPOINT, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(lead) })
+    var store = timed(ENDPOINT, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(lead) })
       .then(asJson).then(function (x) { if (!x.ok || !x.j.ok) throw new Error(x.j.error || "failed"); });
-    var mail = fetch(MAILER, {
+    var mail = timed(MAILER, {
       method: "POST",
       headers: { "Content-Type": "application/json", Accept: "application/json" },
       body: JSON.stringify({
@@ -201,9 +222,10 @@
         "Runs as": lead.budget, Timeline: lead.timeframe, Message: lead.message, Language: lead.lang, Source: utm || lead.entry_referrer || "direct"
       })
     }).then(asJson).then(function (x) { if (!x.ok || String(x.j.success) !== "true") throw new Error(x.j.message || "failed"); });
-    // Success if either path lands: D1 keeps the record, FormSubmit delivers the email.
+    // D1 keeps the record; the email is what actually reaches Mine, so success = email delivered.
+    // If the email path fails, open a prefilled mail draft even when D1 stored it.
     Promise.allSettled([store, mail]).then(function (res) {
-      if (res[0].status !== "fulfilled" && res[1].status !== "fulfilled") throw new Error("both failed");
+      if (res[1].status !== "fulfilled") throw new Error("mail failed");
       form.reset();
       say(M.ok, "ok");
       track("generate_lead", { channel: "ugc-mine-portfolio", lang: lead.lang });
