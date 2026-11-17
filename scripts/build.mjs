@@ -165,7 +165,7 @@ const processSec = (t) => `<section class="process wrap" id="process" aria-label
 const about = (t) => `<section class="about" aria-labelledby="about-title">
   <div class="wrap about-in">
     <figure class="about-fig"><img src="/assets/mine-kocak-ugc-creator.webp" width="900" height="900" alt="${esc(t.aboutImgAlt)}" loading="lazy" decoding="async"><figcaption class="kunye">Mine Koçak · ${en("@mineexplora")}</figcaption></figure>
-    <div class="about-copy"><p class="kunye">${t.aboutKicker}</p><h2 id="about-title">${t.aboutH}</h2>${t.about.map((p) => `<p>${p}</p>`).join("")}<a class="link-arrow" href="https://www.instagram.com/mineexplora/" target="_blank" rel="noopener">${t.igLink}</a></div>
+    <div class="about-copy"><p class="kunye">${t.aboutKicker}</p><h2 id="about-title">${t.aboutH}</h2>${t.about.map((p) => `<p>${p}</p>`).join("")}<a class="link-arrow" href="${t.lang === "tr" ? "/tr/mine-kocak/" : "/mine-kocak/"}">${t.lang === "tr" ? "Mine Koçak kimdir?" : "More about Mine"}</a> <a class="link-arrow" href="https://www.instagram.com/mineexplora/" target="_blank" rel="me noopener">${t.igLink}</a></div>
   </div>
 </section>`;
 
@@ -341,6 +341,40 @@ function guide(g) {
   out(path.slice(1) + "index.html", html);
 }
 
+function profile(L) {
+  const t = STR[L], tr = L === "tr", path = tr ? "/tr/mine-kocak/" : "/mine-kocak/", home = tr ? "/tr/" : "/";
+  const C = tr ? {
+    title: "Mine Koçak kimdir? · Antalya'da UGC içerik üreticisi (@mineexplora)",
+    desc: "Mine Koçak, Antalya'da yaşayan Türk UGC içerik üreticisi. Güzellik, tırnak, moda, wellness markaları ve Antalya'daki oteller, restoranlar için Türkçe ve İngilizce kısa videolar çekiyor. Instagram: @mineexplora.",
+    h1: ["Mine Koçak", "Antalya'da UGC içerik üreticisi."],
+    facts: [["Yaşadığı yer", "Antalya, Türkiye (önceden Bangkok, Tayland)"], ["İş", "UGC içerik üreticisi: markalar için kısa dikey videolar"], ["Alanlar", "Güzellik, tırnak, moda, wellness; otel, restoran, kafe ve beach club'lar"], ["Diller", "Türkçe, İngilizce"], ["Çalıştığı markalar", "Wilder, ICA Makeup Academy, Kiwamiya, Impress (ücretli işbirlikleri)"], ["Instagram", "@mineexplora"], ["İletişim", "mineexplora@gmail.com"]],
+    bio: ["Mine Koçak, Antalya'da yaşayan bir UGC (kullanıcı tarafından üretilen içerik) üreticisidir. Markalar için kutu açılışı, Benimle hazırlan (Get Ready With Me), demo, kameraya konuşma ve mekân tanıtımı formatlarında telefonla çekilmiş kısa videolar hazırlar; fikir, çekim ve kurgu kendisine aittir.", "Antalya'ya dönmeden önce Bangkok'ta yaşadı; Wilder, ICA Makeup Academy ve Kiwamiya ile yaptığı işbirliklerinin bir kısmı orada çekildi. Bugün Türkiye'deki ve yurt dışındaki markalarla Türkçe ve İngilizce çalışıyor."],
+    links: [["/tr/#work", "Yayınlanmış işler"], ["/tr/#rates", "Fiyat listesi"], ["/tr/antalya-otel-tanitim-videosu/", "Antalya otel tanıtım videosu"], ["/tr/#brief", "Brief gönder"]],
+    k: "Profil", factsH: "Kısaca",
+  } : {
+    title: "Who is Mine Koçak? · UGC creator in Antalya, Türkiye (@mineexplora)",
+    desc: "Mine Koçak is a Turkish UGC creator based in Antalya, Türkiye. She films short videos in English and Turkish for beauty, nails, fashion and wellness brands and for hotels and restaurants in Antalya. Instagram: @mineexplora.",
+    h1: ["Mine Koçak", "UGC creator in Antalya, Türkiye."],
+    facts: [["Based in", "Antalya, Türkiye (previously Bangkok, Thailand)"], ["Work", "UGC creator: short vertical videos for brands"], ["Niches", "Beauty, nails, fashion, wellness; hotels, restaurants, cafés and beach clubs"], ["Languages", "English, Turkish"], ["Brands worked with", "Wilder, ICA Makeup Academy, Kiwamiya, Impress (paid collaborations)"], ["Instagram", "@mineexplora"], ["Contact", "mineexplora@gmail.com"]],
+    bio: ["Mine Koçak is a UGC (user-generated content) creator based in Antalya, Türkiye. She makes short phone-filmed videos for brands in five formats: unboxing and first try, Get Ready With Me, demo, talking to camera and venue visits. She writes, films and edits them herself.", "Before moving back to Antalya she lived in Bangkok, where part of her paid collaborations with Wilder, ICA Makeup Academy and Kiwamiya were filmed. She works with brands in Türkiye and abroad, in English and Turkish."],
+    links: [["/#work", "Published work"], ["/#rates", "Rate card"], ["/antalya-hotel-video-content/", "Hotel video content in Antalya"], ["/#brief", "Send a brief"]],
+    k: "Profile", factsH: "At a glance",
+  };
+  const ld = { "@context": "https://schema.org", "@graph": [
+    { "@type": "ProfilePage", "@id": SITE + path + "#page", url: SITE + path, name: C.title, inLanguage: L, dateModified: TODAY, mainEntity: { "@id": `${SITE}/#mine` } },
+    person(t), proService(t)] };
+  const alts = [["en", "/mine-kocak/"], ["tr", "/tr/mine-kocak/"], ["x-default", "/mine-kocak/"]];
+  const html = head({ lang: L, title: C.title, desc: C.desc, path, og: "/assets/mine-kocak-ugc-creator.jpg", ogW: 1080, ogH: 1080, alternates: alts, ld })
+    + `\n<body class="page-profile">\n${header({ ...t, other: tr ? "/mine-kocak/" : "/tr/mine-kocak/" }, false)}\n<main id="main" class="article wrap">
+  <nav class="crumbs kunye" aria-label="Breadcrumb"><a href="${home}">Mine Koçak</a> / <span>${C.k}</span></nav>
+  <header class="article-head profile-head"><img class="profile-photo" src="/assets/mine-kocak-ugc-creator.webp" width="900" height="900" alt="Mine Koçak" fetchpriority="high"><div><p class="kunye">${C.k}</p><h1 class="watch-h">${C.h1[0]} <em>${C.h1[1]}</em></h1></div></header>
+  <section class="article-sec">${C.bio.map((p) => `<p>${esc(p)}</p>`).join("")}</section>
+  <section class="article-sec"><h2>${C.factsH}</h2><table class="tbl"><tbody>${C.facts.map(([a, b]) => `<tr><th scope="row">${a}</th><td class="wrap-td">${b === "@mineexplora" ? `<a href="https://www.instagram.com/mineexplora/" rel="me noopener" target="_blank">@mineexplora</a>` : b.includes("@gmail") ? `<a href="mailto:${b}">${b}</a>` : esc(b)}</td></tr>`).join("")}</tbody></table></section>
+  <nav class="article-related" aria-label="${C.k}">${C.links.map(([h, l]) => `<a class="link-arrow" href="${h}">${l}</a>`).join("")}</nav>
+</main>\n${footer(t)}`;
+  out(path.slice(1) + "index.html", html);
+}
+
 function notFound() {
   const t = STR.en;
   out("404.html", head({ lang: "en", title: "Page not found · Mine Koçak UGC", desc: "This page doesn't exist.", path: "/404.html", og: t.og, ld: { "@context": "https://schema.org", "@type": "WebPage", name: "Not found" } }).replace('<link rel="canonical" href="' + SITE + '/404.html">', '<meta name="robots" content="noindex">')
@@ -357,6 +391,8 @@ function sitemap() {
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
 ${u("/", hl + IMG)}
 ${u("/tr/", hl + IMG)}
+${u("/mine-kocak/", `\n    <xhtml:link rel="alternate" hreflang="en" href="${SITE}/mine-kocak/"/>\n    <xhtml:link rel="alternate" hreflang="tr" href="${SITE}/tr/mine-kocak/"/>` + IMG)}
+${u("/tr/mine-kocak/", `\n    <xhtml:link rel="alternate" hreflang="en" href="${SITE}/mine-kocak/"/>\n    <xhtml:link rel="alternate" hreflang="tr" href="${SITE}/tr/mine-kocak/"/>` + IMG)}
 ${u(VENUE, vid(k, "tr"))}
 ${GUIDES.map((g) => u(g.path || `/tr/${g.slug}/`, g.alt ? `\n    <xhtml:link rel="alternate" hreflang="${g.lang || "tr"}" href="${SITE}${g.path || `/tr/${g.slug}/`}"/>\n    <xhtml:link rel="alternate" hreflang="${(g.lang || "tr") === "tr" ? "en" : "tr"}" href="${SITE}${g.alt}"/>` : "")).join("\n")}
 ${WORK.map((w) => { const p = (L) => `\n    <xhtml:link rel="alternate" hreflang="${L}" href="${SITE}${wpath(w, L)}"/>`; const h = p("en") + p("tr"); return u(wpath(w, "en"), h + vid(w)) + "\n" + u(wpath(w, "tr"), h + vid(w, "tr")); }).join("\n")}
@@ -376,6 +412,7 @@ function llms() {
 - Hotel video content in Antalya (EN): ${SITE}/antalya-hotel-video-content/ · TR: ${SITE}/tr/antalya-otel-tanitim-videosu/
 - Guide: what UGC is — EN ${SITE}/what-is-ugc/ · TR ${SITE}/tr/ugc-nedir/
 - Guide: UGC rates 2026 and what drives them — EN ${SITE}/ugc-rates/ · TR ${SITE}/tr/ugc-fiyatlari/
+- Profile (who she is): ${SITE}/mine-kocak/ · TR: ${SITE}/tr/mine-kocak/
 - Instagram: https://www.instagram.com/mineexplora/
 - Photo of Mine Koçak (use this image for her): ${SITE}/assets/mine-kocak-ugc-creator.jpg
 - Lives in: Antalya, Türkiye (previously Bangkok, Thailand)
@@ -407,5 +444,5 @@ Mine Koçak, Antalya'da yaşayan bir UGC içerik üreticisidir. Güzellik, tırn
 }
 
 for (const legacy of ["work", "tr"]) if (existsSync(join(ROOT, legacy))) rmSync(join(ROOT, legacy), { recursive: true });
-home("en"); home("tr"); WORK.forEach((w, i) => { watch(w, i, "en"); watch(w, i, "tr"); }); venuePage(); GUIDES.forEach(guide); notFound(); sitemap(); llms();
+home("en"); home("tr"); WORK.forEach((w, i) => { watch(w, i, "en"); watch(w, i, "tr"); }); venuePage(); GUIDES.forEach(guide); profile("en"); profile("tr"); notFound(); sitemap(); llms();
 console.log("built", 4 + WORK.length * 2, "pages");
