@@ -72,9 +72,9 @@ function header(t, home, cta) {
 </header>`;
 }
 
-const brandItems = (t) => BRANDS.map((b) => `<li class="brand">${b.img
-  ? `<img src="/assets/brands/${b.img}" alt="${esc(b.name)}" width="${Math.round(b.w / 5)}" height="32" loading="lazy" decoding="async">`
-  : `<span class="brand-word">${esc(b.name)}</span>`}${b[t.lang] ? `<span class="brand-note">${b[t.lang]}</span>` : ""}</li>`).join("");
+const tiles = (hidden) => BRANDS.map((b) => `<li class="tile tile-${b.tile}"><img src="/assets/brands/${b.img}" alt="${hidden ? "" : esc(b.name)}" width="${Math.round(b.w / 4)}" height="24" loading="lazy" decoding="async"></li>`).join("");
+// Two identical lists; the track slides by exactly one list width, so the loop is seamless. The copy is hidden from AT.
+const brandItems = () => `<div class="marquee"><div class="marquee-track"><ul class="brand-row">${tiles(false)}</ul><ul class="brand-row" aria-hidden="true">${tiles(true)}${tiles(true)}</ul></div></div>`;
 
 function hero(t) {
   return `<section class="hero" aria-labelledby="hero-title">
@@ -83,7 +83,7 @@ function hero(t) {
     <h1 id="hero-title" class="display">${t.h1.map((l, i) => `<span class="ln"><span class="rise" data-d="${i + 1}">${l}</span></span>`).join("")}</h1>
     <p class="lede rise" data-d="4"><span class="lede-full">${t.lede}</span><span class="lede-short">${t.ledeShort}</span></p>
     <div class="hero-cta rise" data-d="5"><a class="btn" href="#brief">${t.cta}</a><a class="link-arrow" href="#rates">${t.rateLink}</a></div>
-    <div class="brands brands-hero rise" data-d="6"><p class="kunye">${t.brandsTitle}</p><ul class="brand-row">${brandItems(t)}</ul></div>
+    <div class="brands brands-hero rise" data-d="6"><p class="kunye">${t.brandsTitle}</p>${brandItems()}</div>
   </div>
   <figure class="hero-frame">
     <div class="frame-clip">
@@ -92,7 +92,7 @@ function hero(t) {
     <figcaption class="kunye"><span>${t.heroCap[0]}</span><span>${t.heroCap[1]}</span></figcaption>
   </figure>
 </section>
-<section class="brands brands-band" aria-label="${esc(t.brandsTitle)}"><p class="kunye">${t.brandsTitle}</p><ul class="brand-row">${brandItems(t)}</ul></section>`;
+<section class="brands brands-band" aria-label="${esc(t.brandsTitle)}"><p class="kunye">${t.brandsTitle}</p>${brandItems()}</section>`;
 }
 
 function theatre(t, items = WORK, id = "work", head = true) {

@@ -48,9 +48,9 @@ export const FORMATS = [
     tr: ["Mekân tanıtımı", "Antalya'da kafe, restoran, otel ve beach club. Talep üzerine seyahat çekimleri."] },
 ];
 
-export const BRANDS = [
-  { name: "Wilder", img: "wilder.webp", w: 515, en: "2 videos", tr: "2 video" },
-  { name: "ICA Makeup Academy", text: true, en: "", tr: "" },
-  { name: "Kiwamiya", img: "kiwamiya.webp", w: 478, en: "", tr: "" },
-  { name: "Impress", img: "impress.webp", w: 647, en: "", tr: "" },
+export const BRANDS = [ // real logos in their own colours; w = width at 96px height
+  { name: "Wilder", img: "wilder.webp", w: 309, tile: "wilder" },
+  { name: "ICA Makeup Academy", img: "ica.webp", w: 183, tile: "ica" },
+  { name: "Kiwamiya", img: "kiwamiya.webp", w: 287, tile: "kiwamiya" },
+  { name: "Impress", img: "impress.webp", w: 388, tile: "impress" },
 ];
