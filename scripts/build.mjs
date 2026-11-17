@@ -74,7 +74,7 @@ function header(t, home, cta) {
 
 const brandItems = (t) => BRANDS.map((b) => `<li class="brand">${b.img
   ? `<img src="/assets/brands/${b.img}" alt="${esc(b.name)}" width="${Math.round(b.w / 5)}" height="32" loading="lazy" decoding="async">`
-  : `<span class="brand-word">${esc(b.name)}</span>`}<span class="brand-note">${b[t.lang]}</span></li>`).join("");
+  : `<span class="brand-word">${esc(b.name)}</span>`}${b[t.lang] ? `<span class="brand-note">${b[t.lang]}</span>` : ""}</li>`).join("");
 
 function hero(t) {
   return `<section class="hero" aria-labelledby="hero-title">
@@ -343,6 +343,7 @@ function llms() {
 - Email: mineexplora@gmail.com
 
 ## Published work
+Paid collaborations: Wilder (2 videos, electrolyte drink mix), ICA Makeup Academy (Bangkok), Kiwamiya at Siam Paragon (restaurant), Impress (press-on nails). The two Get Ready With Me videos are Mine's own posts.
 ${WORK.map((w) => `- ${w.brand}: ${strip(w.en.title)} (${w.en.niche}, ${w.en.fmt}, ${w.secs}s) — ${w.en.label}. ${SITE}/work/${w.slug}/`).join("\n")}
 Several of these were filmed in Bangkok, where Mine lived before returning to Antalya.
 
