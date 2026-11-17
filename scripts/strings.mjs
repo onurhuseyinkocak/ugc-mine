@@ -80,7 +80,7 @@ export const STR = {
     fmtNote: "Oynatmak için üzerine gelin ya da kaydırın. Her kare yayınlanmış bir videodan.",
     fmtLast: ["İstediğiniz format, Türkçe veya İngilizce.", "Hangisinin uygun olduğundan emin değil misiniz? Ürünü ve hedefi yazın, iki üç fikir önereyim."],
     ratesKicker: "03 · Fiyat listesi · TL", ratesH: "Net fiyatlar. <em>Sürpriz yok.</em>",
-    ratesNote: `Her videoya altyazı, bir tur düzeltme ve markanızın kendi kanallarında 12 ay kullanım dahildir. TL fiyatlar ${FX.date} kuruna (1 USD ≈ ₺${String(FX.rate).replace(".", ",")}) göre belirlenmiştir; parantez içindekiler yurt dışı markalar için USD karşılığıdır.`,
+    ratesNote: `Her videoya altyazı, bir tur düzeltme ve markanızın kendi kanallarında 12 ay kullanım dahildir. TL fiyatlar ${FX.date} kuruna (1 USD ≈ ₺${String(FX.rate).replace(".", ",")}) göre belirlenmiştir; parantez içindekiler yurt dışı markalar için USD karşılığıdır. Fiyatın neye göre değiştiğini <a href="/tr/ugc-fiyatlari/">UGC fiyatları rehberinde</a> anlattım.`,
     pk: [
       { k: "single", name: "Tekli", price: TRY.single, usd: usd(PRICES.single), what: "1 video, 30 saniyeye kadar", p: "Ürününüzü nasıl sunduğumu görmenin en kolay yolu.", pick: "Tekli video (₺9.000)" },
       { k: "trio", name: "Üçlü", price: TRY.trio, usd: usd(PRICES.trio), what: "3 video + 3 alternatif açılış", p: "Tek ürüne üç farklı bakış. Alternatif açılışlarla (ilk 3 saniye) hangisinin dikkat tuttuğunu test edersiniz.", pick: "Üçlü (₺24.000)", flag: "Önerilen" },

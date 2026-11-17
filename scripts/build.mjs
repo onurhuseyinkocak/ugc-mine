@@ -5,6 +5,7 @@ import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { SITE, WORK, FORMATS, BRANDS, PRICES, TRY } from "./content.mjs";
 import { STR } from "./strings.mjs";
+import { GUIDES } from "./guides.mjs";
 
 const VENUE = "/tr/antalya-mekan-tanitim-videosu/";
 const wpath = (w, L) => (L === "tr" ? `/tr/is/${w.slug}/` : `/work/${w.slug}/`);
@@ -199,7 +200,7 @@ function brief(t) {
 
 const footer = (t) => `<footer class="foot"><div class="wrap foot-in">
   <p>${t.foot}</p>
-  <p><a href="${VENUE}" lang="tr">${t.venueLink}</a> · <a href="https://www.instagram.com/mineexplora/" target="_blank" rel="noopener">Instagram</a> · <a href="mailto:mineexplora@gmail.com">${t.lang === "tr" ? "E-posta" : "Email"}</a> · <a href="${t.other}" lang="${t.other === "/" ? "en" : "tr"}">${t.otherName}</a> · <a href="https://ugc-onur.vibecodingturkey.com/">${t.sister}</a></p>
+  <p><a href="${VENUE}" lang="tr">${t.venueLink}</a> · <a href="/tr/ugc-nedir/" lang="tr">UGC nedir?</a> · <a href="/tr/ugc-fiyatlari/" lang="tr">UGC fiyatları</a> · <a href="https://www.instagram.com/mineexplora/" target="_blank" rel="noopener">Instagram</a> · <a href="mailto:mineexplora@gmail.com">${t.lang === "tr" ? "E-posta" : "Email"}</a> · <a href="${t.other}" lang="${t.other === "/" ? "en" : "tr"}">${t.otherName}</a> · <a href="https://ugc-onur.vibecodingturkey.com/">${t.sister}</a></p>
 </div></footer>
 </body>
 </html>
@@ -313,6 +314,28 @@ ${brief(t)}
   out(path.slice(1) + "index.html", html);
 }
 
+function guide(g) {
+  const t = STR.tr, path = `/tr/${g.slug}/`;
+  const block = (b) => Array.isArray(b) ? b.map((p) => `<p>${esc(p)}</p>`).join("")
+    : b.list ? `<ul>${b.list.map((i) => `<li>${esc(i)}</li>`).join("")}</ul>${b.link ? `<p><a class="link-arrow" href="${b.link[0]}">${esc(b.link[1])}</a></p>` : ""}`
+    : `<table class="tbl"><tbody>${b.table.map(([a, c]) => `<tr><th scope="row">${esc(a)}</th><td>${esc(c)}</td></tr>`).join("")}</tbody></table>`;
+  const ld = { "@context": "https://schema.org", "@graph": [
+    { "@type": "Article", headline: strip(g.h1.join(" ")), description: g.desc, inLanguage: "tr", url: SITE + path, image: `${SITE}/assets/og-tr.jpg`,
+      datePublished: "2026-11-17", dateModified: TODAY, author: { "@id": `${SITE}/#mine` }, publisher: { "@id": `${SITE}/#studio` } },
+    person(t), faqLd(g.faq),
+    { "@type": "BreadcrumbList", itemListElement: [{ "@type": "ListItem", position: 1, name: "Mine Koçak UGC", item: SITE + "/tr/" }, { "@type": "ListItem", position: 2, name: strip(g.h1[0]), item: SITE + path }] }] };
+  const html = head({ lang: "tr", title: g.title, desc: g.desc, path, og: "/assets/og-tr.jpg", ld })
+    + `\n<body class="page-guide">\n${header(t, false)}\n<main id="main" class="article wrap">
+  <nav class="crumbs kunye" aria-label="Breadcrumb"><a href="/tr/">Mine Koçak</a> / <span>${esc(g.kicker)}</span></nav>
+  <header class="article-head"><p class="kunye">${esc(g.kicker)}</p><h1 class="watch-h">${esc(g.h1[0])} <em>${esc(g.h1[1])}</em></h1><p class="watch-line">${esc(g.lede)}</p></header>
+  ${g.sections.map(([h, b]) => `<section class="article-sec"><h2>${esc(h)}</h2>${block(b)}</section>`).join("\n  ")}
+  <section class="article-sec"><h2>Sık sorulanlar</h2><div class="faq-list">${g.faq.map(([q, a]) => `<details><summary>${esc(q)}</summary><p>${esc(a)}</p></details>`).join("")}</div></section>
+  <aside class="article-cta"><p class="kunye">Mine Koçak · UGC içerik üreticisi · Antalya</p><p class="article-cta-h">Ürününüz ya da mekânınız için bir video mu düşünüyorsunuz?</p><div class="hero-cta"><a class="btn" href="/tr/#brief">Brief gönder</a><a class="link-arrow" href="/tr/#work">Örnek videolar</a></div></aside>
+  <nav class="article-related" aria-label="İlgili"><p class="kunye">İlgili</p>${g.related.map(([h, l]) => `<a class="link-arrow" href="${h}">${esc(l)}</a>`).join("")}</nav>
+</main>\n${footer(t)}`;
+  out(path.slice(1) + "index.html", html);
+}
+
 function notFound() {
   const t = STR.en;
   out("404.html", head({ lang: "en", title: "Page not found · Mine Koçak UGC", desc: "This page doesn't exist.", path: "/404.html", og: t.og, ld: { "@context": "https://schema.org", "@type": "WebPage", name: "Not found" } }).replace('<link rel="canonical" href="' + SITE + '/404.html">', '<meta name="robots" content="noindex">')
@@ -329,6 +352,7 @@ function sitemap() {
 ${u("/", hl)}
 ${u("/tr/", hl)}
 ${u(VENUE, vid(k, "tr"))}
+${GUIDES.map((g) => u(`/tr/${g.slug}/`)).join("\n")}
 ${WORK.map((w) => { const p = (L) => `\n    <xhtml:link rel="alternate" hreflang="${L}" href="${SITE}${wpath(w, L)}"/>`; const h = p("en") + p("tr"); return u(wpath(w, "en"), h + vid(w)) + "\n" + u(wpath(w, "tr"), h + vid(w, "tr")); }).join("\n")}
 </urlset>
 `;
@@ -343,6 +367,8 @@ function llms() {
 - Site (EN): ${SITE}/
 - Site (TR): ${SITE}/tr/
 - Antalya venue videos (TR): ${SITE}/tr/antalya-mekan-tanitim-videosu/
+- Guide (TR): what UGC is — ${SITE}/tr/ugc-nedir/
+- Guide (TR): UGC prices 2026 and what drives them — ${SITE}/tr/ugc-fiyatlari/
 - Instagram: https://www.instagram.com/mineexplora/
 - Email: mineexplora@gmail.com
 
@@ -372,5 +398,5 @@ Mine Koçak, Antalya'da yaşayan bir UGC içerik üreticisidir. Güzellik, tırn
 }
 
 for (const legacy of ["work", "tr"]) if (existsSync(join(ROOT, legacy))) rmSync(join(ROOT, legacy), { recursive: true });
-home("en"); home("tr"); WORK.forEach((w, i) => { watch(w, i, "en"); watch(w, i, "tr"); }); venuePage(); notFound(); sitemap(); llms();
+home("en"); home("tr"); WORK.forEach((w, i) => { watch(w, i, "en"); watch(w, i, "tr"); }); venuePage(); GUIDES.forEach(guide); notFound(); sitemap(); llms();
 console.log("built", 4 + WORK.length * 2, "pages");
